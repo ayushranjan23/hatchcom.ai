@@ -54,7 +54,7 @@ export async function POST(req: Request) {
         execute: async ({ similarQuestions }) => {
           const results = await Promise.all(
             similarQuestions.map(
-              async (question) => await findRelevantContent(question),
+              //async (question) => await findRelevantContent(question),
             ),
           );
           // Flatten the array of arrays and remove duplicates based on 'name'
