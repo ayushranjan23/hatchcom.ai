@@ -2,7 +2,7 @@ import { embed, embedMany } from "ai";
 import { cosineDistance, desc, gt, sql } from "drizzle-orm";
 import { embeddings } from "../db/schema/embeddings";
 import { db } from "../db";
-
+/*
 const embeddingModel = "openai/text-embedding-ada-002";
 
 const generateChunks = (input: string): string[] => {
@@ -43,3 +43,4 @@ export const findRelevantContent = async (userQuery: string) => {
     .limit(4);
   return similarGuides;
 };
+*/
