@@ -45,6 +45,7 @@ export async function POST(req: Request) {
         }),
         execute: async ({ content }) => createResource({ content }),
       }),
+      /*
       getInformation: tool({
         description: `get information from your knowledge base to answer questions.`,
         inputSchema: z.object({
@@ -64,6 +65,8 @@ export async function POST(req: Request) {
           return uniqueResults;
         },
       }),
+      */
+     
       understandQuery: tool({
         description: `understand the users query. use this tool on every prompt.`,
         inputSchema: z.object({
