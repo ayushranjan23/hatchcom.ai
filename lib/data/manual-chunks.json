@@ -1,0 +1,216 @@
+{
+  "chunks": [
+    {
+      "id": "L1-001",
+      "title": "Account Management",
+      "summary": "User account settings, profiles, and preferences.",
+      "children": [
+        {
+          "id": "L2-001",
+          "title": "Password Settings",
+          "summary": "Change, reset, and secure your password.",
+          "children": [
+            {
+              "id": "L3-001",
+              "title": "Reset Password",
+              "summary": "Recover access using email verification.",
+              "page": 5,
+              "section": "Account/Security/Password Reset",
+              "content": "To reset your password, navigate to the login page and click 'Forgot Password'. Enter your registered email address and click 'Send Reset Link'. Check your email inbox for a password reset link (it may take up to 5 minutes). Click the link and create a new password that is at least 8 characters long, contains uppercase and lowercase letters, numbers, and special characters. Confirm your new password and click 'Reset Password'. You'll be redirected to the login page where you can sign in with your new credentials."
+            },
+            {
+              "id": "L3-002",
+              "title": "Change Password",
+              "summary": "Update your current password securely.",
+              "page": 6,
+              "section": "Account/Security/Change Password",
+              "content": "To change your password while logged in, go to Settings > Security > Password. Enter your current password for verification. Type your new password in the 'New Password' field. Re-enter the new password in the 'Confirm Password' field. Click 'Update Password'. You'll receive a confirmation email that your password has been changed. For security, you may be logged out from other devices and will need to log in again with your new password."
+            }
+          ]
+        },
+        {
+          "id": "L2-002",
+          "title": "Profile Settings",
+          "summary": "Update personal information and preferences.",
+          "children": [
+            {
+              "id": "L3-003",
+              "title": "Edit Profile Info",
+              "summary": "Change name, email, and contact details.",
+              "page": 8,
+              "section": "Account/Profile/Edit Information",
+              "content": "To update your profile information, click on your profile icon in the top-right corner and select 'Profile Settings'. You can edit your display name, email address, phone number, and profile picture. Click on any field to edit it. For email changes, you'll need to verify the new email address by clicking a confirmation link sent to both your old and new email. Profile picture changes are instant - click 'Upload Photo' to select an image from your device (max 5MB, JPG or PNG). Click 'Save Changes' when done."
+            },
+            {
+              "id": "L3-004",
+              "title": "Notification Preferences",
+              "summary": "Control email and push notification settings.",
+              "page": 10,
+              "section": "Account/Profile/Notifications",
+              "content": "Manage your notification preferences by going to Settings > Notifications. You can toggle email notifications, push notifications, and SMS alerts independently. Choose which types of updates you want to receive: system updates, security alerts, promotional messages, and activity notifications. Set notification frequency (instant, daily digest, or weekly summary). Enable 'Do Not Disturb' mode for specific hours. Changes take effect immediately."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L1-002",
+      "title": "Security & Authentication",
+      "summary": "Two-factor authentication, login security, and access control.",
+      "children": [
+        {
+          "id": "L2-003",
+          "title": "Two-Factor Authentication",
+          "summary": "Set up 2FA for enhanced account security.",
+          "children": [
+            {
+              "id": "L3-005",
+              "title": "Enable 2FA",
+              "summary": "Activate two-factor authentication using authenticator app.",
+              "page": 15,
+              "section": "Security/2FA/Setup",
+              "content": "To enable two-factor authentication, go to Settings > Security > Two-Factor Authentication. Click 'Enable 2FA'. Download an authenticator app like Google Authenticator, Authy, or Microsoft Authenticator on your mobile device. Scan the QR code displayed on screen with your authenticator app. Enter the 6-digit code from your app to verify setup. Save the backup codes shown on screen in a secure location - you'll need these if you lose access to your phone. Click 'Activate' to complete setup. From now on, you'll need both your password and a code from your authenticator app to log in."
+            },
+            {
+              "id": "L3-006",
+              "title": "Disable 2FA",
+              "summary": "Turn off two-factor authentication if needed.",
+              "page": 16,
+              "section": "Security/2FA/Disable",
+              "content": "To disable two-factor authentication, navigate to Settings > Security > Two-Factor Authentication. Enter your current password for verification. Click 'Disable 2FA'. You'll need to enter a 6-digit code from your authenticator app to confirm. If you no longer have access to your authenticator app, click 'Use backup code' and enter one of your saved backup codes. Once disabled, you'll only need your password to log in. We strongly recommend keeping 2FA enabled for security."
+            }
+          ]
+        },
+        {
+          "id": "L2-004",
+          "title": "Login Issues",
+          "summary": "Troubleshoot login problems and account access.",
+          "children": [
+            {
+              "id": "L3-007",
+              "title": "Account Locked",
+              "summary": "Unlock account after multiple failed login attempts.",
+              "page": 18,
+              "section": "Security/Login/Account Locked",
+              "content": "If you see 'Account Locked' after multiple failed login attempts, your account has been temporarily locked for security. Wait 30 minutes and try again. To unlock immediately, click 'Unlock Account' on the login page and verify your identity using email verification. Check your email for an unlock link and click it. You may also be asked to answer security questions. Once unlocked, ensure you're using the correct password. If you've forgotten your password, use the 'Forgot Password' option instead."
+            },
+            {
+              "id": "L3-008",
+              "title": "Email Not Verified",
+              "summary": "Complete email verification to access account.",
+              "page": 19,
+              "section": "Security/Login/Email Verification",
+              "content": "If you see 'Email Not Verified' when trying to log in, you need to verify your email address first. Check your inbox for a verification email sent during registration. Click the 'Verify Email' link in the email. If you can't find the email, check your spam folder. To request a new verification email, click 'Resend Verification Email' on the login page. Enter your email address and click 'Send'. The new link will expire in 24 hours. Once verified, you can log in normally."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L1-003",
+      "title": "Billing & Payments",
+      "summary": "Manage subscriptions, payment methods, and invoices.",
+      "children": [
+        {
+          "id": "L2-005",
+          "title": "Payment Methods",
+          "summary": "Add, update, or remove payment methods.",
+          "children": [
+            {
+              "id": "L3-009",
+              "title": "Add Credit Card",
+              "summary": "Add a new credit or debit card for payments.",
+              "page": 25,
+              "section": "Billing/Payment Methods/Add Card",
+              "content": "To add a new payment method, go to Settings > Billing > Payment Methods. Click 'Add Payment Method'. Select 'Credit/Debit Card'. Enter your card number, expiration date, and CVV code. Provide the billing address associated with the card. Click 'Add Card'. Your card will be verified with a small temporary charge that will be refunded. You can set this as your default payment method by checking 'Make Default'. All payment information is encrypted and stored securely."
+            },
+            {
+              "id": "L3-010",
+              "title": "Update Payment Info",
+              "summary": "Modify existing payment method details.",
+              "page": 26,
+              "section": "Billing/Payment Methods/Update",
+              "content": "To update an existing payment method, navigate to Settings > Billing > Payment Methods. Find the card you want to update and click 'Edit'. You can update the expiration date, billing address, or set/unset as default. To change the card number, you'll need to add a new card and delete the old one. Click 'Save Changes' when done. If your card is the default payment method for active subscriptions, make sure the updated information is correct to avoid payment failures."
+            }
+          ]
+        },
+        {
+          "id": "L2-006",
+          "title": "Subscriptions",
+          "summary": "Manage your subscription plans and renewals.",
+          "children": [
+            {
+              "id": "L3-011",
+              "title": "Upgrade Plan",
+              "summary": "Switch to a higher-tier subscription plan.",
+              "page": 30,
+              "section": "Billing/Subscriptions/Upgrade",
+              "content": "To upgrade your subscription, go to Settings > Billing > Subscription. Click 'Upgrade Plan'. Compare available plans and select the one you want. Review the pricing - you'll be charged a prorated amount for the remainder of your current billing period. Click 'Confirm Upgrade'. Your new plan features will be available immediately. Your next billing date remains the same, but the amount charged will reflect your new plan. You can view your updated invoice in the Billing History section."
+            },
+            {
+              "id": "L3-012",
+              "title": "Cancel Subscription",
+              "summary": "End your subscription and understand the process.",
+              "page": 32,
+              "section": "Billing/Subscriptions/Cancel",
+              "content": "To cancel your subscription, navigate to Settings > Billing > Subscription. Click 'Cancel Subscription'. Select a reason for cancellation (optional but helps us improve). Confirm cancellation by clicking 'Yes, Cancel My Subscription'. Your subscription will remain active until the end of your current billing period. You'll retain access to premium features until that date. No refunds are provided for the remaining days of your current period. You can reactivate your subscription anytime before it expires. After cancellation, you'll be downgraded to the free plan."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L1-004",
+      "title": "Troubleshooting",
+      "summary": "Common issues, error messages, and solutions.",
+      "children": [
+        {
+          "id": "L2-007",
+          "title": "Performance Issues",
+          "summary": "Fix slow loading and app performance problems.",
+          "children": [
+            {
+              "id": "L3-013",
+              "title": "Slow Loading Times",
+              "summary": "Resolve issues with pages taking too long to load.",
+              "page": 40,
+              "section": "Troubleshooting/Performance/Slow Loading",
+              "content": "If you're experiencing slow loading times, try these solutions: Clear your browser cache and cookies (Settings > Privacy > Clear Data). Disable browser extensions that might interfere with the app. Check your internet connection speed (minimum 5 Mbps recommended). Try using a different browser (Chrome, Firefox, or Edge recommended). Close unnecessary browser tabs to free up memory. If on mobile, ensure you have the latest app version. Check if the issue persists in incognito/private browsing mode. If problems continue, try accessing during off-peak hours or contact support with your browser version and device information."
+            },
+            {
+              "id": "L3-014",
+              "title": "App Crashes",
+              "summary": "Fix application crashes and freezing issues.",
+              "page": 42,
+              "section": "Troubleshooting/Performance/Crashes",
+              "content": "If the app crashes or freezes frequently, follow these steps: Update to the latest version (Settings > About > Check for Updates). Clear app cache and data. On mobile, uninstall and reinstall the app. Ensure your device meets minimum requirements (4GB RAM, updated OS). Close other running applications to free up resources. Disable hardware acceleration in browser settings if using web version. Check for conflicting software like antivirus or firewalls. Review crash logs (Help > Report Problem > View Logs) and share with support. As a temporary fix, try using the web version if on mobile, or vice versa."
+            }
+          ]
+        },
+        {
+          "id": "L2-008",
+          "title": "Error Messages",
+          "summary": "Understand and resolve common error codes.",
+          "children": [
+            {
+              "id": "L3-015",
+              "title": "Error 403 Forbidden",
+              "summary": "Fix access denied errors when using features.",
+              "page": 45,
+              "section": "Troubleshooting/Errors/403 Forbidden",
+              "content": "Error 403 Forbidden means you don't have permission to access a specific feature or resource. This can happen for several reasons: You're trying to access a premium feature without a subscription - upgrade your plan to gain access. Your account permissions have been restricted - contact your account administrator. Your session has expired - log out and log back in. You're accessing from a restricted IP address or location. Clear your cookies and try again. If you believe you should have access, verify your subscription status in Settings > Billing. Contact support if the issue persists, providing the specific feature you're trying to access."
+            },
+            {
+              "id": "L3-016",
+              "title": "Error 500 Server Error",
+              "summary": "Resolve internal server errors.",
+              "page": 46,
+              "section": "Troubleshooting/Errors/500 Server",
+              "content": "Error 500 indicates a server-side problem, not an issue with your account or device. First, wait a few minutes and try again - it may be temporary. Refresh the page or restart the app. Check our status page at status.example.com to see if there's a known outage. If the error persists, try accessing a different feature to see if the issue is feature-specific. Clear your cache and cookies. Try accessing from a different device or network to rule out local issues. If you continue seeing this error after 30 minutes, contact support with the time you encountered it, what you were trying to do, and any error reference number displayed."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
