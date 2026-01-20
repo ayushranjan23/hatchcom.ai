@@ -2,66 +2,74 @@
   {
     "id": "L1-001",
     "title": "Account Management",
-    "summary": "Manage user accounts, profiles, and account settings",
-    "level2": [
+    "summary": "User account settings, profiles, and security options.",
+    "children": [
       {
         "id": "L2-001",
-        "title": "Password & Security",
-        "summary": "Password resets, two-factor authentication, and security settings",
-        "level3": [
+        "title": "Password Settings",
+        "summary": "Password management including reset and updates.",
+        "children": [
           {
             "id": "L3-001",
             "title": "Reset Password",
-            "summary": "Recover account access using email verification",
+            "summary": "Recover account access using email verification.",
             "content": "#",
             "page": 5,
             "section": "Account/Security/Password Reset"
           },
           {
             "id": "L3-002",
-            "title": "Enable 2FA",
-            "summary": "Add two-factor authentication to secure your account",
+            "title": "Change Password",
+            "summary": "Update your current password for security.",
             "content": "#",
-            "page": 7,
-            "section": "Account/Security/Two-Factor Auth"
+            "page": 6,
+            "section": "Account/Security/Password Change"
           }
         ]
       },
       {
         "id": "L2-002",
         "title": "Profile Settings",
-        "summary": "Update profile information, avatar, and display preferences",
-        "level3": [
+        "summary": "Personal information and display preferences.",
+        "children": [
           {
             "id": "L3-003",
             "title": "Update Email",
-            "summary": "Change your registered email address",
+            "summary": "Change your registered email address.",
             "content": "#",
-            "page": 10,
-            "section": "Account/Profile/Email Settings"
+            "page": 8,
+            "section": "Account/Profile/Email Update"
           },
           {
             "id": "L3-004",
             "title": "Change Avatar",
-            "summary": "Upload or change your profile picture",
+            "summary": "Upload or modify your profile picture.",
             "content": "#",
-            "page": 11,
+            "page": 9,
             "section": "Account/Profile/Avatar"
           }
         ]
       },
       {
         "id": "L2-003",
-        "title": "Account Deletion",
-        "summary": "Permanently delete your account and all associated data",
-        "level3": [
+        "title": "Two-Factor Auth",
+        "summary": "Enhanced security with 2FA setup and management.",
+        "children": [
           {
             "id": "L3-005",
-            "title": "Delete Account",
-            "summary": "Steps to permanently remove your account",
+            "title": "Enable 2FA",
+            "summary": "Activate two-factor authentication for your account.",
             "content": "#",
-            "page": 15,
-            "section": "Account/Management/Delete Account"
+            "page": 12,
+            "section": "Account/Security/2FA Setup"
+          },
+          {
+            "id": "L3-006",
+            "title": "Disable 2FA",
+            "summary": "Remove two-factor authentication from your account.",
+            "content": "#",
+            "page": 13,
+            "section": "Account/Security/2FA Disable"
           }
         ]
       }
@@ -69,52 +77,52 @@
   },
   {
     "id": "L1-002",
-    "title": "System Features",
-    "summary": "Core application features and functionality",
-    "level2": [
+    "title": "System Settings",
+    "summary": "Application configuration and preferences.",
+    "children": [
       {
         "id": "L2-004",
-        "title": "Dashboard Overview",
-        "summary": "Understanding your main dashboard and navigation",
-        "level3": [
-          {
-            "id": "L3-006",
-            "title": "Dashboard Widgets",
-            "summary": "Customize and rearrange dashboard widgets",
-            "content": "#",
-            "page": 20,
-            "section": "Features/Dashboard/Widgets"
-          },
+        "title": "Notifications",
+        "summary": "Manage email and in-app notification preferences.",
+        "children": [
           {
             "id": "L3-007",
-            "title": "Quick Actions",
-            "summary": "Use keyboard shortcuts and quick action menu",
+            "title": "Email Notifications",
+            "summary": "Configure when you receive email alerts.",
             "content": "#",
-            "page": 22,
-            "section": "Features/Dashboard/Quick Actions"
+            "page": 15,
+            "section": "Settings/Notifications/Email"
+          },
+          {
+            "id": "L3-008",
+            "title": "Push Notifications",
+            "summary": "Set up mobile and desktop push alerts.",
+            "content": "#",
+            "page": 16,
+            "section": "Settings/Notifications/Push"
           }
         ]
       },
       {
         "id": "L2-005",
-        "title": "Data Management",
-        "summary": "Import, export, and manage your data",
-        "level3": [
-          {
-            "id": "L3-008",
-            "title": "Export Data",
-            "summary": "Download your data in various formats",
-            "content": "#",
-            "page": 25,
-            "section": "Features/Data/Export"
-          },
+        "title": "Appearance",
+        "summary": "Theme, layout, and display customization options.",
+        "children": [
           {
             "id": "L3-009",
-            "title": "Import Data",
-            "summary": "Upload and import data from external sources",
+            "title": "Change Theme",
+            "summary": "Switch between light, dark, and auto themes.",
             "content": "#",
-            "page": 27,
-            "section": "Features/Data/Import"
+            "page": 18,
+            "section": "Settings/Appearance/Theme"
+          },
+          {
+            "id": "L3-010",
+            "title": "Font Size",
+            "summary": "Adjust text size for better readability.",
+            "content": "#",
+            "page": 19,
+            "section": "Settings/Appearance/Font"
           }
         ]
       }
@@ -123,50 +131,50 @@
   {
     "id": "L1-003",
     "title": "Troubleshooting",
-    "summary": "Common issues and their solutions",
-    "level2": [
+    "summary": "Common issues and solutions for technical problems.",
+    "children": [
       {
         "id": "L2-006",
         "title": "Login Issues",
-        "summary": "Resolve problems with logging into your account",
-        "level3": [
-          {
-            "id": "L3-010",
-            "title": "Fix Login Error",
-            "summary": "Resolve login failures caused by cached credentials",
-            "content": "#",
-            "page": 30,
-            "section": "Troubleshooting/Login/Errors"
-          },
+        "summary": "Problems accessing your account or signing in.",
+        "children": [
           {
             "id": "L3-011",
-            "title": "Session Timeout",
-            "summary": "Handle automatic logout and session expiry",
+            "title": "Forgot Password",
+            "summary": "Steps to recover access when password is lost.",
             "content": "#",
-            "page": 32,
-            "section": "Troubleshooting/Login/Session"
+            "page": 22,
+            "section": "Troubleshooting/Login/Password Recovery"
+          },
+          {
+            "id": "L3-012",
+            "title": "Account Locked",
+            "summary": "Unlock account after multiple failed attempts.",
+            "content": "#",
+            "page": 23,
+            "section": "Troubleshooting/Login/Account Lock"
           }
         ]
       },
       {
         "id": "L2-007",
-        "title": "Performance Problems",
-        "summary": "Fix slow loading and performance issues",
-        "level3": [
+        "title": "Performance",
+        "summary": "Slow loading times and application lag fixes.",
+        "children": [
           {
-            "id": "L3-012",
+            "id": "L3-013",
             "title": "Clear Cache",
-            "summary": "Remove cached data to improve performance",
+            "summary": "Remove stored data to improve speed.",
             "content": "#",
-            "page": 35,
+            "page": 25,
             "section": "Troubleshooting/Performance/Cache"
           },
           {
-            "id": "L3-013",
+            "id": "L3-014",
             "title": "Browser Compatibility",
-            "summary": "Ensure your browser is compatible and up to date",
+            "summary": "Ensure your browser supports all features.",
             "content": "#",
-            "page": 37,
+            "page": 26,
             "section": "Troubleshooting/Performance/Browser"
           }
         ]
@@ -175,52 +183,75 @@
   },
   {
     "id": "L1-004",
-    "title": "Settings & Preferences",
-    "summary": "Configure application settings and preferences",
-    "level2": [
+    "title": "Data Management",
+    "summary": "Import, export, and backup your information.",
+    "children": [
       {
         "id": "L2-008",
-        "title": "Notification Settings",
-        "summary": "Manage email, push, and in-app notifications",
-        "level3": [
-          {
-            "id": "L3-014",
-            "title": "Configure Notifications",
-            "summary": "Enable or disable specific notification types",
-            "content": "#",
-            "page": 40,
-            "section": "Settings/Notifications/Configuration"
-          },
+        "title": "Export Data",
+        "summary": "Download your data in various formats.",
+        "children": [
           {
             "id": "L3-015",
-            "title": "Notification Schedule",
-            "summary": "Set quiet hours and notification timing",
+            "title": "Export to CSV",
+            "summary": "Download your data as a CSV file.",
             "content": "#",
-            "page": 42,
-            "section": "Settings/Notifications/Schedule"
+            "page": 28,
+            "section": "Data/Export/CSV"
+          },
+          {
+            "id": "L3-016",
+            "title": "Export to JSON",
+            "summary": "Download your data in JSON format.",
+            "content": "#",
+            "page": 29,
+            "section": "Data/Export/JSON"
           }
         ]
       },
       {
         "id": "L2-009",
-        "title": "Privacy Controls",
-        "summary": "Manage privacy settings and data sharing",
-        "level3": [
-          {
-            "id": "L3-016",
-            "title": "Privacy Settings",
-            "summary": "Control who can see your profile and activity",
-            "content": "#",
-            "page": 45,
-            "section": "Settings/Privacy/Visibility"
-          },
+        "title": "Import Data",
+        "summary": "Upload and restore data from files.",
+        "children": [
           {
             "id": "L3-017",
-            "title": "Data Sharing",
-            "summary": "Manage third-party data sharing preferences",
+            "title": "Import from CSV",
+            "summary": "Upload data from a CSV file.",
             "content": "#",
-            "page": 47,
-            "section": "Settings/Privacy/Data Sharing"
+            "page": 31,
+            "section": "Data/Import/CSV"
+          },
+          {
+            "id": "L3-018",
+            "title": "Import from JSON",
+            "summary": "Upload data from a JSON file.",
+            "content": "#",
+            "page": 32,
+            "section": "Data/Import/JSON"
+          }
+        ]
+      },
+      {
+        "id": "L2-010",
+        "title": "Backup",
+        "summary": "Create and restore backups of your data.",
+        "children": [
+          {
+            "id": "L3-019",
+            "title": "Create Backup",
+            "summary": "Generate a full backup of your account.",
+            "content": "#",
+            "page": 34,
+            "section": "Data/Backup/Create"
+          },
+          {
+            "id": "L3-020",
+            "title": "Restore Backup",
+            "summary": "Recover data from a previous backup.",
+            "content": "#",
+            "page": 35,
+            "section": "Data/Backup/Restore"
           }
         ]
       }
@@ -228,52 +259,52 @@
   },
   {
     "id": "L1-005",
-    "title": "Getting Started",
-    "summary": "Initial setup and onboarding for new users",
-    "level2": [
+    "title": "Integrations",
+    "summary": "Connect with third-party services and APIs.",
+    "children": [
       {
-        "id": "L2-010",
-        "title": "Installation",
-        "summary": "System requirements and installation steps",
-        "level3": [
+        "id": "L2-011",
+        "title": "OAuth Setup",
+        "summary": "Connect external accounts using OAuth.",
+        "children": [
           {
-            "id": "L3-018",
-            "title": "System Requirements",
-            "summary": "Minimum hardware and software needed to run the application",
+            "id": "L3-021",
+            "title": "Google OAuth",
+            "summary": "Link your Google account for easy sign-in.",
             "content": "#",
-            "page": 2,
-            "section": "Getting Started/Installation/Requirements"
+            "page": 38,
+            "section": "Integrations/OAuth/Google"
           },
           {
-            "id": "L3-019",
-            "title": "Installation Guide",
-            "summary": "Step-by-step installation process for all platforms",
+            "id": "L3-022",
+            "title": "GitHub OAuth",
+            "summary": "Connect your GitHub account for integration.",
             "content": "#",
-            "page": 3,
-            "section": "Getting Started/Installation/Guide"
+            "page": 39,
+            "section": "Integrations/OAuth/GitHub"
           }
         ]
       },
       {
-        "id": "L2-011",
-        "title": "First Steps",
-        "summary": "Complete your profile and learn basic features",
-        "level3": [
+        "id": "L2-012",
+        "title": "API Access",
+        "summary": "Generate and manage API keys for development.",
+        "children": [
           {
-            "id": "L3-020",
-            "title": "Complete Profile",
-            "summary": "Fill out your profile information for the first time",
+            "id": "L3-023",
+            "title": "Generate API Key",
+            "summary": "Create a new API key for your applications.",
             "content": "#",
-            "page": 8,
-            "section": "Getting Started/Setup/Profile"
+            "page": 42,
+            "section": "Integrations/API/Generate"
           },
           {
-            "id": "L3-021",
-            "title": "Tutorial Walkthrough",
-            "summary": "Interactive tutorial covering essential features",
+            "id": "L3-024",
+            "title": "Revoke API Key",
+            "summary": "Disable an existing API key for security.",
             "content": "#",
-            "page": 9,
-            "section": "Getting Started/Setup/Tutorial"
+            "page": 43,
+            "section": "Integrations/API/Revoke"
           }
         ]
       }
