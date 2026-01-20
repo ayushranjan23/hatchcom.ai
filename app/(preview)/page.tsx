@@ -198,11 +198,15 @@ const AssistantMessage = ({ message }: { message: UIMessage | undefined }) => {
 
 const Loading = ({ tool }: { tool?: string }) => {
   const toolName =
-    tool === "getInformation"
-      ? "Getting information"
-      : tool === "addResource"
-        ? "Adding information"
-        : "test for thinking instead";
+    tool === "selectLevel1Category"
+      ? "Analyzing top categories"
+      : tool === "selectLevel2Subcategory"
+        ? "Finding relevant subcategory"
+        : tool === "generateFinalAnswer"
+          ? "Generating answer"
+          : tool === "handleOutOfScope"
+            ? "Checking manual scope"
+            : "Thinking";
 
   return (
     <AnimatePresence mode="wait">

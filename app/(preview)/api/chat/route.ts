@@ -1,251 +1,297 @@
-import { generateObject, streamText } from "ai";
+import {
+  convertToModelMessages,
+  generateObject,
+  streamText,
+  tool,
+  UIMessage,
+} from "ai";
 import { z } from "zod";
-import manualData from "@/data/manual-chunks.json";
-import { google } from "@ai-sdk/google";
+import manualChunks from "@/lib/data/manual-chunks.json";
 
 // Configuration
 const MAX_ATTEMPTS = 5;
 const CONFIDENCE_THRESHOLD = 0.3;
-const MODEL = google("gemini-2.0-flash-exp");
 
 // Allow streaming responses up to 30 seconds
 export const maxDuration = 30;
 
 // Type definitions
-interface L3Chunk {
+type Level3Chunk = {
   id: string;
   title: string;
   summary: string;
-  content: string;
   page: number;
   section: string;
-}
+  content: string;
+};
 
-interface L2Chunk {
+type Level2Chunk = {
   id: string;
   title: string;
   summary: string;
-  level3: L3Chunk[];
-}
+  children: Level3Chunk[];
+};
 
-interface L1Chunk {
+type Level1Chunk = {
   id: string;
   title: string;
   summary: string;
-  level2: L2Chunk[];
-}
-
-interface ManualData {
-  chunks: L1Chunk[];
-}
-
-const data = manualData as ManualData;
+  children: Level2Chunk[];
+};
 
 export async function POST(req: Request) {
-  const { messages } = await req.json();
-  const userQuery = messages[messages.length - 1].content;
+  const { messages }: { messages: UIMessage[] } = await req.json();
 
-  const encoder = new TextEncoder();
-  const stream = new ReadableStream({
-    async start(controller) {
-      const sendThinking = (message: string) => {
-        const chunk = `0:${JSON.stringify([{ type: "text", text: message }])}\n`;
-        controller.enqueue(encoder.encode(chunk));
-      };
-
-      const sendFinalAnswer = (answer: string) => {
-        const chunk = `0:${JSON.stringify([{ type: "text", text: answer }])}\n`;
-        controller.enqueue(encoder.encode(chunk));
-      };
-
-      try {
-        let attempts = 0;
-        const attemptHistory: Array<{ level: number; selected: string; confidence: number }> = [];
-
-        // Level 1: Select top-level category
-        sendThinking("🔍 Analyzing your question...");
-
-        // Check if question is in scope
-        const l1Titles = data.chunks.map((c) => `${c.id}: ${c.title}`).join(", ");
-        
-        const scopeCheck = await generateObject({
-          model: MODEL,
-          schema: z.object({
-            inScope: z.boolean().describe("true if question can be answered using manual topics"),
-            reasoning: z.string().describe("brief explanation of decision"),
-          }),
-          prompt: `Available manual topics: ${l1Titles}
-
-User question: "${userQuery}"
-
-Can this question be answered using ONLY information from these manual topics? If it's general knowledge or unrelated, return false.`,
-        });
-
-        attempts++;
-
-        if (!scopeCheck.object.inScope) {
-          sendFinalAnswer(
-            `I apologize, but I can only answer questions related to the manual topics. The available topics are:\n\n${data.chunks.map((c) => `• ${c.title}`).join("\n")}\n\nPlease ask a question related to these areas, or contact support for other inquiries.`
-          );
-          controller.close();
-          return;
-        }
-
-        sendThinking("📚 Searching through manual categories...");
-
-        const l1Options = data.chunks.map((chunk) => ({
-          id: chunk.id,
-          title: chunk.title,
-          summary: chunk.summary,
-        }));
-
-        const l1Selection = await generateObject({
-          model: MODEL,
-          schema: z.object({
-            selectedChunkId: z.string().describe("ID of the most relevant L1 chunk"),
-            confidence: z.number().min(0).max(1).describe("confidence score 0-1"),
-            reasoning: z.string().describe("why this category was selected"),
-          }),
-          prompt: `User question: "${userQuery}"
-
-Available categories:
-${l1Options.map((o) => `${o.id}: ${o.title} - ${o.summary}`).join("\n")}
-
-Select the ONE most relevant category ID that would contain the answer to the user's question.`,
-        });
-
-        attempts++;
-        attemptHistory.push({
-          level: 1,
-          selected: l1Selection.object.selectedChunkId,
-          confidence: l1Selection.object.confidence,
-        });
-
-        if (l1Selection.object.confidence < CONFIDENCE_THRESHOLD || attempts >= MAX_ATTEMPTS) {
-          sendFinalAnswer(
-            `I attempted to find an answer but couldn't locate relevant information with high confidence.\n\n**Attempted path:**\n${attemptHistory.map((h) => `Level ${h.level}: ${h.selected} (${Math.round(h.confidence * 100)}% confidence)`).join("\n")}\n\nPlease contact support or provide feedback to help us improve.`
-          );
-          controller.close();
-          return;
-        }
-
-        const selectedL1 = data.chunks.find((c) => c.id === l1Selection.object.selectedChunkId);
-        if (!selectedL1) throw new Error("L1 chunk not found");
-
-        sendThinking(`✓ Found category: ${selectedL1.title}`);
-
-        // Level 2: Select sub-topic
-        sendThinking("🔎 Narrowing down to specific topic...");
-
-        const l2Options = selectedL1.level2.map((chunk) => ({
-          id: chunk.id,
-          title: chunk.title,
-          summary: chunk.summary,
-        }));
-
-        const l2Selection = await generateObject({
-          model: MODEL,
-          schema: z.object({
-            selectedChunkId: z.string().describe("ID of the most relevant L2 chunk"),
-            confidence: z.number().min(0).max(1).describe("confidence score 0-1"),
-            reasoning: z.string().describe("why this sub-topic was selected"),
-          }),
-          prompt: `User question: "${userQuery}"
-
-Under category "${selectedL1.title}", available sub-topics:
-${l2Options.map((o) => `${o.id}: ${o.title} - ${o.summary}`).join("\n")}
-
-Select the ONE most relevant sub-topic ID that would contain the answer.`,
-        });
-
-        attempts++;
-        attemptHistory.push({
-          level: 2,
-          selected: l2Selection.object.selectedChunkId,
-          confidence: l2Selection.object.confidence,
-        });
-
-        if (l2Selection.object.confidence < CONFIDENCE_THRESHOLD) {
-          if (attempts >= MAX_ATTEMPTS) {
-            sendFinalAnswer(
-              `I attempted to find an answer but couldn't locate relevant information with high confidence.\n\n**Attempted path:**\n${attemptHistory.map((h) => `Level ${h.level}: ${h.selected} (${Math.round(h.confidence * 100)}% confidence)`).join("\n")}\n\nPlease contact support or provide feedback to help us improve.`
-            );
-            controller.close();
-            return;
+  const result = streamText({
+    model: "google/gemini-2.0-flash",
+    messages: convertToModelMessages(messages),
+    system: `You are a helpful assistant that answers questions using information from a manual.
+You have access to tools that help you navigate through the manual hierarchically.
+IMPORTANT: Only answer questions that can be found in the manual chunks provided to you.
+If a question is completely unrelated to the manual topics, use the appropriate tool to indicate this.`,
+    maxSteps: MAX_ATTEMPTS,
+    tools: {
+      // Level 1: Check if question is in scope and select top-level category
+      selectLevel1Category: tool({
+        description: `Analyze the user's question and select the most relevant top-level category from the manual.
+Use this tool first to determine if the question can be answered using the manual.`,
+        inputSchema: z.object({
+          userQuestion: z.string().describe("The user's original question"),
+          availableCategories: z
+            .array(
+              z.object({
+                id: z.string(),
+                title: z.string(),
+                summary: z.string(),
+              })
+            )
+            .describe("Top-level categories available"),
+          isInScope: z
+            .boolean()
+            .describe(
+              "Whether the question can be answered using the available categories"
+            ),
+          selectedChunkId: z
+            .string()
+            .optional()
+            .describe(
+              "The ID of the selected category (only if isInScope is true)"
+            ),
+          confidence: z
+            .number()
+            .min(0)
+            .max(1)
+            .describe("Confidence level in the selection (0-1)"),
+          reasoning: z
+            .string()
+            .describe("Brief explanation of why this category was chosen"),
+        }),
+        execute: async ({
+          isInScope,
+          selectedChunkId,
+          confidence,
+          reasoning,
+        }) => {
+          if (!isInScope) {
+            return {
+              status: "out_of_scope",
+              message:
+                "This question appears to be outside the scope of the manual.",
+            };
           }
-          // Backtrack to L1
-          sendThinking("⚠️ Low confidence, trying alternative category...");
-          // For simplicity, we'll just proceed with lower confidence
-        }
 
-        const selectedL2 = selectedL1.level2.find((c) => c.id === l2Selection.object.selectedChunkId);
-        if (!selectedL2) throw new Error("L2 chunk not found");
+          if (confidence < CONFIDENCE_THRESHOLD) {
+            return {
+              status: "low_confidence",
+              confidence,
+              reasoning,
+            };
+          }
 
-        sendThinking(`✓ Found topic: ${selectedL2.title}`);
+          const selectedChunk = (manualChunks as Level1Chunk[]).find(
+            (chunk) => chunk.id === selectedChunkId
+          );
 
-        // Level 3: Generate final answer with streaming
-        sendThinking("💡 Generating your answer...");
+          if (!selectedChunk) {
+            return {
+              status: "error",
+              message: "Selected category not found",
+            };
+          }
 
-        const l3Options = selectedL2.level3.map((chunk) => ({
-          id: chunk.id,
-          title: chunk.title,
-          summary: chunk.summary,
-          content: chunk.content,
-          page: chunk.page,
-          section: chunk.section,
-        }));
+          return {
+            status: "success",
+            selectedCategory: selectedChunk.title,
+            confidence,
+            reasoning,
+            nextLevel: selectedChunk.children.map((child) => ({
+              id: child.id,
+              title: child.title,
+              summary: child.summary,
+            })),
+          };
+        },
+      }),
 
-        const l3Prompt = `User question: "${userQuery}"
+      // Level 2: Select subcategory
+      selectLevel2Subcategory: tool({
+        description: `Select the most relevant subcategory from the previously selected top-level category.`,
+        inputSchema: z.object({
+          userQuestion: z.string().describe("The user's original question"),
+          parentCategory: z.string().describe("The parent category selected"),
+          availableSubcategories: z
+            .array(
+              z.object({
+                id: z.string(),
+                title: z.string(),
+                summary: z.string(),
+              })
+            )
+            .describe("Available subcategories"),
+          selectedChunkId: z
+            .string()
+            .describe("The ID of the selected subcategory"),
+          confidence: z
+            .number()
+            .min(0)
+            .max(1)
+            .describe("Confidence level in the selection (0-1)"),
+          reasoning: z
+            .string()
+            .describe("Brief explanation of why this subcategory was chosen"),
+        }),
+        execute: async ({ selectedChunkId, confidence, reasoning }) => {
+          if (confidence < CONFIDENCE_THRESHOLD) {
+            return {
+              status: "low_confidence",
+              confidence,
+              reasoning,
+              suggestion: "backtrack_to_level1",
+            };
+          }
 
-Available solutions:
-${l3Options.map((o) => `${o.id}: ${o.title} - ${o.summary}`).join("\n")}
+          // Find the selected L2 chunk across all L1 chunks
+          let selectedChunk: Level2Chunk | undefined;
+          for (const l1 of manualChunks as Level1Chunk[]) {
+            selectedChunk = l1.children.find(
+              (child) => child.id === selectedChunkId
+            );
+            if (selectedChunk) break;
+          }
 
-Based on the user's question, provide a natural language answer using the most relevant solution. Be helpful and concise.`;
+          if (!selectedChunk) {
+            return {
+              status: "error",
+              message: "Selected subcategory not found",
+            };
+          }
 
-        const finalAnswer = await generateObject({
-          model: MODEL,
-          schema: z.object({
-            answer: z.string().describe("natural language answer to user's question"),
-            confidence: z.number().min(0).max(1).describe("confidence in this answer 0-1"),
-            sourceChunkId: z.string().describe("which L3 chunk was used"),
-            reasoning: z.string().describe("why this answer was provided"),
-          }),
-          prompt: l3Prompt,
-        });
+          return {
+            status: "success",
+            selectedSubcategory: selectedChunk.title,
+            confidence,
+            reasoning,
+            nextLevel: selectedChunk.children.map((child) => ({
+              id: child.id,
+              title: child.title,
+              summary: child.summary,
+              page: child.page,
+            })),
+          };
+        },
+      }),
 
-        attempts++;
+      // Level 3: Generate final answer
+      generateFinalAnswer: tool({
+        description: `Generate a natural language answer to the user's question using the detailed content from the selected solution.
+This is the final step - provide a comprehensive answer.`,
+        inputSchema: z.object({
+          userQuestion: z.string().describe("The user's original question"),
+          availableSolutions: z
+            .array(
+              z.object({
+                id: z.string(),
+                title: z.string(),
+                summary: z.string(),
+                page: z.number(),
+              })
+            )
+            .describe("Available detailed solutions"),
+          selectedChunkId: z
+            .string()
+            .describe("The ID of the solution chunk to use for the answer"),
+          confidence: z
+            .number()
+            .min(0)
+            .max(1)
+            .describe("Confidence level in this being the correct solution"),
+          reasoning: z
+            .string()
+            .describe("Brief explanation of why this solution was chosen"),
+        }),
+        execute: async ({ selectedChunkId, confidence }) => {
+          if (confidence < CONFIDENCE_THRESHOLD) {
+            return {
+              status: "low_confidence",
+              confidence,
+              suggestion: "backtrack_to_level2",
+            };
+          }
 
-        const sourceChunk = l3Options.find((c) => c.id === finalAnswer.object.sourceChunkId);
-        if (!sourceChunk) throw new Error("Source chunk not found");
+          // Find the selected L3 chunk
+          let selectedChunk: Level3Chunk | undefined;
+          for (const l1 of manualChunks as Level1Chunk[]) {
+            for (const l2 of l1.children) {
+              selectedChunk = l2.children.find(
+                (child) => child.id === selectedChunkId
+              );
+              if (selectedChunk) break;
+            }
+            if (selectedChunk) break;
+          }
 
-        // Build final response
-        const confidencePercent = Math.round(finalAnswer.object.confidence * 100);
-        const confidenceEmoji = confidencePercent >= 80 ? "✅" : confidencePercent >= 50 ? "⚠️" : "❌";
+          if (!selectedChunk) {
+            return {
+              status: "error",
+              message: "Selected solution not found",
+            };
+          }
 
-        const response = `${finalAnswer.object.answer}
+          return {
+            status: "ready_to_answer",
+            content: selectedChunk.content,
+            page: selectedChunk.page,
+            section: selectedChunk.section,
+            title: selectedChunk.title,
+            confidence,
+            manualLink: `/manual.pdf#page=${selectedChunk.page}`,
+          };
+        },
+      }),
 
----
-${confidenceEmoji} **Confidence:** ${confidencePercent}%
-📍 **Source:** ${selectedL1.title} → ${selectedL2.title} → ${sourceChunk.title}
-📄 **Manual Reference:** Page ${sourceChunk.page} | [View in manual](manual.pdf#page=${sourceChunk.page})
-🔍 **Section:** ${sourceChunk.section}`;
-
-        sendFinalAnswer(response);
-        controller.close();
-      } catch (error) {
-        console.error("Error in iterative RAG:", error);
-        sendFinalAnswer(
-          "An error occurred while processing your question. Please try again or contact support."
-        );
-        controller.close();
-      }
+      // Fallback tool when out of scope
+      handleOutOfScope: tool({
+        description: `Use this when the user's question is completely unrelated to the manual topics.`,
+        inputSchema: z.object({
+          userQuestion: z.string().describe("The user's question"),
+          reason: z
+            .string()
+            .describe("Why this question is out of scope"),
+        }),
+        execute: async ({ reason }) => {
+          return {
+            status: "out_of_scope",
+            message:
+              "I can only answer questions related to the user manual. Please ask questions about account management, security & privacy, notifications, billing & payments, or troubleshooting.",
+            reason,
+          };
+        },
+      }),
+    },
+    onStepStart: ({ toolCall }) => {
+      console.log(`Tool started: ${toolCall.toolName}`);
     },
   });
 
-  return new Response(stream, {
-    headers: {
-      "Content-Type": "text/plain; charset=utf-8",
-      "X-Vercel-AI-Data-Stream": "v1",
-    },
-  });
+  return result.toUIMessageStreamResponse();
 }

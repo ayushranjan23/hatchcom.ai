@@ -1,0 +1,251 @@
+[
+  {
+    "id": "L1-001",
+    "title": "Account Management",
+    "summary": "User account settings and profile management",
+    "children": [
+      {
+        "id": "L2-001",
+        "title": "Password Settings",
+        "summary": "Password reset and security options",
+        "children": [
+          {
+            "id": "L3-001",
+            "title": "Reset Password",
+            "summary": "Recover account access using email verification",
+            "page": 5,
+            "section": "Account/Security/Password Reset",
+            "content": "To reset your password, navigate to the login page and click 'Forgot Password'. Enter your registered email address and click 'Send Reset Link'. You'll receive an email within 5 minutes with a secure link. Click the link (valid for 24 hours) and enter your new password. Your password must be at least 8 characters with one uppercase letter, one number, and one special character. After successfully resetting, you'll be automatically logged in to your account."
+          },
+          {
+            "id": "L3-002",
+            "title": "Change Password",
+            "summary": "Update your current password for security",
+            "page": 6,
+            "section": "Account/Security/Change Password",
+            "content": "To change your password while logged in, go to Settings > Security > Password. Enter your current password for verification, then type your new password twice to confirm. Your new password must meet security requirements: minimum 8 characters, at least one uppercase letter, one number, and one special character. Click 'Update Password' to save changes. You'll remain logged in on your current device but will be logged out from all other devices for security."
+          }
+        ]
+      },
+      {
+        "id": "L2-002",
+        "title": "Profile Management",
+        "summary": "Update personal information and preferences",
+        "children": [
+          {
+            "id": "L3-003",
+            "title": "Edit Profile Info",
+            "summary": "Modify name, email, and contact details",
+            "page": 8,
+            "section": "Account/Profile/Edit Information",
+            "content": "To edit your profile information, click on your profile icon in the top-right corner and select 'Profile Settings'. You can update your display name, bio, phone number, and profile picture. To change your email address, enter the new email and verify it through the confirmation link sent to that address. Changes to your name and bio are instant, while email changes require verification within 48 hours. Your profile picture must be in JPG or PNG format and under 5MB."
+          },
+          {
+            "id": "L3-004",
+            "title": "Delete Account",
+            "summary": "Permanently remove your account and data",
+            "page": 9,
+            "section": "Account/Profile/Delete Account",
+            "content": "To delete your account permanently, go to Settings > Account > Delete Account. You'll be asked to confirm by entering your password and typing 'DELETE' to proceed. Warning: This action is irreversible. All your data, including saved preferences, history, and uploaded content will be permanently deleted within 30 days. You can cancel the deletion within the first 7 days by logging back in. After deletion, your email address will be released and can be used to create a new account after 90 days."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "L1-002",
+    "title": "Security & Privacy",
+    "summary": "Account security features and privacy controls",
+    "children": [
+      {
+        "id": "L2-003",
+        "title": "Two-Factor Authentication",
+        "summary": "Enable 2FA for enhanced security",
+        "children": [
+          {
+            "id": "L3-005",
+            "title": "Enable 2FA",
+            "summary": "Set up two-factor authentication using authenticator app",
+            "page": 12,
+            "section": "Security/2FA/Enable",
+            "content": "To enable two-factor authentication, go to Settings > Security > Two-Factor Authentication. Click 'Enable 2FA' and choose your preferred method: Authenticator App (recommended) or SMS. For Authenticator App, scan the QR code with Google Authenticator or Authy. Enter the 6-digit code to verify setup. Save your backup codes in a secure location - you'll need these if you lose access to your authenticator. Once enabled, you'll need to enter a code from your authenticator app every time you log in from a new device."
+          },
+          {
+            "id": "L3-006",
+            "title": "Disable 2FA",
+            "summary": "Remove two-factor authentication from account",
+            "page": 13,
+            "section": "Security/2FA/Disable",
+            "content": "To disable two-factor authentication, navigate to Settings > Security > Two-Factor Authentication. Click 'Disable 2FA' and enter your current password for verification. You'll also need to provide a 6-digit code from your authenticator app or use one of your backup codes. Confirm the action by clicking 'Yes, Disable 2FA'. Warning: Disabling 2FA makes your account less secure. We strongly recommend keeping it enabled, especially if you handle sensitive information."
+          }
+        ]
+      },
+      {
+        "id": "L2-004",
+        "title": "Privacy Settings",
+        "summary": "Control data sharing and visibility",
+        "children": [
+          {
+            "id": "L3-007",
+            "title": "Profile Visibility",
+            "summary": "Control who can view your profile",
+            "page": 15,
+            "section": "Security/Privacy/Profile Visibility",
+            "content": "To manage your profile visibility, go to Settings > Privacy > Profile Visibility. You have three options: Public (anyone can view your profile), Friends Only (only approved contacts), or Private (only you can see your profile). You can also customize individual elements like profile picture, bio, and activity status separately. Changes take effect immediately. Note that even with a Private profile, your name and profile picture may still be visible in shared spaces or group activities."
+          },
+          {
+            "id": "L3-008",
+            "title": "Data Export",
+            "summary": "Download a copy of your personal data",
+            "page": 16,
+            "section": "Security/Privacy/Data Export",
+            "content": "To export your personal data, navigate to Settings > Privacy > Download Your Data. Click 'Request Data Export' and select which data types you want to include: Profile Information, Activity History, Messages, or All Data. The export request will be processed within 48 hours. You'll receive an email when your download is ready. The download link is valid for 7 days and can be accessed up to 3 times. Your data will be provided in JSON format in a ZIP file."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "L1-003",
+    "title": "Notifications",
+    "summary": "Manage alerts and notification preferences",
+    "children": [
+      {
+        "id": "L2-005",
+        "title": "Email Notifications",
+        "summary": "Configure email alert settings",
+        "children": [
+          {
+            "id": "L3-009",
+            "title": "Email Preferences",
+            "summary": "Choose which emails you receive",
+            "page": 18,
+            "section": "Notifications/Email/Preferences",
+            "content": "To manage email notifications, go to Settings > Notifications > Email. You can enable or disable different types of emails: Account Activity (login alerts, password changes), Product Updates (new features, maintenance), Marketing (newsletters, promotions), and Social (mentions, comments). Toggle each category on or off based on your preference. You can also set email frequency: Instant, Daily Digest, or Weekly Summary. Critical security notifications cannot be disabled. Changes apply immediately to future emails."
+          }
+        ]
+      },
+      {
+        "id": "L2-006",
+        "title": "Push Notifications",
+        "summary": "Manage mobile and desktop alerts",
+        "children": [
+          {
+            "id": "L3-010",
+            "title": "Push Settings",
+            "summary": "Configure real-time push notifications",
+            "page": 20,
+            "section": "Notifications/Push/Settings",
+            "content": "To configure push notifications, go to Settings > Notifications > Push Notifications. Enable or disable notifications for different categories: Messages (instant messages, replies), Activity (likes, follows, mentions), and System (updates, reminders). You can customize notification sounds and set Quiet Hours to mute notifications during specific times. On mobile, manage per-app notification permissions in your device settings. Desktop notifications require browser permission - click 'Enable Notifications' when prompted. You can test notifications using the 'Send Test Notification' button."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "L1-004",
+    "title": "Billing & Payments",
+    "summary": "Subscription management and payment methods",
+    "children": [
+      {
+        "id": "L2-007",
+        "title": "Subscription Plans",
+        "summary": "View and modify your subscription",
+        "children": [
+          {
+            "id": "L3-011",
+            "title": "Upgrade Plan",
+            "summary": "Switch to a higher tier subscription",
+            "page": 22,
+            "section": "Billing/Subscription/Upgrade",
+            "content": "To upgrade your subscription, navigate to Settings > Billing > Subscription Plans. Compare available plans (Free, Pro, Enterprise) and click 'Upgrade' on your desired tier. Review the features and pricing, then click 'Confirm Upgrade'. Enter your payment information if not already saved. The upgrade takes effect immediately and you'll be charged a prorated amount for the current billing period. You'll gain instant access to premium features including increased storage, priority support, and advanced analytics."
+          },
+          {
+            "id": "L3-012",
+            "title": "Cancel Subscription",
+            "summary": "Downgrade or cancel your paid plan",
+            "page": 23,
+            "section": "Billing/Subscription/Cancel",
+            "content": "To cancel your subscription, go to Settings > Billing > Manage Subscription. Click 'Cancel Subscription' and select a reason from the dropdown (optional but helps us improve). Confirm cancellation by clicking 'Yes, Cancel'. Your premium features will remain active until the end of your current billing period. No refunds are provided for partial months. After cancellation, your account automatically downgrades to the Free plan. You can reactivate your subscription anytime without losing your data."
+          }
+        ]
+      },
+      {
+        "id": "L2-008",
+        "title": "Payment Methods",
+        "summary": "Manage cards and billing information",
+        "children": [
+          {
+            "id": "L3-013",
+            "title": "Add Payment Method",
+            "summary": "Link a new credit or debit card",
+            "page": 25,
+            "section": "Billing/Payment/Add Method",
+            "content": "To add a payment method, visit Settings > Billing > Payment Methods. Click 'Add Payment Method' and enter your card details: card number, expiration date, CVV, and billing address. We accept Visa, Mastercard, American Express, and Discover. Your information is securely encrypted using PCI-DSS compliant standards. You can save multiple payment methods and set one as default. The default card will be used for all future charges including subscription renewals and one-time purchases."
+          },
+          {
+            "id": "L3-014",
+            "title": "Update Billing Info",
+            "summary": "Change billing address or payment details",
+            "page": 26,
+            "section": "Billing/Payment/Update Info",
+            "content": "To update billing information, go to Settings > Billing > Payment Methods. Click the three dots next to your payment method and select 'Edit'. You can update the billing address, expiration date, or replace the card entirely. For security, you'll need to re-enter the CVV code even for address changes. Updates take effect immediately for future charges. If your card is about to expire, we'll send email reminders starting 30 days before expiration to avoid service interruptions."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "L1-005",
+    "title": "Troubleshooting",
+    "summary": "Common issues and solutions",
+    "children": [
+      {
+        "id": "L2-009",
+        "title": "Login Issues",
+        "summary": "Fix problems accessing your account",
+        "children": [
+          {
+            "id": "L3-015",
+            "title": "Forgot Username",
+            "summary": "Recover your account username",
+            "page": 28,
+            "section": "Troubleshooting/Login/Forgot Username",
+            "content": "If you've forgotten your username, go to the login page and click 'Forgot Username' below the login form. Enter the email address associated with your account and click 'Send Username'. Check your email inbox (and spam folder) for a message containing your username. If you don't receive an email within 10 minutes, verify that you entered the correct email address. If you no longer have access to that email, contact support with proof of identity (photo ID and account creation date) for manual verification."
+          },
+          {
+            "id": "L3-016",
+            "title": "Account Locked",
+            "summary": "Unlock account after multiple failed attempts",
+            "page": 29,
+            "section": "Troubleshooting/Login/Account Locked",
+            "content": "Your account is automatically locked after 5 consecutive failed login attempts to protect against unauthorized access. The lock lasts for 30 minutes. You can wait for the lockout period to expire, or click 'Unlock My Account' on the login page to receive a unlock link via email. The unlock link is valid for 1 hour. Once unlocked, you can attempt to log in again. If you continue having issues, use the 'Forgot Password' option to reset your password. For persistent problems, contact our security team."
+          }
+        ]
+      },
+      {
+        "id": "L2-010",
+        "title": "Performance Issues",
+        "summary": "Resolve slow loading and errors",
+        "children": [
+          {
+            "id": "L3-017",
+            "title": "Clear Cache",
+            "summary": "Fix loading issues by clearing browser data",
+            "page": 31,
+            "section": "Troubleshooting/Performance/Clear Cache",
+            "content": "If pages are loading slowly or not displaying correctly, clearing your browser cache often resolves the issue. In Chrome: press Ctrl+Shift+Delete (Windows) or Cmd+Shift+Delete (Mac), select 'Cached images and files', choose 'All time' as the time range, and click 'Clear data'. In Firefox: press Ctrl+Shift+Delete, check 'Cache', and click 'Clear Now'. After clearing cache, refresh the page (F5) or fully reload (Ctrl+F5). If issues persist, try using Incognito/Private mode to rule out extensions or cookies causing conflicts."
+          },
+          {
+            "id": "L3-018",
+            "title": "Connection Timeout",
+            "summary": "Resolve network connectivity errors",
+            "page": 32,
+            "section": "Troubleshooting/Performance/Connection Timeout",
+            "content": "Connection timeout errors typically indicate network issues. First, check your internet connection by visiting other websites. If only our service is affected, check our status page (status.example.com) for known outages. Try disabling VPN or proxy servers temporarily as they may interfere with connections. Restart your router by unplugging it for 30 seconds. Flush your DNS cache by opening Command Prompt (Windows) or Terminal (Mac) and running 'ipconfig /flushdns' or 'sudo killall -HUP mDNSResponder'. If problems persist after these steps, contact your ISP or our technical support team."
+          }
+        ]
+      }
+    ]
+  }
+]
