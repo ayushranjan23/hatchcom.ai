@@ -40,7 +40,6 @@ export async function POST(req: Request) {
   const result = streamText({
     model: "google/gemini-2.0-flash",
     messages,
-    maxSteps: MAX_ATTEMPTS,
     tools: {
       // Level 1: Analyze top-level categories
       analyzeCategories: tool({
