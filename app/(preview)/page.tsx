@@ -202,7 +202,7 @@ const Loading = ({ tool }: { tool?: string }) => {
       ? "Getting information"
       : tool === "addResource"
         ? "Adding information"
-        : "Thinking";
+        : "test for thinking instead";
 
   return (
     <AnimatePresence mode="wait">
