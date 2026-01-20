@@ -15,281 +15,227 @@ const CONFIDENCE_THRESHOLD = 0.3;
 // Allow streaming responses up to 30 seconds
 export const maxDuration = 30;
 
-// Type definitions
+// Types for our nested JSON structure
 type Level3Chunk = {
   id: string;
   title: string;
   summary: string;
+  content: string;
   page: number;
   section: string;
-  content: string;
 };
 
 type Level2Chunk = {
   id: string;
   title: string;
   summary: string;
-  children: Level3Chunk[];
+  level3: Level3Chunk[];
 };
 
 type Level1Chunk = {
   id: string;
   title: string;
   summary: string;
-  children: Level2Chunk[];
+  level2: Level2Chunk[];
 };
 
 export async function POST(req: Request) {
   const { messages }: { messages: UIMessage[] } = await req.json();
-
+  
   const result = streamText({
     model: "google/gemini-2.0-flash",
     messages: convertToModelMessages(messages),
-    system: `You are a helpful assistant that answers questions using information from a manual.
-You have access to tools that help you navigate through the manual hierarchically.
-IMPORTANT: Only answer questions that can be found in the manual chunks provided to you.
-If a question is completely unrelated to the manual topics, use the appropriate tool to indicate this.`,
+    system: `You are a helpful manual assistant that guides users through an iterative search process.
+Follow the tool calls exactly and provide accurate responses based on the manual content.`,
     maxSteps: MAX_ATTEMPTS,
     tools: {
-      // Level 1: Check if question is in scope and select top-level category
-      selectLevel1Category: tool({
-        description: `Analyze the user's question and select the most relevant top-level category from the manual.
-Use this tool first to determine if the question can be answered using the manual.`,
+      // Level 1: Select main category
+      selectLevel1: tool({
+        description: `First step: Analyze available top-level categories and select the most relevant one.
+Only use this tool if the question can be answered from the manual. If the question is completely unrelated to any category, indicate that.`,
         inputSchema: z.object({
-          userQuestion: z.string().describe("The user's original question"),
-          availableCategories: z
-            .array(
-              z.object({
-                id: z.string(),
-                title: z.string(),
-                summary: z.string(),
-              })
-            )
-            .describe("Top-level categories available"),
-          isInScope: z
-            .boolean()
-            .describe(
-              "Whether the question can be answered using the available categories"
-            ),
-          selectedChunkId: z
-            .string()
-            .optional()
-            .describe(
-              "The ID of the selected category (only if isInScope is true)"
-            ),
-          confidence: z
-            .number()
-            .min(0)
-            .max(1)
-            .describe("Confidence level in the selection (0-1)"),
-          reasoning: z
-            .string()
-            .describe("Brief explanation of why this category was chosen"),
+          query: z.string().describe("the user's original question"),
         }),
-        execute: async ({
-          isInScope,
-          selectedChunkId,
-          confidence,
-          reasoning,
-        }) => {
-          if (!isInScope) {
-            return {
-              status: "out_of_scope",
-              message:
-                "This question appears to be outside the scope of the manual.",
-            };
-          }
+        execute: async ({ query }) => {
+          const level1Options = (manualChunks as Level1Chunk[]).map((chunk) => ({
+            id: chunk.id,
+            title: chunk.title,
+            summary: chunk.summary,
+          }));
 
-          if (confidence < CONFIDENCE_THRESHOLD) {
+          const { object } = await generateObject({
+            model: "google/gemini-2.0-flash",
+            system: `You are analyzing which top-level category best matches a user query.
+If the question is completely unrelated to all categories (e.g., general knowledge, math, current events), set isRelevant to false.
+Otherwise, select the ONE most relevant category.`,
+            schema: z.object({
+              selectedChunkId: z.string().describe("ID of selected level 1 chunk (e.g., 'L1-001')"),
+              confidence: z.number().min(0).max(1).describe("Confidence score 0-1"),
+              reasoning: z.string().describe("Why this category was selected"),
+              isRelevant: z.boolean().describe("Whether question is answerable from manual"),
+            }),
+            prompt: `Available categories:
+${level1Options.map((opt) => `- ${opt.id}: ${opt.title} - ${opt.summary}`).join("\n")}
+
+User question: "${query}"
+
+Select the most relevant category.`,
+          });
+
+          if (!object.isRelevant || object.confidence < CONFIDENCE_THRESHOLD) {
             return {
-              status: "low_confidence",
-              confidence,
-              reasoning,
+              success: false,
+              message: "Question appears unrelated to manual content",
+              ...object,
             };
           }
 
           const selectedChunk = (manualChunks as Level1Chunk[]).find(
-            (chunk) => chunk.id === selectedChunkId
+            (c) => c.id === object.selectedChunkId
           );
 
-          if (!selectedChunk) {
-            return {
-              status: "error",
-              message: "Selected category not found",
-            };
-          }
-
           return {
-            status: "success",
-            selectedCategory: selectedChunk.title,
-            confidence,
-            reasoning,
-            nextLevel: selectedChunk.children.map((child) => ({
-              id: child.id,
-              title: child.title,
-              summary: child.summary,
-            })),
+            success: true,
+            selected: selectedChunk,
+            ...object,
           };
         },
       }),
 
       // Level 2: Select subcategory
-      selectLevel2Subcategory: tool({
-        description: `Select the most relevant subcategory from the previously selected top-level category.`,
+      selectLevel2: tool({
+        description: `Second step: From the selected category, choose the most relevant subcategory.`,
         inputSchema: z.object({
-          userQuestion: z.string().describe("The user's original question"),
-          parentCategory: z.string().describe("The parent category selected"),
-          availableSubcategories: z
-            .array(
-              z.object({
-                id: z.string(),
-                title: z.string(),
-                summary: z.string(),
-              })
-            )
-            .describe("Available subcategories"),
-          selectedChunkId: z
-            .string()
-            .describe("The ID of the selected subcategory"),
-          confidence: z
-            .number()
-            .min(0)
-            .max(1)
-            .describe("Confidence level in the selection (0-1)"),
-          reasoning: z
-            .string()
-            .describe("Brief explanation of why this subcategory was chosen"),
+          query: z.string().describe("the user's original question"),
+          level1Id: z.string().describe("ID of previously selected level 1 chunk"),
         }),
-        execute: async ({ selectedChunkId, confidence, reasoning }) => {
-          if (confidence < CONFIDENCE_THRESHOLD) {
+        execute: async ({ query, level1Id }) => {
+          const level1Chunk = (manualChunks as Level1Chunk[]).find(
+            (c) => c.id === level1Id
+          );
+
+          if (!level1Chunk) {
+            return { success: false, message: "Level 1 chunk not found" };
+          }
+
+          const level2Options = level1Chunk.level2.map((chunk) => ({
+            id: chunk.id,
+            title: chunk.title,
+            summary: chunk.summary,
+          }));
+
+          const { object } = await generateObject({
+            model: "google/gemini-2.0-flash",
+            system: `You are narrowing down to a subcategory within "${level1Chunk.title}".
+Select the ONE most relevant subcategory.`,
+            schema: z.object({
+              selectedChunkId: z.string().describe("ID of selected level 2 chunk (e.g., 'L2-001')"),
+              confidence: z.number().min(0).max(1).describe("Confidence score 0-1"),
+              reasoning: z.string().describe("Why this subcategory was selected"),
+            }),
+            prompt: `You selected category: ${level1Chunk.title}
+
+Available subcategories:
+${level2Options.map((opt) => `- ${opt.id}: ${opt.title} - ${opt.summary}`).join("\n")}
+
+User question: "${query}"
+
+Select the most relevant subcategory.`,
+          });
+
+          if (object.confidence < CONFIDENCE_THRESHOLD) {
             return {
-              status: "low_confidence",
-              confidence,
-              reasoning,
-              suggestion: "backtrack_to_level1",
+              success: false,
+              message: "Low confidence, may need to go back to level 1",
+              ...object,
             };
           }
 
-          // Find the selected L2 chunk across all L1 chunks
-          let selectedChunk: Level2Chunk | undefined;
-          for (const l1 of manualChunks as Level1Chunk[]) {
-            selectedChunk = l1.children.find(
-              (child) => child.id === selectedChunkId
-            );
-            if (selectedChunk) break;
-          }
-
-          if (!selectedChunk) {
-            return {
-              status: "error",
-              message: "Selected subcategory not found",
-            };
-          }
+          const selectedChunk = level1Chunk.level2.find(
+            (c) => c.id === object.selectedChunkId
+          );
 
           return {
-            status: "success",
-            selectedSubcategory: selectedChunk.title,
-            confidence,
-            reasoning,
-            nextLevel: selectedChunk.children.map((child) => ({
-              id: child.id,
-              title: child.title,
-              summary: child.summary,
-              page: child.page,
-            })),
+            success: true,
+            selected: selectedChunk,
+            ...object,
           };
         },
       }),
 
       // Level 3: Generate final answer
-      generateFinalAnswer: tool({
-        description: `Generate a natural language answer to the user's question using the detailed content from the selected solution.
-This is the final step - provide a comprehensive answer.`,
+      answerFromLevel3: tool({
+        description: `Final step: Generate a natural language answer based on the most specific content.`,
         inputSchema: z.object({
-          userQuestion: z.string().describe("The user's original question"),
-          availableSolutions: z
-            .array(
-              z.object({
-                id: z.string(),
-                title: z.string(),
-                summary: z.string(),
-                page: z.number(),
-              })
-            )
-            .describe("Available detailed solutions"),
-          selectedChunkId: z
-            .string()
-            .describe("The ID of the solution chunk to use for the answer"),
-          confidence: z
-            .number()
-            .min(0)
-            .max(1)
-            .describe("Confidence level in this being the correct solution"),
-          reasoning: z
-            .string()
-            .describe("Brief explanation of why this solution was chosen"),
+          query: z.string().describe("the user's original question"),
+          level2Id: z.string().describe("ID of previously selected level 2 chunk"),
+          level1Id: z.string().describe("ID of previously selected level 1 chunk"),
         }),
-        execute: async ({ selectedChunkId, confidence }) => {
-          if (confidence < CONFIDENCE_THRESHOLD) {
-            return {
-              status: "low_confidence",
-              confidence,
-              suggestion: "backtrack_to_level2",
-            };
+        execute: async ({ query, level2Id, level1Id }) => {
+          const level1Chunk = (manualChunks as Level1Chunk[]).find(
+            (c) => c.id === level1Id
+          );
+          const level2Chunk = level1Chunk?.level2.find((c) => c.id === level2Id);
+
+          if (!level2Chunk) {
+            return { success: false, message: "Level 2 chunk not found" };
           }
 
-          // Find the selected L3 chunk
-          let selectedChunk: Level3Chunk | undefined;
-          for (const l1 of manualChunks as Level1Chunk[]) {
-            for (const l2 of l1.children) {
-              selectedChunk = l2.children.find(
-                (child) => child.id === selectedChunkId
-              );
-              if (selectedChunk) break;
-            }
-            if (selectedChunk) break;
-          }
+          const level3Options = level2Chunk.level3.map((chunk) => ({
+            id: chunk.id,
+            title: chunk.title,
+            summary: chunk.summary,
+            page: chunk.page,
+            section: chunk.section,
+          }));
 
-          if (!selectedChunk) {
+          // For final answer, use generateObject to get structured data
+          const { object } = await generateObject({
+            model: "google/gemini-2.0-flash",
+            system: `You are providing a final answer from the manual.
+Select the most relevant specific solution and provide a helpful natural language answer.`,
+            schema: z.object({
+              answer: z.string().describe("Natural language answer to the user's question"),
+              sourceChunkId: z.string().describe("ID of the level 3 chunk used (e.g., 'L3-001')"),
+              confidence: z.number().min(0).max(1).describe("Confidence in this answer 0-1"),
+              reasoning: z.string().describe("Why this specific solution was chosen"),
+            }),
+            prompt: `Available solutions in "${level2Chunk.title}":
+${level3Options.map((opt) => `- ${opt.id}: ${opt.title} - ${opt.summary} (Page ${opt.page})`).join("\n")}
+
+User question: "${query}"
+
+Provide a natural language answer based on the most relevant solution.`,
+          });
+
+          const sourceChunk = level2Chunk.level3.find(
+            (c) => c.id === object.sourceChunkId
+          );
+
+          if (!sourceChunk) {
             return {
-              status: "error",
-              message: "Selected solution not found",
+              success: false,
+              message: "Source chunk not found",
             };
           }
 
           return {
-            status: "ready_to_answer",
-            content: selectedChunk.content,
-            page: selectedChunk.page,
-            section: selectedChunk.section,
-            title: selectedChunk.title,
-            confidence,
-            manualLink: `/manual.pdf#page=${selectedChunk.page}`,
+            success: true,
+            answer: object.answer,
+            confidence: object.confidence,
+            source: sourceChunk.title,
+            page: sourceChunk.page,
+            section: sourceChunk.section,
+            manualLink: `/manual.pdf#page=${sourceChunk.page}`,
+            decisionPath: {
+              level1: level1Chunk?.title,
+              level2: level2Chunk.title,
+              level3: sourceChunk.title,
+            },
+            reasoning: object.reasoning,
           };
         },
       }),
-
-      // Fallback tool when out of scope
-      handleOutOfScope: tool({
-        description: `Use this when the user's question is completely unrelated to the manual topics.`,
-        inputSchema: z.object({
-          userQuestion: z.string().describe("The user's question"),
-          reason: z
-            .string()
-            .describe("Why this question is out of scope"),
-        }),
-        execute: async ({ reason }) => {
-          return {
-            status: "out_of_scope",
-            message:
-              "I can only answer questions related to the user manual. Please ask questions about account management, security & privacy, notifications, billing & payments, or troubleshooting.",
-            reason,
-          };
-        },
-      }),
-    },
-    onStepStart: ({ toolCall }) => {
-      console.log(`Tool started: ${toolCall.toolName}`);
     },
   });
 
