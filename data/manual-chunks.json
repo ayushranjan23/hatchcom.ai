@@ -1,242 +1,172 @@
-[
-  {
-    "id": "L1-001",
-    "title": "Account Access",
-    "summary": "Sign-in, credentials, and security basics",
-    "page": 1,
-    "children": [
-      {
-        "id": "L2-001",
-        "title": "Credentials",
-        "summary": "Passwords, recovery, and email changes",
-        "page": 3,
-        "children": [
-          {
-            "id": "L3-001",
-            "title": "Reset Password",
-            "summary": "Recover access when password is forgotten",
-            "page": 5,
-            "section": "Account/Access/Credentials/Reset",
-            "manualLink": "#page=5",
-            "content": "#"
-          },
-          {
-            "id": "L3-002",
-            "title": "Change Email",
-            "summary": "Update primary login email",
-            "page": 6,
-            "section": "Account/Access/Credentials/Email",
-            "manualLink": "#page=6",
-            "content": "#"
-          }
-        ]
-      },
-      {
-        "id": "L2-002",
-        "title": "Security",
-        "summary": "2FA, sessions, and device trust",
-        "page": 4,
-        "children": [
-          {
-            "id": "L3-003",
-            "title": "Enable 2FA",
-            "summary": "Turn on two-factor authentication",
-            "page": 7,
-            "section": "Account/Access/Security/2FA",
-            "manualLink": "#page=7",
-            "content": "#"
-          },
-          {
-            "id": "L3-004",
-            "title": "Session Timeout",
-            "summary": "Adjust session expiration and auto-logout",
-            "page": 8,
-            "section": "Account/Access/Security/Timeout",
-            "manualLink": "#page=8",
-            "content": "#"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "L1-002",
-    "title": "Workspace Setup",
-    "summary": "Provisioning projects and environments",
-    "page": 2,
-    "children": [
-      {
-        "id": "L2-003",
-        "title": "Projects",
-        "summary": "Create, rename, and archive workspaces",
-        "page": 9,
-        "children": [
-          {
-            "id": "L3-005",
-            "title": "Create Project",
-            "summary": "Start a new project with defaults",
-            "page": 10,
-            "section": "Workspace/Projects/Create",
-            "manualLink": "#page=10",
-            "content": "#"
-          },
-          {
-            "id": "L3-006",
-            "title": "Archive Project",
-            "summary": "Safely archive and restore projects",
-            "page": 11,
-            "section": "Workspace/Projects/Archive",
-            "manualLink": "#page=11",
-            "content": "#"
-          }
-        ]
-      },
-      {
-        "id": "L2-004",
-        "title": "Environments",
-        "summary": "Dev/stage/prod configuration",
-        "page": 12,
-        "children": [
-          {
-            "id": "L3-007",
-            "title": "Add Environment",
-            "summary": "Create a new environment tier",
-            "page": 13,
-            "section": "Workspace/Environments/Add",
-            "manualLink": "#page=13",
-            "content": "#"
-          },
-          {
-            "id": "L3-008",
-            "title": "Deploy Settings",
-            "summary": "Configure deployment rules",
-            "page": 14,
-            "section": "Workspace/Environments/Deploy",
-            "manualLink": "#page=14",
-            "content": "#"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "L1-003",
-    "title": "Data Management",
-    "summary": "Imports, exports, and backups",
-    "page": 3,
-    "children": [
-      {
-        "id": "L2-005",
-        "title": "Import",
-        "summary": "Bring data into the workspace",
-        "page": 15,
-        "children": [
-          {
-            "id": "L3-009",
-            "title": "CSV Import",
-            "summary": "Map columns and validate records",
-            "page": 16,
-            "section": "Data/Import/CSV",
-            "manualLink": "#page=16",
-            "content": "#"
-          },
-          {
-            "id": "L3-010",
-            "title": "API Import",
-            "summary": "Pull data via API",
-            "page": 17,
-            "section": "Data/Import/API",
-            "manualLink": "#page=17",
-            "content": "#"
-          }
-        ]
-      },
-      {
-        "id": "L2-006",
-        "title": "Backup",
-        "summary": "Snapshots and retention",
-        "page": 18,
-        "children": [
-          {
-            "id": "L3-011",
-            "title": "Schedule Backup",
-            "summary": "Configure automated backups",
-            "page": 19,
-            "section": "Data/Backup/Schedule",
-            "manualLink": "#page=19",
-            "content": "#"
-          },
-          {
-            "id": "L3-012",
-            "title": "Restore Backup",
-            "summary": "Recover data from snapshot",
-            "page": 20,
-            "section": "Data/Backup/Restore",
-            "manualLink": "#page=20",
-            "content": "#"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "L1-004",
-    "title": "Notifications",
-    "summary": "Email and in-app alerts",
-    "page": 4,
-    "children": [
-      {
-        "id": "L2-007",
-        "title": "Email",
-        "summary": "Digest, alerts, and frequency",
-        "page": 21,
-        "children": [
-          {
-            "id": "L3-013",
-            "title": "Configure Alerts",
-            "summary": "Set alert rules and recipients",
-            "page": 22,
-            "section": "Notifications/Email/Alerts",
-            "manualLink": "#page=22",
-            "content": "#"
-          },
-          {
-            "id": "L3-014",
-            "title": "Digest Settings",
-            "summary": "Daily and weekly digests",
-            "page": 23,
-            "section": "Notifications/Email/Digest",
-            "manualLink": "#page=23",
-            "content": "#"
-          }
-        ]
-      },
-      {
-        "id": "L2-008",
-        "title": "In-App",
-        "summary": "Bell notifications and preferences",
-        "page": 24,
-        "children": [
-          {
-            "id": "L3-015",
-            "title": "Mute Channels",
-            "summary": "Silence noisy channels",
-            "page": 25,
-            "section": "Notifications/InApp/Mute",
-            "manualLink": "#page=25",
-            "content": "#"
-          },
-          {
-            "id": "L3-016",
-            "title": "Set Priorities",
-            "summary": "Prioritize critical alerts",
-            "page": 26,
-            "section": "Notifications/InApp/Priorities",
-            "manualLink": "#page=26",
-            "content": "#"
-          }
-        ]
-      }
-    ]
-  }
-]
+{
+  "level1": [
+    {
+      "id": "L1-001",
+      "title": "Accounts",
+      "summary": "Account creation, login, recovery",
+      "page": 1,
+      "level2": [
+        {
+          "id": "L2-001",
+          "title": "Login Issues",
+          "summary": "Password reset, MFA, lockouts",
+          "page": 3,
+          "level3": [
+            {
+              "id": "L3-001",
+              "title": "Reset Password",
+              "summary": "Reset via email",
+              "page": 5,
+              "section": "Account/Login/Reset",
+              "content": "#"
+            },
+            {
+              "id": "L3-002",
+              "title": "MFA Locked Out",
+              "summary": "Recover MFA access",
+              "page": 6,
+              "section": "Account/Login/MFA",
+              "content": "#"
+            }
+          ]
+        },
+        {
+          "id": "L2-002",
+          "title": "Profile Updates",
+          "summary": "Change email, name, notifications",
+          "page": 4,
+          "level3": [
+            {
+              "id": "L3-003",
+              "title": "Change Email",
+              "summary": "Update account email",
+              "page": 7,
+              "section": "Account/Profile/Email",
+              "content": "#"
+            },
+            {
+              "id": "L3-004",
+              "title": "Notification Settings",
+              "summary": "Manage alerts",
+              "page": 8,
+              "section": "Account/Profile/Notifications",
+              "content": "#"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L1-002",
+      "title": "Projects",
+      "summary": "Create, import, archive projects",
+      "page": 9,
+      "level2": [
+        {
+          "id": "L2-003",
+          "title": "Create Projects",
+          "summary": "New project setup",
+          "page": 10,
+          "level3": [
+            {
+              "id": "L3-005",
+              "title": "New Project Wizard",
+              "summary": "Wizard flow",
+              "page": 11,
+              "section": "Projects/Create/Wizard",
+              "content": "#"
+            },
+            {
+              "id": "L3-006",
+              "title": "Import CSV",
+              "summary": "CSV import steps",
+              "page": 12,
+              "section": "Projects/Create/Import",
+              "content": "#"
+            }
+          ]
+        },
+        {
+          "id": "L2-004",
+          "title": "Archive & Restore",
+          "summary": "Archive or restore",
+          "page": 13,
+          "level3": [
+            {
+              "id": "L3-007",
+              "title": "Archive Project",
+              "summary": "How to archive",
+              "page": 14,
+              "section": "Projects/Archive",
+              "content": "#"
+            },
+            {
+              "id": "L3-008",
+              "title": "Restore Project",
+              "summary": "Recover archived",
+              "page": 15,
+              "section": "Projects/Restore",
+              "content": "#"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L1-003",
+      "title": "Billing",
+      "summary": "Plans, invoices, payments",
+      "page": 16,
+      "level2": [
+        {
+          "id": "L2-005",
+          "title": "Plans",
+          "summary": "Upgrade, downgrade",
+          "page": 17,
+          "level3": [
+            {
+              "id": "L3-009",
+              "title": "Upgrade Plan",
+              "summary": "Move to higher tier",
+              "page": 18,
+              "section": "Billing/Plans/Upgrade",
+              "content": "#"
+            },
+            {
+              "id": "L3-010",
+              "title": "Cancel Plan",
+              "summary": "Stop subscription",
+              "page": 19,
+              "section": "Billing/Plans/Cancel",
+              "content": "#"
+            }
+          ]
+        },
+        {
+          "id": "L2-006",
+          "title": "Invoices",
+          "summary": "Download, edit payment",
+          "page": 20,
+          "level3": [
+            {
+              "id": "L3-011",
+              "title": "Download Invoice",
+              "summary": "Get PDF invoice",
+              "page": 21,
+              "section": "Billing/Invoices/Download",
+              "content": "#"
+            },
+            {
+              "id": "L3-012",
+              "title": "Update Card",
+              "summary": "Change payment card",
+              "page": 22,
+              "section": "Billing/Invoices/Payment",
+              "content": "#"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
