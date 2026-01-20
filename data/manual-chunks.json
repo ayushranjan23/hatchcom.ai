@@ -1,0 +1,246 @@
+{
+  "chunks": [
+    {
+      "id": "L1-001",
+      "title": "Account Management",
+      "summary": "User account settings, profile management, and authentication.",
+      "level2": [
+        {
+          "id": "L2-001",
+          "title": "Password Settings",
+          "summary": "Password reset, change, and security requirements.",
+          "level3": [
+            {
+              "id": "L3-001",
+              "title": "Reset Password",
+              "summary": "Recover account access using email verification.",
+              "content": "To reset your password, navigate to the login page and click 'Forgot Password'. Enter your email address and we'll send you a verification code. Enter the 6-digit code within 10 minutes. Create a new password that meets our requirements: at least 8 characters, one uppercase letter, one number, and one special character. Your new password cannot be the same as your last 3 passwords.",
+              "page": 12,
+              "section": "Account/Security/Password"
+            },
+            {
+              "id": "L3-002",
+              "title": "Change Password",
+              "summary": "Update your current password in account settings.",
+              "content": "To change your password while logged in, go to Settings > Security > Password. Enter your current password for verification. Create a new password following the security requirements. Click 'Update Password'. You'll be logged out of all devices except the current one. You can change your password once every 24 hours.",
+              "page": 13,
+              "section": "Account/Security/Password"
+            },
+            {
+              "id": "L3-003",
+              "title": "Password Requirements",
+              "summary": "Security rules for creating strong passwords.",
+              "content": "All passwords must meet these requirements: Minimum 8 characters in length. At least one uppercase letter (A-Z). At least one lowercase letter (a-z). At least one number (0-9). At least one special character (!@#$%^&*). Cannot contain your username or email. Cannot be a commonly used password. Must be different from your last 3 passwords. Passwords expire every 90 days for security.",
+              "page": 14,
+              "section": "Account/Security/Password"
+            }
+          ]
+        },
+        {
+          "id": "L2-002",
+          "title": "Profile Settings",
+          "summary": "Update personal information, photo, and preferences.",
+          "level3": [
+            {
+              "id": "L3-004",
+              "title": "Update Email",
+              "summary": "Change your account email address.",
+              "content": "To change your email address, go to Settings > Profile > Email. Enter your new email address and click 'Update'. We'll send a verification link to both your old and new email addresses. Click the verification link in the new email within 24 hours. Your old email will remain active for 7 days. All notifications will be sent to the new email immediately.",
+              "page": 18,
+              "section": "Account/Profile/Email"
+            },
+            {
+              "id": "L3-005",
+              "title": "Change Profile Photo",
+              "summary": "Upload or update your profile picture.",
+              "content": "To change your profile photo, click on your current photo in the top right corner. Select 'Upload New Photo'. Choose an image file (JPG, PNG, or GIF). Maximum file size is 5MB. Recommended dimensions are 400x400 pixels. The image will be automatically cropped to a square. Your photo is visible to all users in your organization.",
+              "page": 19,
+              "section": "Account/Profile/Photo"
+            }
+          ]
+        },
+        {
+          "id": "L2-003",
+          "title": "Two-Factor Auth",
+          "summary": "Enable additional security with 2FA verification.",
+          "level3": [
+            {
+              "id": "L3-006",
+              "title": "Enable 2FA",
+              "summary": "Set up two-factor authentication for account security.",
+              "content": "To enable two-factor authentication, go to Settings > Security > Two-Factor Authentication. Click 'Enable 2FA'. Choose your preferred method: SMS, Authenticator App, or Email. For Authenticator App: Scan the QR code with Google Authenticator or Authy. Enter the 6-digit verification code to confirm. Save your backup codes in a secure location. You'll need a code each time you log in from a new device.",
+              "page": 22,
+              "section": "Account/Security/2FA"
+            },
+            {
+              "id": "L3-007",
+              "title": "Disable 2FA",
+              "summary": "Turn off two-factor authentication if needed.",
+              "content": "To disable two-factor authentication, go to Settings > Security > Two-Factor Authentication. Click 'Disable 2FA'. Enter your current password. Enter a verification code from your 2FA method. Confirm that you want to disable 2FA. Warning: Disabling 2FA reduces your account security. You can re-enable it anytime.",
+              "page": 23,
+              "section": "Account/Security/2FA"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L1-002",
+      "title": "Billing & Payments",
+      "summary": "Subscription plans, payment methods, and invoices.",
+      "level2": [
+        {
+          "id": "L2-004",
+          "title": "Subscription Plans",
+          "summary": "Upgrade, downgrade, or cancel subscription.",
+          "level3": [
+            {
+              "id": "L3-008",
+              "title": "Upgrade Plan",
+              "summary": "Switch to a higher-tier subscription.",
+              "content": "To upgrade your subscription, go to Settings > Billing > Plans. Review available plans and features. Click 'Upgrade' on your desired plan. Confirm the new pricing and billing cycle. Enter payment information if needed. Your upgrade takes effect immediately. You'll be charged a prorated amount for the current billing period. All new features are unlocked instantly.",
+              "page": 35,
+              "section": "Billing/Subscription/Upgrade"
+            },
+            {
+              "id": "L3-009",
+              "title": "Cancel Subscription",
+              "summary": "End your current subscription plan.",
+              "content": "To cancel your subscription, go to Settings > Billing > Subscription. Click 'Cancel Subscription'. Select a reason for cancellation (optional). Confirm cancellation. Your subscription remains active until the end of the current billing period. You can reactivate anytime before the period ends. After cancellation, your account converts to the free plan. All data is preserved for 90 days.",
+              "page": 37,
+              "section": "Billing/Subscription/Cancel"
+            }
+          ]
+        },
+        {
+          "id": "L2-005",
+          "title": "Payment Methods",
+          "summary": "Add, update, or remove payment methods.",
+          "level3": [
+            {
+              "id": "L3-010",
+              "title": "Add Payment Method",
+              "summary": "Add a credit card or payment option.",
+              "content": "To add a payment method, go to Settings > Billing > Payment Methods. Click 'Add Payment Method'. Enter your card details: card number, expiration date, CVV, and billing ZIP code. Optionally set as default payment method. Click 'Save'. Your card is securely stored and encrypted. We accept Visa, Mastercard, American Express, and Discover.",
+              "page": 40,
+              "section": "Billing/Payment/Add"
+            },
+            {
+              "id": "L3-011",
+              "title": "Update Payment Method",
+              "summary": "Change card details or billing information.",
+              "content": "To update a payment method, go to Settings > Billing > Payment Methods. Click the 'Edit' icon next to your saved card. Update card details as needed: expiration date, CVV, or billing address. Click 'Save Changes'. The update applies to all future charges. If your card is declined, update it within 7 days to avoid service interruption.",
+              "page": 41,
+              "section": "Billing/Payment/Update"
+            }
+          ]
+        },
+        {
+          "id": "L2-006",
+          "title": "Invoices & Receipts",
+          "summary": "View and download billing invoices.",
+          "level3": [
+            {
+              "id": "L3-012",
+              "title": "Download Invoices",
+              "summary": "Get PDF copies of your billing invoices.",
+              "content": "To download invoices, go to Settings > Billing > Invoices. View a list of all past invoices. Click 'Download PDF' next to any invoice. Invoices include: invoice number, billing date, payment method, itemized charges, and total amount. Invoices are available for 7 years. You can also request invoices be emailed monthly by enabling the option in Billing Preferences.",
+              "page": 44,
+              "section": "Billing/Invoices/Download"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L1-003",
+      "title": "Notifications",
+      "summary": "Email alerts, push notifications, and preferences.",
+      "level2": [
+        {
+          "id": "L2-007",
+          "title": "Email Notifications",
+          "summary": "Configure which emails you receive.",
+          "level3": [
+            {
+              "id": "L3-013",
+              "title": "Configure Email Alerts",
+              "summary": "Choose which notifications arrive in your inbox.",
+              "content": "To configure email notifications, go to Settings > Notifications > Email. Toggle individual notification types on or off: Security alerts, Billing updates, Product updates, Weekly digest, Marketing emails. Set notification frequency: Real-time, Daily digest, or Weekly summary. Save your preferences. Changes take effect immediately. You can always unsubscribe from individual emails using the link at the bottom.",
+              "page": 50,
+              "section": "Notifications/Email/Configure"
+            },
+            {
+              "id": "L3-014",
+              "title": "Unsubscribe All Emails",
+              "summary": "Stop all non-essential email notifications.",
+              "content": "To unsubscribe from all emails, go to Settings > Notifications > Email. Click 'Unsubscribe from All'. Confirm your choice. You'll only receive critical account and security emails. Marketing, product updates, and digests will stop. You can re-enable specific emails anytime. Note: Legal and transactional emails cannot be disabled.",
+              "page": 51,
+              "section": "Notifications/Email/Unsubscribe"
+            }
+          ]
+        },
+        {
+          "id": "L2-008",
+          "title": "Push Notifications",
+          "summary": "Mobile and desktop notification settings.",
+          "level3": [
+            {
+              "id": "L3-015",
+              "title": "Enable Push Notifications",
+              "summary": "Allow browser or app notifications on your device.",
+              "content": "To enable push notifications, go to Settings > Notifications > Push. Click 'Enable Push Notifications'. Your browser will ask for permission - click 'Allow'. Choose which types of notifications to receive: Messages, Mentions, Updates, Reminders. Select notification sound and vibration preferences. Push notifications work on desktop browsers and mobile apps. You can disable them anytime in your device settings.",
+              "page": 54,
+              "section": "Notifications/Push/Enable"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L1-004",
+      "title": "Troubleshooting",
+      "summary": "Common issues and solutions for technical problems.",
+      "level2": [
+        {
+          "id": "L2-009",
+          "title": "Login Issues",
+          "summary": "Cannot sign in or access your account.",
+          "level3": [
+            {
+              "id": "L3-016",
+              "title": "Fix Login Errors",
+              "summary": "Resolve common login and authentication failures.",
+              "content": "If you can't log in, try these steps: 1. Clear your browser cache and cookies. 2. Try a different browser or incognito mode. 3. Verify your email and password are correct. 4. Check if Caps Lock is on. 5. Reset your password if needed. 6. Disable browser extensions that might interfere. 7. Check if your account is locked due to multiple failed attempts (unlocks after 30 minutes). 8. Ensure your internet connection is stable. If issues persist, contact support with error details.",
+              "page": 62,
+              "section": "Troubleshooting/Login/Errors"
+            },
+            {
+              "id": "L3-017",
+              "title": "Account Locked",
+              "summary": "Your account is temporarily locked after failed attempts.",
+              "content": "If your account is locked: Your account locks automatically after 5 failed login attempts within 15 minutes. The lock lasts for 30 minutes. You'll see an error message: 'Account temporarily locked'. Wait 30 minutes and try again. Or use 'Forgot Password' to reset immediately. Contact support if you suspect unauthorized access. Enable 2FA to prevent future lockouts from unauthorized users.",
+              "page": 63,
+              "section": "Troubleshooting/Login/Locked"
+            }
+          ]
+        },
+        {
+          "id": "L2-010",
+          "title": "Performance Issues",
+          "summary": "App is slow or not responding properly.",
+          "level3": [
+            {
+              "id": "L3-018",
+              "title": "Improve App Speed",
+              "summary": "Fix slow loading times and lag issues.",
+              "content": "To improve performance: 1. Close unused browser tabs. 2. Clear browser cache (Settings > Privacy > Clear Cache). 3. Update to the latest browser version. 4. Disable unnecessary browser extensions. 5. Check your internet speed (minimum 5 Mbps recommended). 6. Try a wired connection instead of WiFi. 7. Restart your browser or device. 8. Check our status page for any service issues. Our app works best on Chrome, Firefox, Safari, and Edge (latest versions).",
+              "page": 68,
+              "section": "Troubleshooting/Performance/Speed"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
