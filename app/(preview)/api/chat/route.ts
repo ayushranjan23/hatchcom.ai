@@ -256,7 +256,7 @@ Provide a natural language answer based on the most relevant solution. Reference
               title: sourceChunk.title,
               page: sourceChunk.page,
               section: sourceChunk.section,
-              manualLink: `https://hatchcom.vercel.app/manual.pdf#page=${sourceChunk.page}`,
+              manualLink: `https://hatchcomai.vercel.app/manual.pdf#page=${sourceChunk.page}`,
             },
             decisionPath: [
               { level: 1, title: level1Parent.title, id: level1Parent.id },
