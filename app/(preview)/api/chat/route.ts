@@ -54,7 +54,7 @@ After each tool call, immediately call the next required tool using the previous
   Do not terminate or stop before sending this final assistant message.
 Always include confidence in your final output.`,
     // Ensure tool loop continues and doesn't stop early
-    maxSteps: MAX_ATTEMPTS,
+    stopWhen: stepCountIs(MAX_ATTEMPTS),
     tools: {
       // Level 1: Analyze top-level categories
       analyzeCategories: tool({
