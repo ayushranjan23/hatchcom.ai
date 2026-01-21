@@ -1,4 +1,4 @@
-import { generateObject, streamText, tool } from "ai";
+import { generateObject, streamText } from "ai";
 import { z } from "zod";
 import manualChunks from "@/lib/data/manual-chunks.json";
 
@@ -41,7 +41,7 @@ export async function POST(req: Request) {
     messages,
     tools: {
       // Level 1: Analyze top-level categories
-      analyzeCategories: tool({
+      analyzeCategories: {
         description: `Analyze top-level manual categories to find the most relevant one. Use this tool first to determine if the question can be answered from the manual.`,
         parameters: z.object({}),
         execute: async () => {
@@ -96,10 +96,10 @@ Select the ONE most relevant category ID that best matches this question.`,
             availableSubcategories: selectedChunk?.children.length || 0,
           };
         },
-      }),
+      },
 
       // Level 2: Refine to subcategory
-      selectSubcategory: tool({
+      selectSubcategory: {
         description: `Select the most relevant subcategory within the chosen category.`,
         parameters: z.object({
           level1ChunkId: z.string().describe("The L1 chunk ID to search within"),
@@ -162,10 +162,10 @@ Select the ONE most relevant subcategory ID.`,
             availableSolutions: selectedChunk?.children.length || 0,
           };
         },
-      }),
+      },
 
       // Level 3: Generate final answer
-      generateAnswer: tool({
+      generateAnswer: {
         description: `Generate the final answer using the specific solution from the manual.`,
         parameters: z.object({
           level2ChunkId: z.string().describe("The L2 chunk ID to get solutions from"),
@@ -247,7 +247,7 @@ Provide a natural language answer based on the most relevant solution. Reference
             reasoning: object.reasoning,
           };
         },
-      }),
+      },
     },
   });
 
