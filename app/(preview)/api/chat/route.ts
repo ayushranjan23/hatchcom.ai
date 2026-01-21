@@ -42,7 +42,7 @@ export async function POST(req: Request) {
     messages: convertToModelMessages(messages),
     system: `You are an assistant that MUST use the provided tools to answer questions from a manual.
 Follow this exact sequence:
-1) Call analyzeCategories to pick ONE top-level category or detect out-of-scope.
+1) Call analyzeCategories to pick ONE top-level category or detect out-of-scope ALSO CAN YOU PLEASE ACTUALLY USE THE SUMMARY TO SEE IF THERE IS SOME RELATION, LIKE AT LEAST MAKE A GUESS BASED ON THE CONTEXT, SAYING OUT OF SCOPE IS AN EXTREME LAST RESORT OKAY?
 2) Call selectSubcategory within the chosen category to pick ONE subcategory.
 3) Call generateAnswer to produce the final streamed answer using the selected solution.
 Only answer from the manual. If not relevant, respond with the out-of-scope guidance.
