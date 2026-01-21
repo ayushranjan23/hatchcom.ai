@@ -38,8 +38,9 @@ export async function POST(req: Request) {
   const userQuery = messages[messages.length - 1]?.parts?.find((p: any) => p.type === "text")?.text || "";
 
   const result = streamText({
-    model: "google/gemini-1.5-pro",
+    model: "google/gemini-2.0-flash",
     messages: convertToModelMessages(messages),
+    toolChoice: "required",
     maxSteps: MAX_ATTEMPTS,
     system: `You are an assistant that MUST use the provided tools to answer questions from a manual.
 Follow this exact sequence:
@@ -63,7 +64,7 @@ Always include confidence in your final output.`,
           
           // Check if question is answerable from manual
           const { object: relevanceCheck } = await generateObject({
-            model: "google/gemini-1.5-pro",
+            model: "google/gemini-2.0-flash",
             schema: z.object({
               isRelevant: z.boolean().describe("Can this be answered using ONLY the manual categories?"),
               reasoning: z.string().describe("Brief explanation"),
@@ -85,7 +86,7 @@ Can this question be answered using ONLY information from these manual categorie
 
           // Select most relevant L1 chunk
           const { object } = await generateObject({
-            model: "google/gemini-1.5-pro",
+            model: "google/gemini-2.0-flash",
             schema: z.object({
               selectedChunkId: z.string().describe("ID of the selected level 1 chunk (e.g., L1-001)"),
               confidence: z.number().min(0).max(1).describe("Confidence score 0-1"),
@@ -142,7 +143,7 @@ Select the ONE most relevant category ID that best matches this question.`,
           }
 
           const { object } = await generateObject({
-            model: "google/gemini-1.5-pro",
+            model: "google/gemini-2.0-flash",
             schema: z.object({
               selectedChunkId: z.string().describe("ID of the selected level 2 chunk (e.g., L2-001)"),
               confidence: z.number().min(0).max(1).describe("Confidence score 0-1"),
@@ -220,7 +221,7 @@ Select the ONE most relevant subcategory ID.`,
           }
 
           const { object } = await generateObject({
-            model: "google/gemini-1.5-pro",
+            model: "google/gemini-2.0-flash",
             schema: z.object({
               answer: z.string().describe("Natural language answer to the user's question"),
               confidence: z.number().min(0).max(1).describe("Confidence in this answer"),
