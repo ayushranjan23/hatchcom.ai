@@ -3,7 +3,6 @@ import { z } from "zod";
 import manualChunks from "@/lib/data/manual-chunks.json";
 
 // Configuration
-// const MAX_ATTEMPTS = 5;
 const CONFIDENCE_THRESHOLD = 0.3;
 
 // Allow streaming responses up to 30 seconds
@@ -40,7 +39,6 @@ export async function POST(req: Request) {
   const result = streamText({
     model: "google/gemini-2.0-flash",
     messages,
-    // maxSteps: MAX_ATTEMPTS,
     tools: {
       // Level 1: Analyze top-level categories
       analyzeCategories: tool({
