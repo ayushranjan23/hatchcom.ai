@@ -40,8 +40,6 @@ export async function POST(req: Request) {
   const result = streamText({
     model: "google/gemini-2.0-flash",
     messages: convertToModelMessages(messages),
-    toolChoice: "required",
-    maxSteps: MAX_ATTEMPTS,
     system: `You are an assistant that MUST use the provided tools to answer questions from a manual.
 Follow this exact sequence:
 1) Call analyzeCategories to pick ONE top-level category or detect out-of-scope.
@@ -49,10 +47,14 @@ Follow this exact sequence:
 3) Call generateAnswer to produce the final streamed answer using the selected solution.
 Only answer from the manual. If not relevant, respond with the out-of-scope guidance.
 After each tool call, immediately call the next required tool using the previous result.
-Do not terminate until you produce a final assistant text message with the answer.
+  CRITICAL: After generateAnswer returns, you MUST produce a final assistant text message that contains:
+  - The natural language answer
+  - Confidence as a percentage
+  - Source title and "manual.pdf#page=n" link
+  Do not terminate or stop before sending this final assistant message.
 Always include confidence in your final output.`,
     // Ensure tool loop continues and doesn't stop early
-    stopWhen: stepCountIs(MAX_ATTEMPTS),
+    maxSteps: MAX_ATTEMPTS,
     tools: {
       // Level 1: Analyze top-level categories
       analyzeCategories: tool({
