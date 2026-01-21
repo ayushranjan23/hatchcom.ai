@@ -254,5 +254,6 @@ Provide a natural language answer based on the most relevant solution. Reference
     },
   });
 
-  return result.toAIStreamResponse();
+  // Use toTextStreamResponse() instead of toAIStreamResponse()
+  return result.toTextStreamResponse();
 }
