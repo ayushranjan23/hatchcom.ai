@@ -33,6 +33,17 @@ type Level1Chunk = {
   children: Level2Chunk[];
 };
 
+// Define the return types for each tool
+type ToolReturnType = 
+  | { type: "out_of_scope"; message: string; reasoning: string }
+  | { type: "level1_selected"; selectedChunkId: string; selectedTitle: string; confidence: number; reasoning: string; availableSubcategories: number }
+  | { type: "error"; message: string; reasoning?: string }
+  | { type: "no_subcategories"; message: string; reasoning: string }
+  | { type: "low_confidence"; message: string; confidence: number; selectedChunkId: string; reasoning: string }
+  | { type: "level2_selected"; selectedChunkId: string; selectedTitle: string; confidence: number; reasoning: string; availableSolutions: number }
+  | { type: "no_solutions"; message: string; reasoning: string }
+  | { type: "final_answer"; answer: string; confidence: number; source: { title: string; page: number; section: string; manualLink: string }; decisionPath: Array<{ level: number; title: string; id: string }>; reasoning: string };
+
 export async function POST(req: Request) {
   const { messages } = await req.json();
   const userQuery = messages[messages.length - 1]?.content || "";
@@ -40,15 +51,13 @@ export async function POST(req: Request) {
   const result = streamText({
     model: "google/gemini-2.0-flash",
     messages,
-    // Use experimental_continueSteps instead of maxSteps
-    experimental_continueSteps: true,
     maxSteps: MAX_ATTEMPTS,
     tools: {
       // Level 1: Analyze top-level categories
       analyzeCategories: tool({
         description: `Analyze top-level manual categories to find the most relevant one. Use this tool first to determine if the question can be answered from the manual.`,
         parameters: z.object({}),
-        execute: async () => {
+        execute: async (): Promise<ToolReturnType> => {
           const level1Chunks = manualChunks as Level1Chunk[];
           
           // Check if question is answerable from manual
@@ -108,13 +117,13 @@ Select the ONE most relevant category ID that best matches this question.`,
         parameters: z.object({
           level1ChunkId: z.string().describe("The L1 chunk ID to search within"),
         }),
-        execute: async ({ level1ChunkId }) => {
+        execute: async ({ level1ChunkId }): Promise<ToolReturnType> => {
           const level1Chunks = manualChunks as Level1Chunk[];
           const level1Chunk = level1Chunks.find(c => c.id === level1ChunkId);
 
           if (!level1Chunk) {
             return { 
-              type: "error", 
+              type: "error",
               message: "Level 1 chunk not found",
               reasoning: `Level 1 chunk with ID ${level1ChunkId} was not found.`,
             };
@@ -174,7 +183,7 @@ Select the ONE most relevant subcategory ID.`,
         parameters: z.object({
           level2ChunkId: z.string().describe("The L2 chunk ID to get solutions from"),
         }),
-        execute: async ({ level2ChunkId }) => {
+        execute: async ({ level2ChunkId }): Promise<ToolReturnType> => {
           const level1Chunks = manualChunks as Level1Chunk[];
           let level2Chunk: Level2Chunk | undefined;
           let level1Parent: Level1Chunk | undefined;
@@ -191,7 +200,7 @@ Select the ONE most relevant subcategory ID.`,
 
           if (!level2Chunk || !level1Parent) {
             return { 
-              type: "error", 
+              type: "error",
               message: "Level 2 chunk not found",
               reasoning: `Level 2 chunk with ID ${level2ChunkId} was not found.`,
             };
@@ -227,11 +236,9 @@ Provide a natural language answer based on the most relevant solution. Reference
 
           if (!sourceChunk) {
             return { 
-              type: "error", 
+              type: "error",
               message: "Source chunk not found",
-              answer: object.answer,
-              confidence: object.confidence,
-              reasoning: object.reasoning,
+              reasoning: `Source chunk with ID ${object.sourceChunkId} was not found.`,
             };
           }
 
@@ -257,5 +264,5 @@ Provide a natural language answer based on the most relevant solution. Reference
     },
   });
 
-  return result.toUIMessageStreamResponse();
+  return result.toAIStreamResponse();
 }
