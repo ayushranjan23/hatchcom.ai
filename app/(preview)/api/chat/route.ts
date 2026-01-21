@@ -50,7 +50,7 @@ After each tool call, immediately call the next required tool using the previous
   CRITICAL: After generateAnswer returns, you MUST produce a final assistant text message that contains:
   - The natural language answer
   - Confidence as a percentage
-  - Source title and "https://hatchcom.vercel.app/manual.pdf#page=n" link
+  - Source title and "https://hatchcomai.vercel.app/manual.pdf#page=n" link
   Do not terminate or stop before sending this final assistant message.
 Always include confidence in your final output.`,
     // Ensure tool loop continues and doesn't stop early
@@ -81,7 +81,7 @@ Can this question be answered using ONLY information from these manual categorie
           if (!relevanceCheck.isRelevant) {
             return {
               type: "out_of_scope",
-              message: "Thanks for this prompt! Unfortunately, the prompt appears to be outside our HatchcomV manual's scope. Please ask questions related to the manual content. If you believe this is a mistake, please email support@hatchcom.ai with your query and manual reference. Thanks for using HatchcomAI!",
+              message: "Thanks for this prompt! Unfortunately, the prompt appears to be outside our HatchcomV manual's scope. Please ask questions related to the manual content. If you believe this is a mistake, please email support@hatchcomai.vercel.app with your query and manual reference. Thanks for using HatchcomAI!",
               reasoning: relevanceCheck.reasoning,
             };
           }
