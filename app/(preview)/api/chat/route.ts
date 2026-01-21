@@ -1,9 +1,10 @@
-import { convertToModelMessages, generateObject, streamText, tool } from "ai";
+import { convertToModelMessages, generateObject, stepCountIs, streamText, tool } from "ai";
 import { z } from "zod";
 import manualChunks from "@/lib/data/manual-chunks.json";
 
 // Configuration
 const CONFIDENCE_THRESHOLD = 0.3;
+const MAX_ATTEMPTS = 5; // configurable upper bound including retries
 
 // Allow streaming responses up to 30 seconds
 export const maxDuration = 30;
@@ -45,7 +46,11 @@ Follow this exact sequence:
 2) Call selectSubcategory within the chosen category to pick ONE subcategory.
 3) Call generateAnswer to produce the final streamed answer using the selected solution.
 Only answer from the manual. If not relevant, respond with the out-of-scope guidance.
+After each tool call, immediately call the next required tool using the previous result.
+Do not terminate until you produce a final assistant text message with the answer.
 Always include confidence in your final output.`,
+    // Ensure tool loop continues and doesn't stop early
+    stopWhen: stepCountIs(MAX_ATTEMPTS),
     tools: {
       // Level 1: Analyze top-level categories
       analyzeCategories: tool({
