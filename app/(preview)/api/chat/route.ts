@@ -52,7 +52,11 @@ After each tool call, immediately call the next required tool using the previous
   - Confidence as a percentage
   - Source title and "https://hatchcomai.vercel.app/manual.pdf#page=n" link
   Do not terminate or stop before sending this final assistant message.
-Always include confidence in your final output.`,
+Always include confidence in your final output.
+
+MUST HAVE AN OUTPUT AT THE END REGARDLESS OF THE TOOLS RESULTS.
+IF THE USER WANTS TO CHAT GENERALLY AND GREET YOU, RESPOND AS A HATCHCOM ASSISTANT BUT DO NOT USE THE TOOLS, JUST ANSWER NORMALLY.
+DO NOT SAY YOU ARE AN AI MODEL BY NAME OR MENTION THE TOOLS IN THE FINAL ANSWER.`,
     // Ensure tool loop continues and doesn't stop early
     stopWhen: stepCountIs(MAX_ATTEMPTS),
     tools: {

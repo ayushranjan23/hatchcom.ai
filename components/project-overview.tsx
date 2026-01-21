@@ -16,22 +16,15 @@ const ProjectOverview = () => {
           HatchcomAI
         </h3>
         <p>
-          This bot uses the {" "}
+          This AI uses the {" "}
           <Link
             href="https://hatchcomai.vercel.app/manual.pdf"
             className="text-blue-500"
           >
             Hatchcom5 manual
           </Link>{" "}
-          along with{" "}
-          <Link
-            href="#"
-            className="text-blue-500"
-          >
-            iterations
-          </Link>{" "}
-          for implementing a serverless AI chatbot.
-          Please only only ask specific questions related to the manual content and avoid vague or overly broad queries. Example: What type of reports are available in Hatchcom5? rather than Tell me about Hatchcom5.
+          to implement a serverless chatbot.
+          Please only ask specific questions related to the manual content and avoid vague or overly broad queries. Example: What type of reports are available in Hatchcom5? rather than Tell me about Hatchcom5.
         </p>
       </div>
     </motion.div>
