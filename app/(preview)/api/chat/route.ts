@@ -40,6 +40,9 @@ export async function POST(req: Request) {
   const result = streamText({
     model: "google/gemini-2.0-flash",
     messages,
+    // Use experimental_continueSteps instead of maxSteps
+    experimental_continueSteps: true,
+    maxSteps: MAX_ATTEMPTS,
     tools: {
       // Level 1: Analyze top-level categories
       analyzeCategories: tool({
@@ -110,10 +113,22 @@ Select the ONE most relevant category ID that best matches this question.`,
           const level1Chunk = level1Chunks.find(c => c.id === level1ChunkId);
 
           if (!level1Chunk) {
-            return { type: "error", message: "Level 1 chunk not found" };
+            return { 
+              type: "error", 
+              message: "Level 1 chunk not found",
+              reasoning: `Level 1 chunk with ID ${level1ChunkId} was not found.`,
+            };
           }
 
           const level2Chunks = level1Chunk.children;
+
+          if (!level2Chunks || level2Chunks.length === 0) {
+            return {
+              type: "no_subcategories",
+              message: "No subcategories available in this category.",
+              reasoning: `Category "${level1Chunk.title}" has no subcategories.`,
+            };
+          }
 
           const { object } = await generateObject({
             model: "google/gemini-2.0-flash",
@@ -136,6 +151,7 @@ Select the ONE most relevant subcategory ID.`,
               message: "Confidence too low at level 2, consider going back to level 1",
               confidence: object.confidence,
               selectedChunkId: object.selectedChunkId,
+              reasoning: object.reasoning,
             };
           }
 
@@ -174,10 +190,22 @@ Select the ONE most relevant subcategory ID.`,
           }
 
           if (!level2Chunk || !level1Parent) {
-            return { type: "error", message: "Level 2 chunk not found" };
+            return { 
+              type: "error", 
+              message: "Level 2 chunk not found",
+              reasoning: `Level 2 chunk with ID ${level2ChunkId} was not found.`,
+            };
           }
 
           const level3Chunks = level2Chunk.children;
+
+          if (!level3Chunks || level3Chunks.length === 0) {
+            return {
+              type: "no_solutions",
+              message: "No solutions available in this subcategory.",
+              reasoning: `Subcategory "${level2Chunk.title}" has no solutions.`,
+            };
+          }
 
           const { object } = await generateObject({
             model: "google/gemini-2.0-flash",
@@ -202,7 +230,8 @@ Provide a natural language answer based on the most relevant solution. Reference
               type: "error", 
               message: "Source chunk not found",
               answer: object.answer,
-              confidence: object.confidence 
+              confidence: object.confidence,
+              reasoning: object.reasoning,
             };
           }
 
