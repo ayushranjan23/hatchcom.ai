@@ -3,7 +3,7 @@ import { z } from "zod";
 import manualChunks from "@/lib/data/manual-chunks.json";
 
 // Configuration
-const CONFIDENCE_THRESHOLD = 0.3;
+const CONFIDENCE_THRESHOLD = 0.1; // Lowered to allow more guesses with vague matches
 const MAX_ATTEMPTS = 5; // configurable upper bound including retries
 
 // Allow streaming responses up to 30 seconds
@@ -40,77 +40,93 @@ export async function POST(req: Request) {
   const result = streamText({
     model: "google/gemini-2.0-flash",
     messages: convertToModelMessages(messages),
-    system: `You are an assistant that MUST use the provided tools to answer questions from a manual.
-Follow this exact sequence:
-1) Call analyzeCategories to pick ONE top-level category, MUST PICK A CATEGORY FROM THE MANUAL, EVEN IF THE QUESTION IS OUT OF SCOPE, GUESS THE MOST RELEVANT CATEGORY BASED ON KNOWLEDGE. MUST PICK!
-2) Call selectSubcategory within the chosen category to pick ONE subcategory. MUST PICK A CATEGORY FROM THE MANUAL, EVEN IF THE QUESTION IS OUT OF SCOPE, GUESS THE MOST RELEVANT CATEGORY BASED ON KNOWLEDGE. MUST PICK!
-3) Call generateAnswer to produce the final streamed answer using the selected solution.
-Only answer from the manual. If not relevant, respond with the out-of-scope guidance.
-After each tool call, immediately call the next required tool using the previous result.
-  CRITICAL: After generateAnswer returns, you MUST produce a final assistant text message that contains:
-  - The natural language answer, this should answer completely. As you use the content, it should be a complete answer to the query, do not send the user to the manual, do not say that [LX-XXX] should answer the question completely, no, use the content and answer it yourself, the source is just for the user to confirm at the end that's it! that is just there for reference! you are answering within the chat. SO USE THE CONTENT FOR THE LEVEL3 CHUNK!
+    system: `CRITICAL: You are an assistant that MUST use the provided tools to answer questions from a manual.
+FOLLOW THIS EXACT SEQUENCE EVERY TIME:
+1) ALWAYS call analyzeCategories first. You MUST ALWAYS select a top-level category from the manual. Even if the match seems vague or imperfect, you MUST PICK ONE based on the best available match. Use both title AND summary to make educated guesses.
+2) ALWAYS call selectSubcategory within the chosen category. You MUST ALWAYS select a subcategory. Even if unsure, pick the most plausible one based on available information.
+3) ALWAYS call generateAnswer to produce the final streamed answer using the selected solution.
+
+IMPERATIVE RULES:
+- YOU MUST ALWAYS PICK CATEGORIES AT L1 AND L2 LEVELS. DO NOT STOP OR SKIP TOOLS.
+- When categories seem vague (e.g., "Introduction" with summary mentioning "hardware"), you MUST MAKE AN EDUCATED GUESS based on available information.
+- You MUST use both title AND summary content for matching, not just exact keyword matches.
+- After generateAnswer returns, you MUST produce a final assistant text message that contains:
+  - The COMPLETE natural language answer that fully answers the user's question using the actual content from the Level 3 chunk.
   - Confidence as a percentage
   - Source title and "https://hatchcomai.vercel.app/manual.pdf#page=n" link
-  Do not terminate or stop before sending this final assistant message.
-Always include confidence in your final output.
 
-MUST HAVE AN OUTPUT AT THE END REGARDLESS OF THE TOOLS RESULTS. DO NOT SAY THAT YOUR ANSWER IS IN LX-XXX, ACTUALLY ANSWER THE QUESTION USING THE CONTENT FROM THE LEVEL3 CHUNK, ACTUALLY ANSWER IT! AND ALSO HAVE THE REFERENCE AT THE END!
-IF THE USER WANTS TO CHAT GENERALLY AND GREET YOU, RESPOND AS A HATCHCOM ASSISTANT BUT DO NOT USE THE TOOLS, JUST ANSWER NORMALLY.
-DO NOT SAY YOU ARE AN AI MODEL BY NAME OR MENTION THE TOOLS IN THE FINAL ANSWER.
+CRITICAL: YOUR FINAL ANSWER MUST:
+1. ACTUALLY ANSWER THE QUESTION USING THE LEVEL 3 CONTENT. DO NOT TELL USER TO CHECK THE MANUAL.
+2. PROVIDE A COMPLETE, USEFUL ANSWER AS IF YOU WERE DIRECTLY ANSWERING.
+3. INCLUDE THE REFERENCE AT THE END FOR VERIFICATION.
+4. DO NOT SAY "LX-XXX HAS THE ANSWER" - YOU ARE THE ONE ANSWERING!
 
-Sample Output (FOLLOW THIS!):
-FULL ANSWER IN TEXT, AND DON'T SAY TO CHECK THE MANUAL, JUST ANSWER IT YOURSELF USING THE CONTENT FROM THE LEVEL3 CHUNK! DON'T SAY LX-XXX HAS THE ANSWER, JUST ANSWER IT YOURSELF USING THE CONTENT FROM THE LEVEL3 CHUNK!
+EXAMPLE OF WHAT TO DO:
+User: "What is the cable connector part number?"
+Your answer: "The cable connector part number is XYZ-1234, which is a 24-pin connector used for... [rest of actual answer from content]"
 
 Confidence: XX%
-Source: TITLE
-Reference: https://hatchcomai.vercel.app/manual.pdf#page=n`,
+Source: Connector Specifications
+Reference: https://hatchcomai.vercel.app/manual.pdf#page=42
+
+IF THE USER IS JUST GREETING OR MAKING GENERAL CHAT, respond normally as a Hatchcom assistant without using tools.
+DO NOT MENTION TOOLS, AI MODEL NAMES, OR INTERNAL PROCESSES IN FINAL ANSWER.`,
     // Ensure tool loop continues and doesn't stop early
     stopWhen: stepCountIs(MAX_ATTEMPTS),
     tools: {
       // Level 1: Analyze top-level categories
       analyzeCategories: tool({
-        description: `Analyze top-level manual categories to find the most relevant one. Use this tool first to determine if the question can be answered from the manual.`,
-        // For older versions, use inputSchema instead of parameters
+        description: `Analyze top-level manual categories to find the most relevant one. Use this tool first.`,
         inputSchema: z.object({}),
         execute: async () => {
           const level1Chunks = manualChunks as Level1Chunk[];
           
-          // Check if question is answerable from manual
+          // Check if question is answerable from manual - but now we'll always proceed
           const { object: relevanceCheck } = await generateObject({
             model: "google/gemini-2.0-flash",
             schema: z.object({
               isRelevant: z.boolean().describe("Can this be answered using ONLY the manual categories?"),
               reasoning: z.string().describe("Brief explanation"),
             }),
-            prompt: `Available manual categories: ${level1Chunks.map(c => `"${c.title}" - ${c.summary}`).join(", ")}
-            
+            prompt: `CRITICAL: You MUST ALWAYS select a category, even if the match seems imperfect.
+
+Available manual categories:
+${level1Chunks.map(c => `ID: ${c.id}, Title: "${c.title}", Summary: "${c.summary}"`).join("\n")}
+
 User question: "${userQuery}"
 
-Can this question be answered using ONLY information from these manual categories? If it's general knowledge or unrelated, return false.`,
+ANALYSIS INSTRUCTIONS:
+1. Review ALL titles AND summaries (not just titles)
+2. Look for conceptual matches, not just exact keywords
+3. If something seems vaguely related (e.g., "cable connector" could be in "Introduction" if summary mentions "hardware"), select it
+4. YOU MUST PICK ONE CATEGORY - DO NOT RETURN isRelevant: false
+
+Select the ONE most plausible category ID.`,
           });
 
-          if (!relevanceCheck.isRelevant) {
-            return {
-              type: "out_of_scope",
-              message: "Thanks for this prompt! Unfortunately, the prompt appears to be outside our HatchcomV manual's scope. Please ask questions related to the manual content. If you believe this is a mistake, please email support@hatchcomai.vercel.app with your query and manual reference. Thanks for using HatchcomAI!",
-              reasoning: relevanceCheck.reasoning,
-            };
-          }
-
+          // ALWAYS proceed to selection, even if relevance is low
           // Select most relevant L1 chunk
           const { object } = await generateObject({
             model: "google/gemini-2.0-flash",
             schema: z.object({
               selectedChunkId: z.string().describe("ID of the selected level 1 chunk (e.g., L1-001)"),
               confidence: z.number().min(0).max(1).describe("Confidence score 0-1"),
-              reasoning: z.string().describe("Why this category was selected"),
+              reasoning: z.string().describe("Why this category was selected based on title AND summary content"),
             }),
-            prompt: `Available categories:
-${level1Chunks.map(c => `ID: ${c.id}, Title: "${c.title}", Summary: ${c.summary}`).join("\n")}
+            prompt: `IMPERATIVE: YOU MUST SELECT A CATEGORY. Even with low confidence, pick the best available match.
+
+Available categories:
+${level1Chunks.map(c => `ID: ${c.id}, Title: "${c.title}", Summary: "${c.summary}"`).join("\n")}
 
 User question: "${userQuery}"
 
-Select the ONE most relevant category ID that best matches this question.`,
+SELECTION CRITERIA:
+1. Look at BOTH title AND summary content
+2. Consider conceptual relationships (e.g., "connector" might be in "Hardware" or "Introduction" if those summaries mention components)
+3. Vague matches are acceptable - just pick the most plausible one
+4. DO NOT skip - you MUST return a selectedChunkId
+
+Select the ONE most relevant category ID.`,
           });
 
           const selectedChunk = level1Chunks.find(c => c.id === object.selectedChunkId);
@@ -129,7 +145,6 @@ Select the ONE most relevant category ID that best matches this question.`,
       // Level 2: Refine to subcategory
       selectSubcategory: tool({
         description: `Select the most relevant subcategory within the chosen category.`,
-        // Use inputSchema instead of parameters
         inputSchema: z.object({
           level1ChunkId: z.string().describe("The L1 chunk ID to search within"),
         }),
@@ -160,25 +175,24 @@ Select the ONE most relevant category ID that best matches this question.`,
             schema: z.object({
               selectedChunkId: z.string().describe("ID of the selected level 2 chunk (e.g., L2-001)"),
               confidence: z.number().min(0).max(1).describe("Confidence score 0-1"),
-              reasoning: z.string().describe("Why this subcategory was selected"),
+              reasoning: z.string().describe("Why this subcategory was selected based on title AND summary"),
             }),
-            prompt: `Within category "${level1Chunk.title}", available subcategories:
-${level2Chunks.map(c => `ID: ${c.id}, Title: "${c.title}", Summary: ${c.summary}`).join("\n")}
+            prompt: `IMPERATIVE: YOU MUST SELECT A SUBCATEGORY. Even with low confidence, pick the best available match.
+
+Within category "${level1Chunk.title}", available subcategories:
+${level2Chunks.map(c => `ID: ${c.id}, Title: "${c.title}", Summary: "${c.summary}"`).join("\n")}
 
 User question: "${userQuery}"
 
+SELECTION CRITERIA:
+1. Look at BOTH title AND summary content
+2. Consider the user's question in context of the parent category
+3. Vague matches are acceptable - pick the most plausible path forward
+4. DO NOT return low confidence as an error - just select something
+5. YOU MUST return a selectedChunkId
+
 Select the ONE most relevant subcategory ID.`,
           });
-
-          if (object.confidence < CONFIDENCE_THRESHOLD) {
-            return {
-              type: "low_confidence",
-              message: "Confidence too low at level 2, consider going back to level 1",
-              confidence: object.confidence,
-              selectedChunkId: object.selectedChunkId,
-              reasoning: object.reasoning,
-            };
-          }
 
           const selectedChunk = level2Chunks.find(c => c.id === object.selectedChunkId);
 
@@ -196,7 +210,6 @@ Select the ONE most relevant subcategory ID.`,
       // Level 3: Generate final answer
       generateAnswer: tool({
         description: `Generate the final answer using the specific solution from the manual.`,
-        // Use inputSchema instead of parameters
         inputSchema: z.object({
           level2ChunkId: z.string().describe("The L2 chunk ID to get solutions from"),
         }),
@@ -236,17 +249,27 @@ Select the ONE most relevant subcategory ID.`,
           const { object } = await generateObject({
             model: "google/gemini-2.0-flash",
             schema: z.object({
-              answer: z.string().describe("Natural language answer to the user's question"),
+              answer: z.string().describe("Complete natural language answer that directly answers the user's question using the content"),
               confidence: z.number().min(0).max(1).describe("Confidence in this answer"),
               sourceChunkId: z.string().describe("Which L3 chunk was used (e.g., L3-001)"),
               reasoning: z.string().describe("Why this solution was chosen"),
             }),
-            prompt: `Available solutions:
-${level3Chunks.map(c => `ID: ${c.id}, Title: "${c.title}", Summary: ${c.summary}, Page: ${c.page}, Section: ${c.section}`).join("\n")}
+            prompt: `CRITICAL: You MUST create a COMPLETE answer that actually answers the user's question.
+
+Available solutions in "${level2Chunk.title}":
+${level3Chunks.map(c => `ID: ${c.id}, Title: "${c.title}", Summary: ${c.summary}, Content: ${c.content.substring(0, 200)}..., Page: ${c.page}, Section: ${c.section}`).join("\n\n")}
 
 User question: "${userQuery}"
 
-Provide a natural language answer based on the most relevant solution. Reference the solution by its ID.`,
+INSTRUCTIONS:
+1. Read the ACTUAL CONTENT of each solution (not just title/summary)
+2. Find the most relevant content that answers the user's question
+3. Create a COMPLETE natural language answer using that content
+4. Your answer should stand alone - the user should NOT need to check the manual
+5. Reference the solution ID in your reasoning, but NOT in the final answer text
+6. If multiple solutions are relevant, synthesize information from them
+
+Provide a thorough answer based on the manual content.`,
           });
 
           const sourceChunk = level3Chunks.find(c => c.id === object.sourceChunkId);
