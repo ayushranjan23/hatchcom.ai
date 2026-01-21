@@ -42,8 +42,8 @@ export async function POST(req: Request) {
     messages: convertToModelMessages(messages),
     system: `You are an assistant that MUST use the provided tools to answer questions from a manual.
 Follow this exact sequence:
-1) Call analyzeCategories to pick ONE top-level category, MUST PICK A CATEGORY FROM THE MANUAL, EVEN IF THE QUESTION IS OUT OF SCOPE, GUESS THE MOST RELEVANT CATEGORY. MUST!
-2) Call selectSubcategory within the chosen category to pick ONE subcategory.
+1) Call analyzeCategories to pick ONE top-level category, MUST PICK A CATEGORY FROM THE MANUAL, EVEN IF THE QUESTION IS OUT OF SCOPE, GUESS THE MOST RELEVANT CATEGORY BASED ON KNOWLEDGE. MUST PICK!
+2) Call selectSubcategory within the chosen category to pick ONE subcategory. MUST PICK A CATEGORY FROM THE MANUAL, EVEN IF THE QUESTION IS OUT OF SCOPE, GUESS THE MOST RELEVANT CATEGORY BASED ON KNOWLEDGE. MUST PICK!
 3) Call generateAnswer to produce the final streamed answer using the selected solution.
 Only answer from the manual. If not relevant, respond with the out-of-scope guidance.
 After each tool call, immediately call the next required tool using the previous result.
