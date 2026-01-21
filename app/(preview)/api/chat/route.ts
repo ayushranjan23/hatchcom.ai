@@ -48,7 +48,7 @@ Follow this exact sequence:
 Only answer from the manual. If not relevant, respond with the out-of-scope guidance.
 After each tool call, immediately call the next required tool using the previous result.
   CRITICAL: After generateAnswer returns, you MUST produce a final assistant text message that contains:
-  - The natural language answer
+  - The natural language answer, this should answer completely. As you use the content, it should be a complete answer to the query, do not send the user to the manual, that is just there for reference, you are answering within the chat.
   - Confidence as a percentage
   - Source title and "https://hatchcomai.vercel.app/manual.pdf#page=n" link
   Do not terminate or stop before sending this final assistant message.

@@ -12,40 +12,37 @@ const ProjectOverview = () => {
       transition={{ duration: 5 }}
     >
       <div className="border rounded-lg p-6 flex flex-col gap-4 text-neutral-500 text-sm dark:text-neutral-400 dark:border-neutral-700 dark:bg-neutral-900">
-        <p className="flex flex-row justify-center gap-4 items-center text-neutral-900 dark:text-neutral-50">
-          <VercelIcon size={16} />
-          <span>+</span>
-          <InformationIcon />
-        </p>
+        <h3 className="flex flex-row justify-center gap-4 items-center text-neutral-900 dark:text-neutral-50">
+          HatchcomAI
+        </h3>
         <p>
-          The{" "}
+          This bot uses the {" "}
           <Link
-            href="https://sdk.vercel.ai/docs/reference/ai-sdk-ui/use-chat"
+            href="https://hatchcomai.vercel.app/manual.pdf"
             className="text-blue-500"
           >
-            useChat
+            Hatchcom5 manual
           </Link>{" "}
-          hook along with the{" "}
+          along with{" "}
           <Link
-            href="https://sdk.vercel.ai/docs/reference/ai-sdk-core/stream-text"
+            href="#"
             className="text-blue-500"
           >
-            streamText
+            iterations
           </Link>{" "}
-          function allows you to build applications with retrieval augmented
-          generation (RAG) capabilities. Data is stored as vector embeddings
-          using DrizzleORM and PostgreSQL.
+          for implementing a Retrieval-Augmented Generation (RAG) chatbot in a serverless method.
+          To prompt the AI effectively, consider asking specific questions related to the manual content and avoid vague or overly broad queries. Ensure your questions are descriptive, concise and precise for the best results.
         </p>
         <p>
-          Learn how to build this project by following this{" "}
+          Visit Jamesway's website{" "}
           <Link
             className="text-blue-500"
-            href="https://sdk.vercel.ai/docs/guides/rag-chatbot"
+            href="https://jamesway.com"
             target="_blank"
           >
-            guide
+            here
           </Link>
-          .
+          to learn more.
         </p>
       </div>
     </motion.div>
