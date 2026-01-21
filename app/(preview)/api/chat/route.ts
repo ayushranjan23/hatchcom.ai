@@ -1,4 +1,4 @@
-import { generateObject, streamText, tool } from "ai";
+import { convertToModelMessages, generateObject, streamText, tool } from "ai";
 import { z } from "zod";
 import manualChunks from "@/lib/data/manual-chunks.json";
 
@@ -34,11 +34,18 @@ type Level1Chunk = {
 
 export async function POST(req: Request) {
   const { messages } = await req.json();
-  const userQuery = messages[messages.length - 1]?.content || "";
+  const userQuery = messages[messages.length - 1]?.parts?.find((p: any) => p.type === "text")?.text || "";
 
   const result = streamText({
     model: "google/gemini-2.0-flash",
-    messages,
+    messages: convertToModelMessages(messages),
+    system: `You are an assistant that MUST use the provided tools to answer questions from a manual.
+Follow this exact sequence:
+1) Call analyzeCategories to pick ONE top-level category or detect out-of-scope.
+2) Call selectSubcategory within the chosen category to pick ONE subcategory.
+3) Call generateAnswer to produce the final streamed answer using the selected solution.
+Only answer from the manual. If not relevant, respond with the out-of-scope guidance.
+Always include confidence in your final output.`,
     tools: {
       // Level 1: Analyze top-level categories
       analyzeCategories: tool({
@@ -254,6 +261,6 @@ Provide a natural language answer based on the most relevant solution. Reference
     },
   });
 
-  // Use toTextStreamResponse() instead of toAIStreamResponse()
-  return result.toTextStreamResponse();
+  // Return UI message stream response to integrate with useChat
+  return result.toUIMessageStreamResponse();
 }
