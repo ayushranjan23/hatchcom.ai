@@ -30,19 +30,8 @@ const ProjectOverview = () => {
           >
             iterations
           </Link>{" "}
-          for implementing a Retrieval-Augmented Generation (RAG) chatbot in a serverless method.
-          To prompt the AI effectively, consider asking specific questions related to the manual content and avoid vague or overly broad queries. Ensure your questions are descriptive, concise and precise for the best results.
-        </p>
-        <p>
-          Visit the Jamesway website{" "}
-          <Link
-            className="text-blue-500"
-            href="https://jamesway.com"
-            target="_blank"
-          >
-            here
-          </Link>
-          to learn more.
+          for implementing a serverless AI chatbot.
+          Please only only ask specific questions related to the manual content and avoid vague or overly broad queries. Example: What type of reports are available in Hatchcom5? rather than Tell me about Hatchcom5.
         </p>
       </div>
     </motion.div>
