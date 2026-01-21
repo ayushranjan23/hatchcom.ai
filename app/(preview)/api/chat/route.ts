@@ -3,6 +3,7 @@ import { z } from "zod";
 import manualChunks from "@/lib/data/manual-chunks.json";
 
 // Configuration
+// const MAX_ATTEMPTS = 5;
 const CONFIDENCE_THRESHOLD = 0.3;
 
 // Allow streaming responses up to 30 seconds
@@ -32,17 +33,6 @@ type Level1Chunk = {
   children: Level2Chunk[];
 };
 
-// Define the return types for each tool
-type ToolReturnType = 
-  | { type: "out_of_scope"; message: string; reasoning: string }
-  | { type: "level1_selected"; selectedChunkId: string; selectedTitle: string; confidence: number; reasoning: string; availableSubcategories: number }
-  | { type: "error"; message: string; reasoning?: string }
-  | { type: "no_subcategories"; message: string; reasoning: string }
-  | { type: "low_confidence"; message: string; confidence: number; selectedChunkId: string; reasoning: string }
-  | { type: "level2_selected"; selectedChunkId: string; selectedTitle: string; confidence: number; reasoning: string; availableSolutions: number }
-  | { type: "no_solutions"; message: string; reasoning: string }
-  | { type: "final_answer"; answer: string; confidence: number; source: { title: string; page: number; section: string; manualLink: string }; decisionPath: Array<{ level: number; title: string; id: string }>; reasoning: string };
-
 export async function POST(req: Request) {
   const { messages } = await req.json();
   const userQuery = messages[messages.length - 1]?.content || "";
@@ -50,12 +40,13 @@ export async function POST(req: Request) {
   const result = streamText({
     model: "google/gemini-2.0-flash",
     messages,
+    // maxSteps: MAX_ATTEMPTS,
     tools: {
       // Level 1: Analyze top-level categories
       analyzeCategories: tool({
         description: `Analyze top-level manual categories to find the most relevant one. Use this tool first to determine if the question can be answered from the manual.`,
         parameters: z.object({}),
-        execute: async (): Promise<ToolReturnType> => {
+        execute: async () => {
           const level1Chunks = manualChunks as Level1Chunk[];
           
           // Check if question is answerable from manual
@@ -115,7 +106,7 @@ Select the ONE most relevant category ID that best matches this question.`,
         parameters: z.object({
           level1ChunkId: z.string().describe("The L1 chunk ID to search within"),
         }),
-        execute: async ({ level1ChunkId }): Promise<ToolReturnType> => {
+        execute: async ({ level1ChunkId }) => {
           const level1Chunks = manualChunks as Level1Chunk[];
           const level1Chunk = level1Chunks.find(c => c.id === level1ChunkId);
 
@@ -181,7 +172,7 @@ Select the ONE most relevant subcategory ID.`,
         parameters: z.object({
           level2ChunkId: z.string().describe("The L2 chunk ID to get solutions from"),
         }),
-        execute: async ({ level2ChunkId }): Promise<ToolReturnType> => {
+        execute: async ({ level2ChunkId }) => {
           const level1Chunks = manualChunks as Level1Chunk[];
           let level2Chunk: Level2Chunk | undefined;
           let level1Parent: Level1Chunk | undefined;
