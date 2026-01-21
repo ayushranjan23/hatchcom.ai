@@ -34,7 +34,7 @@ const ProjectOverview = () => {
           To prompt the AI effectively, consider asking specific questions related to the manual content and avoid vague or overly broad queries. Ensure your questions are descriptive, concise and precise for the best results.
         </p>
         <p>
-          Visit Jamesway's website{" "}
+          Visit the Jamesway website{" "}
           <Link
             className="text-blue-500"
             href="https://jamesway.com"
