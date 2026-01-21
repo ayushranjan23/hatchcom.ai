@@ -1,4 +1,4 @@
-import { generateObject, streamText } from "ai";
+import { generateObject, streamText, tool } from "ai";
 import { z } from "zod";
 import manualChunks from "@/lib/data/manual-chunks.json";
 
@@ -41,9 +41,10 @@ export async function POST(req: Request) {
     messages,
     tools: {
       // Level 1: Analyze top-level categories
-      analyzeCategories: {
+      analyzeCategories: tool({
         description: `Analyze top-level manual categories to find the most relevant one. Use this tool first to determine if the question can be answered from the manual.`,
-        parameters: z.object({}),
+        // For older versions, use inputSchema instead of parameters
+        inputSchema: z.object({}),
         execute: async () => {
           const level1Chunks = manualChunks as Level1Chunk[];
           
@@ -96,12 +97,13 @@ Select the ONE most relevant category ID that best matches this question.`,
             availableSubcategories: selectedChunk?.children.length || 0,
           };
         },
-      },
+      }),
 
       // Level 2: Refine to subcategory
-      selectSubcategory: {
+      selectSubcategory: tool({
         description: `Select the most relevant subcategory within the chosen category.`,
-        parameters: z.object({
+        // Use inputSchema instead of parameters
+        inputSchema: z.object({
           level1ChunkId: z.string().describe("The L1 chunk ID to search within"),
         }),
         execute: async ({ level1ChunkId }) => {
@@ -162,12 +164,13 @@ Select the ONE most relevant subcategory ID.`,
             availableSolutions: selectedChunk?.children.length || 0,
           };
         },
-      },
+      }),
 
       // Level 3: Generate final answer
-      generateAnswer: {
+      generateAnswer: tool({
         description: `Generate the final answer using the specific solution from the manual.`,
-        parameters: z.object({
+        // Use inputSchema instead of parameters
+        inputSchema: z.object({
           level2ChunkId: z.string().describe("The L2 chunk ID to get solutions from"),
         }),
         execute: async ({ level2ChunkId }) => {
@@ -247,7 +250,7 @@ Provide a natural language answer based on the most relevant solution. Reference
             reasoning: object.reasoning,
           };
         },
-      },
+      }),
     },
   });
 
