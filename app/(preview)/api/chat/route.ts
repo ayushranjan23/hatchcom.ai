@@ -37,7 +37,7 @@ type Level1Chunk = {
 export async function POST(req: Request) {
   const { messages } = await req.json();
   const userQuery = messages[messages.length - 1]?.parts?.find((p: any) => p.type === "text")?.text || "";
-  const model = google("gemini-2.0-flash");
+  const model = google("gemini-2.5-flash");
 
   const result = streamText({
     model,
