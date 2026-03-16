@@ -27,10 +27,10 @@ To get the project up and running, follow these steps:
    cp .env.example .env.local
    ```
 
-3. Add your Vercel AI Gateway API key and PostgreSQL connection string to the `.env.local` file:
+3. Add your Google Gemini API key and PostgreSQL connection string to the `.env.local` file:
 
    ```
-   AI_GATEWAY_API_KEY=your_api_key_here
+   GOOGLE_GENERATIVE_AI_API_KEY=your_api_key_here
    DATABASE_URL=your_postgres_connection_string_here
    ```
 

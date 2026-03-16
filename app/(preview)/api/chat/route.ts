@@ -1,4 +1,5 @@
 import { convertToModelMessages, generateObject, stepCountIs, streamText, tool } from "ai";
+import { google } from "@ai-sdk/google";
 import { z } from "zod";
 import manualChunks from "@/lib/data/manual-chunks.json";
 
@@ -36,9 +37,10 @@ type Level1Chunk = {
 export async function POST(req: Request) {
   const { messages } = await req.json();
   const userQuery = messages[messages.length - 1]?.parts?.find((p: any) => p.type === "text")?.text || "";
+  const model = google("gemini-2.0-flash");
 
   const result = streamText({
-    model: "google/gemini-2.0-flash",
+    model,
     messages: convertToModelMessages(messages),
     system: `CRITICAL: You are an assistant that MUST use the provided tools to answer questions from a manual.
 FOLLOW THIS EXACT SEQUENCE EVERY TIME:
@@ -84,7 +86,7 @@ DO NOT MENTION TOOLS, AI MODEL NAMES, OR INTERNAL PROCESSES IN FINAL ANSWER.`,
           // ALWAYS proceed to selection, even if relevance is low
           // Select most relevant L1 chunk
           const { object } = await generateObject({
-            model: "google/gemini-2.0-flash",
+            model,
             schema: z.object({
               selectedChunkId: z.string().describe("ID of the selected level 1 chunk (e.g., L1-001)"),
               confidence: z.number().min(0).max(1).describe("Confidence score 0-1"),
@@ -148,7 +150,7 @@ Select the ONE most relevant category ID.`,
           }
 
           const { object } = await generateObject({
-            model: "google/gemini-2.0-flash",
+            model,
             schema: z.object({
               selectedChunkId: z.string().describe("ID of the selected level 2 chunk (e.g., L2-001)"),
               confidence: z.number().min(0).max(1).describe("Confidence score 0-1"),
@@ -224,7 +226,7 @@ Select the ONE most relevant subcategory ID.`,
           }
 
           const { object } = await generateObject({
-            model: "google/gemini-2.0-flash",
+            model,
             schema: z.object({
               answer: z.string().describe("Complete natural language answer that directly answers the user's question using the content"),
               confidence: z.number().min(0).max(1).describe("Confidence in this answer"),
