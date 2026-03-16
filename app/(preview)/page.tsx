@@ -17,8 +17,8 @@ export default function Chat() {
     onToolCall({ toolCall }) {
       console.log("Tool call:", toolCall);
     },
-    onError: () => {
-      toast.error("You've been rate limited, please try again later!");
+    onError: ({ error }) => {
+      toast.error(error?.message || "Request failed. Check server logs and environment variables.");
     },
   });
 

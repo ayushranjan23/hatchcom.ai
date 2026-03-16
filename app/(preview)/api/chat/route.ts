@@ -4,10 +4,10 @@ import manualChunks from "@/lib/data/manual-chunks.json";
 
 // Configuration
 const CONFIDENCE_THRESHOLD = 0.1; // Lowered to allow more guesses with vague matches
-const MAX_ATTEMPTS = 5; // configurable upper bound including retries
+const MAX_ATTEMPTS = 12; // give tool chain enough headroom before stopping
 
-// Allow streaming responses up to 30 seconds
-export const maxDuration = 30;
+// Allow streaming responses up to 60 seconds
+export const maxDuration = 60;
 
 // Type definitions for manual chunks
 type Level3Chunk = {
@@ -80,29 +80,6 @@ DO NOT MENTION TOOLS, AI MODEL NAMES, OR INTERNAL PROCESSES IN FINAL ANSWER.`,
         inputSchema: z.object({}),
         execute: async () => {
           const level1Chunks = manualChunks as Level1Chunk[];
-          
-          // Check if question is answerable from manual - but now we'll always proceed
-          const { object: relevanceCheck } = await generateObject({
-            model: "google/gemini-2.0-flash",
-            schema: z.object({
-              isRelevant: z.boolean().describe("Can this be answered using ONLY the manual categories?"),
-              reasoning: z.string().describe("Brief explanation"),
-            }),
-            prompt: `CRITICAL: You MUST ALWAYS select a category, even if the match seems imperfect.
-
-Available manual categories:
-${level1Chunks.map(c => `ID: ${c.id}, Title: "${c.title}", Summary: "${c.summary}"`).join("\n")}
-
-User question: "${userQuery}"
-
-ANALYSIS INSTRUCTIONS:
-1. Review ALL titles AND summaries (not just titles)
-2. Look for conceptual matches, not just exact keywords
-3. If something seems vaguely related (e.g., "cable connector" could be in "Introduction" if summary mentions "hardware"), select it
-4. YOU MUST PICK ONE CATEGORY - DO NOT RETURN isRelevant: false
-
-Select the ONE most plausible category ID.`,
-          });
 
           // ALWAYS proceed to selection, even if relevance is low
           // Select most relevant L1 chunk
