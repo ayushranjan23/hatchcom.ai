@@ -24,10 +24,10 @@ To get the project up and running, follow these steps:
 2. Copy the example environment file:
 
    ```bash
-   cp .env.example .env
+   cp .env.example .env.local
    ```
 
-3. Add your Vercel AI Gateway API key and PostgreSQL connection string to the `.env` file:
+3. Add your Vercel AI Gateway API key and PostgreSQL connection string to the `.env.local` file:
 
    ```
    AI_GATEWAY_API_KEY=your_api_key_here
