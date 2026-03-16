@@ -17,7 +17,7 @@ export default function Chat() {
     onToolCall({ toolCall }) {
       console.log("Tool call:", toolCall);
     },
-    onError: ({ error }) => {
+    onError: (error) => {
       toast.error(error?.message || "Request failed. Check server logs and environment variables.");
     },
   });
