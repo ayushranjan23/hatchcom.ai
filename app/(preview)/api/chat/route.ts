@@ -42,36 +42,36 @@ export async function POST(req: Request) {
   const result = streamText({
     model,
     messages: convertToModelMessages(messages),
-    system: `CRITICAL: You are an assistant that MUST use the provided tools to answer questions from a manual.
+    system: `CRITICAL: You are a Tueely AI assistant that MUST use the provided tools to answer questions about Tueely, MenuQR, and MenuGPT.
 FOLLOW THIS EXACT SEQUENCE EVERY TIME:
-1) ALWAYS call analyzeCategories first. You MUST ALWAYS select a top-level category from the manual. Even if the match seems vague or imperfect, you MUST PICK ONE based on the best available match. Use both title AND summary to make educated guesses.
+1) ALWAYS call analyzeCategories first. You MUST ALWAYS select a top-level category from the knowledge base. Even if the match seems vague or imperfect, you MUST PICK ONE based on the best available match. Use both title AND summary to make educated guesses.
 2) ALWAYS call selectSubcategory within the chosen category. You MUST ALWAYS select a subcategory. Even if unsure, pick the most plausible one based on available information.
 3) ALWAYS call generateAnswer to produce the final streamed answer using the selected solution.
 
 IMPERATIVE RULES:
 - YOU MUST ALWAYS PICK CATEGORIES AT L1 AND L2 LEVELS. DO NOT STOP OR SKIP TOOLS.
-- When categories seem vague (e.g., "Introduction" with summary mentioning "hardware"), you MUST MAKE AN EDUCATED GUESS based on available information.
+- When categories seem vague, you MUST MAKE AN EDUCATED GUESS based on available information.
 - You MUST use both title AND summary content for matching, not just exact keyword matches.
 - After generateAnswer returns, you MUST produce a final assistant text message that contains:
   - The COMPLETE natural language answer that fully answers the user's question using the actual content from the Level 3 chunk.
   - Confidence as a percentage
-  - Source title and "https://hatchcomai.vercel.app/manual.pdf#page=n" link
+  - Source title and a reference link
 
 CRITICAL: YOUR FINAL ANSWER MUST:
-1. ACTUALLY ANSWER THE QUESTION USING THE LEVEL 3 CONTENT. DO NOT TELL USER TO CHECK THE MANUAL.
+1. ACTUALLY ANSWER THE QUESTION USING THE LEVEL 3 CONTENT. DO NOT TELL USER TO CHECK THE DOCS.
 2. PROVIDE A COMPLETE, USEFUL ANSWER AS IF YOU WERE DIRECTLY ANSWERING.
 3. INCLUDE THE REFERENCE AT THE END FOR VERIFICATION.
 4. DO NOT SAY "LX-XXX HAS THE ANSWER" - YOU ARE THE ONE ANSWERING!
 
 EXAMPLE OF WHAT TO DO:
-User: "What is the cable connector part number?"
-Your answer: "The cable connector part number is XYZ-1234, which is a 24-pin connector used for... [rest of actual answer from content]"
+User: "How do I update my menu after going live?"
+Your answer: "To update your menu after going live, you can... [rest of actual answer from content]"
 
 Confidence: XX%
-Source: Connector Specifications
-Reference: https://hatchcomai.vercel.app/manual.pdf#page=42
+Source: Updating Your Menu
+Reference: https://tueely.com
 
-IF THE USER IS JUST GREETING OR MAKING GENERAL CHAT, respond normally as a Hatchcom assistant without using tools.
+IF THE USER IS JUST GREETING OR MAKING GENERAL CHAT, respond normally as a Tueely assistant without using tools.
 DO NOT MENTION TOOLS, AI MODEL NAMES, OR INTERNAL PROCESSES IN FINAL ANSWER.`,
     // Ensure tool loop continues and doesn't stop early
     stopWhen: stepCountIs(MAX_ATTEMPTS),
@@ -269,7 +269,7 @@ Provide a thorough answer based on the manual content.`,
               title: sourceChunk.title,
               page: sourceChunk.page,
               section: sourceChunk.section,
-              manualLink: `https://hatchcomai.vercel.app/manual.pdf#page=${sourceChunk.page}`,
+              manualLink: `https://tueely.com`,
             },
             decisionPath: [
               { level: 1, title: level1Parent.title, id: level1Parent.id },

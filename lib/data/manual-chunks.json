@@ -1,122 +1,68 @@
-[
+﻿[
   {
     "id": "L1-001",
-    "title": "Introduction and Installation",
-    "summary": "Comprehensive overview of Hatchcom 5 software including system requirements, hardware installation procedures, remote access configuration, and basic operational interfaces for managing Jamesway hatchery equipment.",
+    "title": "About Tueely",
+    "summary": "Overview of Tueely as a restaurant AI platform, its products MenuQR and MenuGPT, its mission to elevate restaurant menus with AI, and who it is built for.",
     "children": [
       {
         "id": "L2-001",
-        "title": "Software Overview and Features",
-        "summary": "Detailed description of Hatchcom 5 capabilities including monitoring, reporting, graphing, maintenance scheduling, and communication with various incubator and HVAC systems.",
+        "title": "Company Overview",
+        "summary": "What Tueely is, its mission, and the problem it solves for restaurants.",
         "children": [
           {
             "id": "L3-001",
-            "title": "Hatchcom 5 Software Features",
-            "summary": "Complete feature set of Hatchcom 5 for hatchery monitoring and control systems.",
-            "content": "Welcome to the Jamesway Hatchcom 5 program - a powerful and versatile program to manage any hatchery that uses single-stage, multi-stage, or Guardian HVAC control system.\n\nHatchcom 5 is not only a complete hatchery monitoring software system; it contains the tools you need to make decisions effectively and to increase your productivity.\n\nHatchcom 5 has the following features:\n\nIs designed to run on 64 bit Windows 7 Professional or later operating system, and can be used together with other Windows programs such as Microsoft Office. Monitors and controls the operation of all your hatchers and incubators. It will also monitor hatchery rooms when connected to the Guardian HVAC system. Prepares detailed alarm and machine operation reports covering real-time, daily, and past events. The reports can be displayed on screen, printed, or stored in a file which can be imported into other popular software packages for further analysis. Illustrates, analyzes, and troubleshoots machine operation by drawing long term trend-indicating graphs from stored temperature, humidity, damper, and event data. The graph capability is extremely powerful and flexible, allowing information to be displayed in many different formats and resolutions. Stores valuable operational machine data such as actual temperature, humidity and damper readings, as well as machine events such as egg turns, heating and humidification activity. Stores valuable event-driven data such as machine alarms and operator response times to alarms. New maintenance function provides a flexible system to schedule recurring maintenance tasks for incubator, HVAC, and other hatchery equipment. Scheduling of automatic email messaging or telephone calling in the event of an alarm. Allows access to all Hatchcom features from any other computer using a local network or Internet via a VPN connection. Hatchcom is designed as a true client-server application. Can simultaneously communicate with Jamesway's single-stage incubators using Ethernet or fiber optic cabling and multi-stage incubators using fiber optic or RS-485 cabling. Hatchcom provides a seamless interface between all of the machines no matter which cable type is used. Has full support for the Guardian HVAC control system, with the additional benefit of creating automatic scheduled setpoint changes.",
-            "page": 7,
-            "section": "Introduction and Installation/Software Overview and Features/Hatchcom 5 Software Features"
+            "title": "What Is Tueely",
+            "summary": "Tueely is a restaurant AI platform that augments physical in-house menus with AI to accurately answer food-related queries.",
+            "content": "Tueely is a restaurant technology company that builds AI-powered menu tools for restaurants, cafes, and food service businesses. Its mission is to elevate restaurant menus with AI, making dining more accessible and guest experiences smoother.\n\nTueely offers two core products:\n- MenuQR: Gives guests instant access to your menu through branded, scannable QR codes placed at every table.\n- MenuGPT: Adds a conversational AI layer so guests can ask natural questions about ingredients, allergens, spice levels, and dish pairings before they order.\n\nTueely is designed to work as a non-disruptive add-on. It does not replace your existing POS system or payment flow — it layers on top of your current workflow to improve how guests discover and understand your menu.",
+            "page": 1,
+            "section": "About Tueely/Company Overview/What Is Tueely"
           },
           {
             "id": "L3-002",
-            "title": "Help System Access Methods",
-            "summary": "Multiple ways to access Hatchcom help documentation for troubleshooting and guidance.",
-            "content": "When solving problems, you may find it convenient to use the Hatchcom help file. There are several ways to open the help file.\n\nClick the question mark help button on the main screen. Click the question mark icon on a dialog window to jump directly to the help section relevant to the current function. Press the F1 function key as an alternative means to choose context help.",
-            "page": 8,
-            "section": "Introduction and Installation/Software Overview and Features/Help System Access Methods"
+            "title": "Who Tueely Is For",
+            "summary": "Target audience: restaurants, cafes, food halls, quick service, and any food business that uses physical or digital menus.",
+            "content": "Tueely is built for restaurants, cafes, quick service outlets, food halls, ghost kitchens, and any food business that wants to improve the guest menu experience.\n\nIt is particularly well suited for:\n- High-volume restaurants where staff are stretched thin and guests need menu clarity fast\n- Restaurants with complex menus featuring many modifiers, dietary notes, or allergy information\n- Multi-location restaurant groups that want consistent menu access across all sites\n- Owners and operators who want actionable insight about what guests look at and ask most\n- Teams that care about accessibility — ensuring every guest can understand the menu regardless of language barrier or dietary complexity\n\nTueely does not require technical expertise to set up. Once menu data is shared, the Tueely team handles configuration so your staff can focus on service.",
+            "page": 1,
+            "section": "About Tueely/Company Overview/Who Tueely Is For"
           },
           {
             "id": "L3-003",
-            "title": "Customer Support Scope and Contacts",
-            "summary": "Jamesway support services including contact methods and technical support limitations.",
-            "content": "Jamesway provides customer support for Hatchcom 5. Contact your local agent or the office nearest you. Telephone number and email address are located on the inside title page.\n\nJamesway does not supply technical help for Windows problems, configuring local area networking, or for other software installed on your system. Please contact your IT department or the manufacturer of your software if problems should occur in these areas.",
-            "page": 8,
-            "section": "Introduction and Installation/Software Overview and Features/Customer Support Scope and Contacts"
+            "title": "Getting Started with Tueely",
+            "summary": "How to begin with Tueely: share your menu, get a guided walkthrough, and launch with your team.",
+            "content": "Getting started with Tueely is a simple three-step process:\n\n1. Share your current menu — Send your existing PDF, document, or menu link. The Tueely team maps your real menu structure first, so the AI knows your actual items, ingredients, and service flow.\n\n2. Get a guided walkthrough — A personalized demo shows MenuQR and MenuGPT working with realistic guest questions and your specific menu. This is not a generic product tour; it reflects your menu style and service model.\n\n3. Launch with your team — Roll out in stages with your own branding while keeping your current POS process untouched. Staff training is minimal because Tueely does not change how your team takes orders.\n\nTo book a walkthrough, visit tueely.com/demo or contact the team directly.",
+            "page": 2,
+            "section": "About Tueely/Company Overview/Getting Started with Tueely"
           }
         ]
       },
       {
         "id": "L2-002",
-        "title": "System Requirements and Hardware Specifications",
-        "summary": "Minimum hardware specifications, operating system requirements, and physical installation requirements for Hatchcom 5 deployment.",
+        "title": "Tueely Products",
+        "summary": "Overview of Tueely's two products: MenuQR for instant menu access via QR codes and MenuGPT for conversational AI menu questions.",
         "children": [
           {
             "id": "L3-004",
-            "title": "Minimum PC System Requirements",
-            "summary": "Complete hardware and software requirements for running Hatchcom 5 efficiently.",
-            "content": "For Hatchcom 5 to run efficiently on your computer, the following minimum requirements must be met:\n\nDesktop PC with Intel compatible CPU, 4 GB memory and 200 GB hard disk\nWindows 7 Professional 64-bit edition or later\nOne USB port for security lock\nTwo additional USB ports if using fiber optic networking\nOne additional USB port if connecting to a Guardian HVAC control system\nTwo Ethernet ports if using Ethernet networking\nHatchcom software is supplied on USB flash drive",
-            "page": 9,
-            "section": "Introduction and Installation/System Requirements and Hardware Specifications/Minimum PC System Requirements"
+            "title": "MenuQR Overview",
+            "summary": "MenuQR gives guests instant menu access through branded QR codes at every table.",
+            "content": "MenuQR is Tueely's QR code menu product. It replaces or supplements printed menus with clean, scannable QR codes that guests can use on any smartphone or tablet without installing an app.\n\nKey features of MenuQR:\n- Branded QR codes that match your restaurant's visual identity\n- Instant access — no app download required; works in any mobile browser\n- Real-time menu updates: change items, prices, or availability in minutes and every QR touchpoint reflects the update automatically\n- Scannable from table tents, printed cards, wall signage, or receipt footers\n- Works on iPhone, Android, and tablets across all modern browsers\n- Tracks which items guests scan most so you can improve menu design and highlight popular items\n\nMenuQR is the entry point for the Tueely guest experience. Once a guest scans the code, they can browse the menu and, if MenuGPT is enabled, ask questions about any item.",
+            "page": 3,
+            "section": "About Tueely/Tueely Products/MenuQR Overview"
           },
           {
             "id": "L3-005",
-            "title": "Hardware Installation Procedures",
-            "summary": "Step-by-step procedures for connecting Hatchcom to various incubator and hatcher systems.",
-            "content": "When you are connecting Hatchcom to incubators or hatchers using fiber optic or Belden cables, it is necessary to attach a PTA703 USB cable assembly and PTA706 converter box. The picture below indicates where to connect the cable assembly to converter box.\n\nPlatinum machines connected using Ethernet do not require the converter box. It is recommended that the Hatchcom PC uses a secondary Ethernet adapter to connect to the incubators and hatchers, minimizing network traffic on the office network.\n\nThe Hatchcom software must be installed before plugging USB devices into PC. This ensures that the required device drivers are available without the need of a manual driver install.\n\nInstall the Hatchcom security lock into USB port on rear side of computer when prompted to do so at the end of the Hatchcom installation. Either one of the two types of locks shown is compatible.\n\nIf you have a fiber converter box plug in the USB cables. If you plug in the cables after the Hatchcom installer exits, then it will be necessary to reboot the PC to allow the system to recognize the cables.",
-            "page": 9,
-            "section": "Introduction and Installation/System Requirements and Hardware Specifications/Hardware Installation Procedures"
+            "title": "MenuGPT Overview",
+            "summary": "MenuGPT is a conversational AI layer that answers guest questions about your menu including ingredients, allergens, spice levels, and dish pairings.",
+            "content": "MenuGPT is Tueely's AI-powered conversational menu assistant. Once a guest opens the menu through MenuQR, they can ask natural language questions about any item on the menu.\n\nMenuGPT can answer questions like:\n- 'Does the pasta contain gluten?'\n- 'What is the spice level on the chicken curry?'\n- 'Which dishes are vegan-friendly?'\n- 'What goes well with the lamb chops?'\n- 'Is the mushroom risotto nut-free?'\n\nMenuGPT is trained on your specific menu data, so answers are accurate for your restaurant — not generic guesses. When you update your menu, MenuGPT updates too.\n\nBenefits:\n- Reduces the load on front-of-house staff for repetitive menu questions\n- Increases guest confidence before ordering, reducing order errors and returns\n- Helps guests with dietary restrictions feel catered to without asking staff\n- Captures question data so you can see which items or dietary concerns come up most frequently",
+            "page": 4,
+            "section": "About Tueely/Tueely Products/MenuGPT Overview"
           },
           {
             "id": "L3-006",
-            "title": "Network Cable Configuration and Requirements",
-            "summary": "Cable types, connections, and network configuration requirements for different equipment types.",
-            "content": "Refer to the Platinum, PT-100, or PS501 installation manuals for instructions on crimping and polishing the Ethernet, fiber optic, or Belden cables. Each unit's station address needs to be set as described in the manuals before the Hatchcom network can be configured.\n\nIf Hatchcom is used in a hatchery with single-stage ACI equipment, then the fiber optic cable must be connected to a Sentry display panel and the panel's Hatchcom feature must be enabled. In this case Hatchcom will not work correctly when the fiber optic cable is connected to a fiber optic hub. For best performance Hatchcom should be connected to master display panel.",
-            "page": 9,
-            "section": "Introduction and Installation/System Requirements and Hardware Specifications/Network Cable Configuration and Requirements"
-          }
-        ]
-      },
-      {
-        "id": "L2-003",
-        "title": "Remote Access and Network Configuration",
-        "summary": "Configuration of remote client access, VPN setup, network requirements, and troubleshooting for remote Hatchcom operation.",
-        "children": [
-          {
-            "id": "L3-007",
-            "title": "Remote Client Connection Methods",
-            "summary": "Two primary methods for remote access to Hatchcom: dedicated client software and remote desktop solutions.",
-            "content": "Hatchcom provides two different methods for remote access:\n\nThe Hatchcom client program can be installed on any Intel processor-based PC or tablet running the home or professional Windows version. The remote PC can access all Hatchcom functions when there is a direct network connection to the Hatchcom server PC. This could be a LAN (local access network) inside the hatchery, a Wi-Fi network inside the hatchery, or a VPN (virtual private network) connection from anywhere over the Internet. Note that the VPN connections can be difficult to set up because the hatchery network is typically protected through firewalls and user access restrictions.\n\nUse a remote desktop control application such as Windows Remote Desktop or TeamViewer to allow a user to take control of the Hatchcom computer. This is easier to set up, especially if you desire to access more than one Hatchcom computer. The downside is that screen updates are a little slower and a user sitting in front of the main Hatchcom computer must stop working on the computer while someone else is using it remotely. This method will work for any device for which a compatible remote client app is available.",
-            "page": 10,
-            "section": "Introduction and Installation/Remote Access and Network Configuration/Remote Client Connection Methods"
-          },
-          {
-            "id": "L3-008",
-            "title": "Remote Client Installation and Network Setup",
-            "summary": "Installation procedures for remote clients and network configuration requirements.",
-            "content": "Install the Hatchcom client using the standard Hatchcom Setup installer but choose the remote client type when prompted. The client PC must be connected to the hatchery's LAN or Wi-Fi network, not the segregated ethernet network used for Platinum incubators. When Hatchcom client runs the first time it will prompt to set the Hatchcom server PC's computer name if the DNS server is configured to translate the computer name to its address, or the IP address when it is set statically. Note that the DNS name may be different from the Windows PC name. Test the connection by issuing 'ping name' in a Windows command prompt.\n\nFor access from outside of hatchery TeamViewer is recommended because it is easier to configure through the hatchery firewall. If you prefer to remotely connect the Hatchcom client program over the Internet, it is necessary to use a VPN. Its setup depends on the type of Internet router or firewall appliance that is used at the hatchery and will require an experienced IT professional that is familiar with the hatchery's networking hardware to configure. When the VPN is correctly configured on the remote PC to reach the Hatchcom PC inside the hatchery, you will first establish the VPN connection then run the Hatchcom client software.",
-            "page": 10,
-            "section": "Introduction and Installation/Remote Access and Network Configuration/Remote Client Installation and Network Setup"
-          },
-          {
-            "id": "L3-009",
-            "title": "Remote Connection Troubleshooting",
-            "summary": "Common issues and solutions for remote connection problems including firewall and security software conflicts.",
-            "content": "If the remote client fails to connect to the Hatchcom server PC, then security software or third-party firewalls on the client or server PC's may be preventing the connection. Cyber security software such as Bitdefender or Kaspersky Internet Security are known to block communication.",
-            "page": 11,
-            "section": "Introduction and Installation/Remote Access and Network Configuration/Remote Connection Troubleshooting"
-          }
-        ]
-      },
-      {
-        "id": "L2-004",
-        "title": "User Interface and Value Entry Systems",
-        "summary": "Value entry dialog controls, password entry procedures, and user interface navigation for configuring machine settings.",
-        "children": [
-          {
-            "id": "L3-010",
-            "title": "Value Entry Dialog Functions and Controls",
-            "summary": "Complete functionality of the value entry dialog including increment/decrement buttons, decimal entry, and validation.",
-            "content": "Many screens use a value entry dialog that ensures only acceptable settings can be entered.\n\nIncreases the entered value. If the value is outside the allowable range, then the largest possible value is shown and no further increases are made. You may also use the Up key to increase number.\n\nDecreases the entered value. If the value is outside the allowable range, then the lowest possible value is shown and no further decreases are made. You may also use the Down key to decrease number.\n\nAdd a number to current value. The current value will be erased the first time a number button is pressed. You may also use the keyboard to type numbers.\n\nC Clears the current value. You may also use the C key to clear the value.\n\nEnter a decimal place. This button is shown only if the entry allows decimal numbers.\n\nAccept the new value. This button is grayed out when the current value is outside the allowable range.\n\nCancel the value entry without making changes.",
-            "page": 11,
-            "section": "Introduction and Installation/User Interface and Value Entry Systems/Value Entry Dialog Functions and Controls"
-          },
-          {
-            "id": "L3-011",
-            "title": "Password Protected Function Access",
-            "summary": "Password entry procedures and security levels for accessing protected Hatchcom functions.",
-            "content": "When you attempt to access a function that is password protected, you will be shown a modified value entry dialog. As you type the password, the numerals are hidden by the asterisk * symbol. Refer to passwords section for information on controlling user access.\n\nHatchcom does not indicate what level of access is required to proceed. Entering the level 2 password will always be accepted but entering the level 1 password will deny access with the following message if the function is programmed to require level 2.",
-            "page": 12,
-            "section": "Introduction and Installation/User Interface and Value Entry Systems/Password Protected Function Access"
+            "title": "MenuQR vs MenuGPT Differences",
+            "summary": "Clarifying the distinction between MenuQR (QR access layer) and MenuGPT (conversational AI layer) and how they work together.",
+            "content": "MenuQR and MenuGPT are complementary products that work together but solve different problems:\n\nMenuQR:\n- Solves the access problem: How do guests quickly and cleanly view your menu?\n- Provides a branded, scannable QR code that opens your menu instantly on any device\n- No app installation needed; works in the browser\n- Powers the initial menu browsing experience\n\nMenuGPT:\n- Solves the understanding problem: How do guests get answers to menu questions without bothering staff?\n- Adds an AI chat layer on top of the MenuQR experience\n- Answers specific questions about ingredients, allergens, preparations, and pairings\n- Trained specifically on your menu data for accurate, restaurant-specific answers\n\nTogether they form a complete menu discovery experience: guests scan, browse, and ask — all from their phone, without needing a staff member to explain the menu.",
+            "page": 4,
+            "section": "About Tueely/Tueely Products/MenuQR vs MenuGPT Differences"
           }
         ]
       }
@@ -124,427 +70,91 @@
   },
   {
     "id": "L1-002",
-    "title": "Main Screen Interface and Layout Management",
-    "summary": "Complete configuration and management of the main Hatchcom interface including layout editing, machine configuration, HVAC setup, database management, alarm callout systems, and user preferences.",
+    "title": "Setup and Integration",
+    "summary": "How to set up Tueely, integrate it with existing systems, configure menu data, deploy QR codes, and onboard your team.",
     "children": [
       {
-        "id": "L2-005",
-        "title": "Main Screen Layout and Navigation",
-        "summary": "Interface elements, navigation methods, and functional overview of the primary Hatchcom screen for hatchery monitoring and control.",
+        "id": "L2-003",
+        "title": "Menu Data and Configuration",
+        "summary": "How to share your menu with Tueely, what formats are accepted, and how menu updates work.",
         "children": [
           {
-            "id": "L3-012",
-            "title": "Main Screen Overview and Functions",
-            "summary": "Complete description of main screen functionality including machine monitoring, reporting, layout editing, and configuration access.",
-            "content": "When you launch the Hatchcom program, the first screen to appear is the main screen showing the hatchery layout. This is your Home screen. Use this screen to manage the machines in the following ways:\n\nSee an overview of all machines and their critical sensor readings such as temperature, humidity, carbon dioxide actual readings and current alarms.\nView each machine's status indicated by its background color.\nGenerate reports showing present or past activity of all machines.\nConfigure user preferences, alarm calling, and database settings.\nGet detailed information on a machine by double-clicking the unit.\nQuickly access commonly used functions by right-clicking the unit.\nChange the hatchery layout and customize machine status colors or which sensor readings are displayed.\nIf a Guardian HVAC control system is enabled, the HVAC information and status for each Guardian-controlled room will also be displayed.\n\nWhen launching Hatchcom for the first time after installation, the layout screen will be blank and you will be prompted whether you want to edit the layout. Click Yes and proceed to the edit hatchery layout section.\n\nYou may also import settings from an existing Hatchcom Ill installation. Use the Hatchcom 3 Export utility supplied in the miscellaneous folder on the USB flash drive at the old Hatchcom PC to extract the settings file. Transfer the settings file to the Hatchcom 5 PC and click Import button to read into the database. If you have a Hatchcom 4 system simply run the upgrade installer to update to Hatchcom 5, it is not necessary to import the settings.",
-            "page": 13,
-            "section": "Main Screen Interface and Layout Management/Main Screen Layout and Navigation/Main Screen Overview and Functions"
+            "id": "L3-007",
+            "title": "Accepted Menu Formats",
+            "summary": "Tueely accepts PDF menus, Word documents, Google Docs, spreadsheet files, and existing menu links.",
+            "content": "To set up Tueely, you share your current menu in any common format. Tueely accepts:\n- PDF menus: The most common format. Simply send your existing printed menu as a PDF.\n- Word or Google Docs: If you keep your menu in a document, share it directly.\n- Spreadsheet files (CSV or Excel): Useful for restaurants with structured menu data including items, prices, and modifiers.\n- Existing menu links: If you have an online menu (e.g., on your restaurant website or a third-party platform), share the URL.\n- Photos of physical menus: In some cases the team can work from high-quality menu photos.\n\nThe Tueely team reviews your menu data and structures it in the system, including item names, descriptions, ingredients, allergen tags, and any modifiers. You do not need to reformat your menu — share it as-is.",
+            "page": 5,
+            "section": "Setup and Integration/Menu Data and Configuration/Accepted Menu Formats"
           },
           {
+            "id": "L3-008",
+            "title": "Updating Your Menu",
+            "summary": "How to update menu items, prices, and availability after going live with Tueely.",
+            "content": "Keeping your Tueely menu up to date is designed to be fast and easy:\n\n- Item updates: Add, remove, or modify menu items through the Tueely dashboard or by sending updated menu files to the support team.\n- Price changes: Update prices directly in the dashboard and they reflect on guest-facing QR menus immediately.\n- Availability toggles: Mark items as unavailable (e.g., 'sold out today') without removing them from the full menu.\n- Seasonal menus: Switch between saved menu versions for seasonal changes, holiday specials, or timed promotions.\n\nAll updates propagate instantly to every QR code linked to your account. There is no need to reprint QR codes when your menu changes — this is one of the key advantages over static printed menus. MenuGPT also updates automatically when your menu data changes, so AI answers stay accurate after every update.",
+            "page": 5,
+            "section": "Setup and Integration/Menu Data and Configuration/Updating Your Menu"
+          },
+          {
+            "id": "L3-009",
+            "title": "Menu Structure and Categories",
+            "summary": "How Tueely organizes your menu into categories, subcategories, and items for the best guest experience.",
+            "content": "Tueely structures your menu into a hierarchy that mirrors how guests think about food:\n\n- Categories: Top-level groupings such as Starters, Mains, Desserts, Drinks, or any custom sections you prefer.\n- Subcategories: Optional groupings within a category — for example, Mains → Meat Dishes, Vegetarian, Pasta.\n- Items: Individual dishes with names, descriptions, prices, ingredients, and modifiers.\n- Tags: Dietary and allergen tags such as Vegan, Gluten-Free, Contains Nuts, Dairy-Free that appear alongside items.\n\nThe team configures the structure to match your actual menu layout. You can request changes to categories or hierarchy at any time through the dashboard or support channel. A well-structured menu leads to better MenuGPT answers and faster guest browsing with MenuQR.",
+            "page": 6,
+            "section": "Setup and Integration/Menu Data and Configuration/Menu Structure and Categories"
+          }
+        ]
+      },
+      {
+        "id": "L2-004",
+        "title": "QR Code Deployment",
+        "summary": "How to print and deploy MenuQR codes in your restaurant, placement best practices, and customization options.",
+        "children": [
+          {
+            "id": "L3-010",
+            "title": "Generating and Printing QR Codes",
+            "summary": "How to generate branded QR codes from the Tueely dashboard and best practices for printing and placing them.",
+            "content": "Once your menu is configured in Tueely, you can generate your QR codes from the dashboard:\n\n1. Go to the QR Codes section in your Tueely dashboard.\n2. Select the menu or menu section you want the QR code to link to.\n3. Download the QR code as a PNG or SVG file in your preferred size.\n4. Apply your branding (logo, brand colors, call-to-action text like 'Scan to view menu') using the built-in customization options or export for use in your own design files.\n5. Print on table tents, menu cards, wall signage, or any surface guests will see.\n\nBest practices for printing:\n- Use a minimum of 2.5 cm x 2.5 cm (1 inch x 1 inch) QR code size for reliable scanning\n- Ensure high contrast between the QR code and its background\n- Laminate table tents for durability in high-spill environments\n- Place at sitting eye level or slightly above for natural scanning posture",
+            "page": 7,
+            "section": "Setup and Integration/QR Code Deployment/Generating and Printing QR Codes"
+          },
+          {
+            "id": "L3-011",
+            "title": "QR Code Placement Best Practices",
+            "summary": "Where to place MenuQR codes for maximum guest engagement at table, counter, and takeaway formats.",
+            "content": "Where you place your QR codes significantly affects how many guests actually use them:\n\nTable service restaurants:\n- Table tents at the center of each table are the most effective placement\n- QR codes on the physical menu cover or header for hybrid printed + digital experience\n- Placement near condiment holders so guests have something to scan while waiting\n\nCounter and quick service:\n- QR codes at the ordering counter at eye level\n- Digital display boards with QR code insets for pre-order browsing while queuing\n- QR codes on takeaway bags or packaging for reorder and repeat visits\n\nBar and lounge areas:\n- Coaster-style QR cards for drink menus\n- Bar ledge card holders for cocktail and food menus\n\nMultiple QR codes can point to the same menu or different sections (e.g., a drinks-only menu at the bar vs. the full food menu at tables). All can be managed from the same Tueely dashboard.",
+            "page": 8,
+            "section": "Setup and Integration/QR Code Deployment/QR Code Placement Best Practices"
+          },
+          {
+            "id": "L3-012",
+            "title": "QR Code Branding and Customization",
+            "summary": "How to customize QR code appearance with your restaurant brand colors, logo, and call-to-action text.",
+            "content": "Tueely's QR codes are fully brandable to match your restaurant's visual identity:\n\n- Logo integration: Add your restaurant logo to the center of the QR code\n- Brand colors: Change the QR code foreground color to match your brand while maintaining scan reliability\n- Background color: Customize the background to match your printed materials\n- Call-to-action text: Add text around the QR code such as 'Scan to view menu', 'Ask MenuGPT anything', or 'View today's specials'\n- Shape styles: Round, square, or dot-style QR modules depending on your design preference\n\nAll customization is available from the Tueely dashboard QR Designer. Exported files are available in PNG, SVG, and PDF formats suitable for both digital use and professional print production. If you have a specific brand guideline requirement, the Tueely design team can assist with custom QR artwork.",
+            "page": 8,
+            "section": "Setup and Integration/QR Code Deployment/QR Code Branding and Customization"
+          }
+        ]
+      },
+      {
+        "id": "L2-005",
+        "title": "POS and System Integration",
+        "summary": "How Tueely works alongside your existing POS, payment flow, and other restaurant management systems.",
+        "children": [
+          {
             "id": "L3-013",
-            "title": "Report Generation and Monitoring Functions",
-            "summary": "Screen report, alarm report, statistic report, maintenance report, and alarm callout configuration buttons.",
-            "content": "Screen report displays all current setpoint and actual readings for each incubator, hatcher or Guardian-controlled room.\n\nAlarm report displays a history of alarms for all machines, showing each alarm's start and end time and the sensor readings at the time the alarm commenced. To display a single unit report right-click the unit and choose alarm report in the context menu.\n\nStatistic report displays averaged sensor readings over a period of time. It also shows the minimum and maximum extents and percentage of time that heating, cooling and other outputs were operating.\n\nScheduled maintenance report allows the user to set periodic maintenance tasks for incubators and HVAC units and keep track of unfinished tasks. To display a single unit report right-click the unit and choose maintenance in the context menu.\n\nScheduled maintenance report button with an indicator that tasks are due.\n\nConfigure alarm callout to automatically send an e-mail or initiate a call when an alarm occurs. You may specify which alarms will trigger callout and the time the day that the system will operate.",
-            "page": 14,
-            "section": "Main Screen Interface and Layout Management/Main Screen Layout and Navigation/Report Generation and Monitoring Functions"
+            "title": "POS Compatibility and Non-Disruption",
+            "summary": "Tueely does not replace your POS. It works as a menu discovery layer on top of your existing ordering and payment flow.",
+            "content": "Tueely is designed to be a non-disruptive add-on to your restaurant operation. It does not replace your POS (Point of Sale) system, payment processor, or existing ordering flow.\n\nHow this works in practice:\n- Guests use Tueely (MenuQR + MenuGPT) to browse the menu and understand options\n- Ordering still happens exactly as it does today: verbally with staff, via your existing digital ordering system, or at the counter\n- Payment is handled by your existing POS and payment setup — Tueely has no involvement in transactions\n- There is no integration required with your POS to go live; Tueely operates independently as a menu layer\n\nThis means:\n- Zero risk to your order accuracy or payment flow\n- No retraining your team on a new POS or workflow\n- No downtime risk from a new system deployment\n- You can evaluate Tueely's guest impact without committing to any system change\n\nFor restaurants who want to explore deeper integrations (e.g., syncing menu availability from their POS directly into Tueely), that is available as a custom integration discussed with the Tueely team.",
+            "page": 9,
+            "section": "Setup and Integration/POS and System Integration/POS Compatibility and Non-Disruption"
           },
           {
             "id": "L3-014",
-            "title": "Configuration and Utility Functions",
-            "summary": "Layout editing, database management, preferences, help access, and group selection utilities.",
-            "content": "Edit layout function allows you to configure incubators, hatchers, and Guardian-controlled rooms and arrange them to match the building layout. You may also customize the status colors and select the actual readings that are displayed.\n\nDatabase function allows you to schedule automatic backups of the database, import or export database settings, and view archived databases.\n\nPreference screen allows you to set display units for temperature, humidity, pressure and other settings. When connecting remotely use this screen to choose the main Hatchcom computer name.\n\nHelp function opens the user manual.\n\nThe group selection button is displayed whenever a unit is selected. It allows you to perform the same action on several units at the same time.\n\nEach unit is shown as a rectangle with its current readings and any active alarms. The background color indicates the current machine status listed below in priority order from highest to lowest. The colors shown are the defaults used; they may be changed in the edit layout function. See alarm description section for list of alarm icons.",
-            "page": 15,
-            "section": "Main Screen Interface and Layout Management/Main Screen Layout and Navigation/Configuration and Utility Functions"
-          },
-          {
-            "id": "L3-015",
-            "title": "Screen Navigation and Zoom Controls",
-            "summary": "Zooming, scrolling, and navigation methods for viewing the hatchery layout.",
-            "content": "There are several ways to navigate the main screen. Click on the (+) and - buttons on the left edge of the screen to zoom in or out, or use the zoom all button to scale the entire layout to fit into the window. You may also use the scroll wheel on the mouse to zoom in or out.\n\nWhen only part of the hatchery layout is visible, use the scrollbars to reposition the hatchery view or click and hold the left mouse button to drag the layout.\n\nIf special room objects have been defined in the layout, click the middle mouse button (scroll wheel) or double-click left button on a point not covered by any units to zoom in to show the entire room area. Click the middle mouse button again to return to previous zoom position.",
-            "page": 16,
-            "section": "Main Screen Interface and Layout Management/Main Screen Layout and Navigation/Screen Navigation and Zoom Controls"
-          },
-          {
-            "id": "L3-016",
-            "title": "Unit Interaction and Context Menus",
-            "summary": "Methods for interacting with machine units including double-click, right-click context menus, and available functions.",
-            "content": "Double-click one of the units with the left mouse button to show the unit's machine state screen. If the machine state screen for the selected unit is already open but hidden behind the main screen, then the window will be moved to the front.\n\nClick the right mouse button on one of the units to display its context menu. The context menu contains frequently used functions to display reports and manipulate profiles. The functions that are listed in the menu depend on the type of machine and its current status.\n\nThe context menu shows the following functions:\n\nMachine state screen shows all of the machine's setpoints, actual sensor readings, and machine status.\nAlarm report displays a history of alarms for selected machine or room, showing each alarm's start and end time and the sensor readings at the time the alarm commenced.\nNumeric report presents a detailed listing of temperature, humidity, carbon dioxide and other readings for selected machine or room over a period of time.\nSetpoint report lists all setpoint changes made to a machine or room over a period of time. The setpoint changes could have been made by a profile or schedule, or by the user selecting fixed setpoints.\nProfile Report lists all profile and setting changes made to a machine over a period of time. The changes could have been made by an operator from Hatchcom or locally at a Platinum touch screen.\nMaintenance report allows the user to view current maintenance tasks that need to be performed on a specific machine or room. You may also complete a task or create a new one-time task in this screen.\nGraph function allows you to see a graphic representation of past performance using the same data generated in the numeric report.\nChange setpoints allows you to modify the fixed setpoints on a CM setter or hatcher.\nView profile function shows the currently active profile, or you can view the stage program on CM machines. View screen has commands to save or print the profile. This button is only visible if the machine is running a profile.\nStart profile allows you to run a profile or control stage program on an incubator or hatcher.\nEdit profile allows you to modify a profile or edit stage program on an incubator or hatcher.\nEdit Encore profile function is available on egg storage machines only. It can be used to create a new SPIDES profile or make changes to an existing profile.\nTransfer profile start date is present on incubators if it is currently running a profile. This function allows the profile and profile start date to carry over to one to four hatchers that have received eggs from that incubator.\nAlarm status screen lists all the currently active alarms, with additional commands to generate reports or activate alarm override.\nSchedule function configures automatic setpoint changes at predefined days during the week on Guardian-controlled rooms.\nGroup selection function allows you to perform the same action on several units at the same time.",
-            "page": 17,
-            "section": "Main Screen Interface and Layout Management/Main Screen Layout and Navigation/Unit Interaction and Context Menus"
-          }
-        ]
-      },
-      {
-        "id": "L2-006",
-        "title": "Group Selection and Batch Operations",
-        "summary": "Methods for selecting multiple machines and performing batch operations including report generation, setpoint changes, profile management, and maintenance tasks.",
-        "children": [
-          {
-            "id": "L3-017",
-            "title": "Group Selection Methods and Techniques",
-            "summary": "Multiple methods for selecting groups of machines including click selection, shift-drag selection, and room-based selection.",
-            "content": "With the group selection function, you can select a list of machines to perform certain functions on each machine in one step. To start the group selection, pick one of the units in the layout and click the group selection button at the top of the screen or select it in the context menu after clicking the right mouse button. The main screen is now in group selection mode.\n\nYou may now select additional units of the same type by clicking once inside each rectangle. To remove one of the units from the selection click the unit a second time. You may also select a range of machines using rubber band by holding down the Shift key. If a single unit is selected, the Ctrl-A key combination will select all other units of the same type, else all units will be selected. Click a room object to select all machines that have same room assignment and type, else if the room does not have a number assigned select all machines that it intersects.\n\nOnce all the required units have been selected, click one of the command buttons at the top of the screen. Hatchcom will not allow selecting units that are of different type. For example, picking an incubator initially will disallow selecting Guardian-controlled rooms. Some command functions will become unavailable if both incubator and hatcher types are selected at the same time, as they are not compatible with both types of machines.",
-            "page": 18,
-            "section": "Main Screen Interface and Layout Management/Group Selection and Batch Operations/Group Selection Methods and Techniques"
-          },
-          {
-            "id": "L3-018",
-            "title": "Group Command Functions and Operations",
-            "summary": "Complete list of batch operations available for selected groups including reports, online/offline status, setpoint changes, and profile management.",
-            "content": "Cancel the group function command.\n\nAlarm report displays a history of alarms for all selected machines.\nStatistic report displays averaged sensor readings over a period of time for all selected machines.\nMaintenance report shows current maintenance tasks that need to be performed on selected machines. You may also complete a task or create new one-time tasks that are linked only to the selected units.\nPlace all selected units online. Hatchcom will then attempt to communicate with these machines and update the status color accordingly.\nPlace all selected units offline. Hatchcom will stop accepting data from these units. This function should be used whenever units will be powered off for an extended period of time. The units' status color will change to offline (default is dark gray).\nSetpoint allows you to modify the temperature, humidity, damper, or carbon dioxide setpoints in one operation, or on CM machines change fixed setpoints. Note: Active profiles will be cancelled without confirmation.\nStart profile allows you to run a profile or control stage program on all selected incubators or hatchers.\nNote: The profile does not start if selected profile slot is unused. After sending the command, verify on each unit that the intended profile is running.\nOn CM machines allows you to edit stage program on all selected setters or hatchers.\nOn CM machines allows you to change engineer settings on all selected setters or hatchers.\nSchedule function allows you to configure automatic setpoint changes at predefined days during the week on Guardian-controlled rooms. After sending the command, verify on each unit that the intended schedule is running.\nSilence alarms on all selected units.",
-            "page": 19,
-            "section": "Main Screen Interface and Layout Management/Group Selection and Batch Operations/Group Command Functions and Operations"
-          }
-        ]
-      },
-      {
-        "id": "L2-007",
-        "title": "Setpoint Configuration and Modification",
-        "summary": "Interface and procedures for modifying temperature, humidity, damper, and carbon dioxide setpoints for single-stage, multi-stage, and CM machines.",
-        "children": [
-          {
-            "id": "L3-019",
-            "title": "Setpoint Modification Interface for Single-Stage Machines",
-            "summary": "Complete interface for changing temperature, humidity, damper, and CO2 setpoints with alarm override options.",
-            "content": "Use the setpoint function to modify the temperature, humidity, damper, or carbon dioxide setpoints in one operation on all selected machines. On multi-stage machines only temperature and humidity setpoints are available. On Platinum egg storage machines only temperature and damper are available. Select the override option to start the alarm override when the setpoints are sent to machine.\n\nPress button to change fixed temperature setpoint. Current temperature setpoint is shown in units as set in the preference screen.\nPress button to change fixed humidity setpoint. Current humidity setpoint is shown in units as set in the preference screen.\nPress button to change fixed damp setpoint. Current setpoint is shown in percent open. There is no damper setpoint when carbon dioxide setpoint is selected.\nPress button to change fixed carbon dioxide setpoint. Current setpoint is shown in units as set in the preference screen. There is no carbon dioxide setpoint when damper setpoint is selected.\nPress the button to toggle alarm override on or off, it will be activated when button is colored orange. Use the alarm override function to set the alarms that are overridden.\nOnce desired setpoints have been entered, accept the new setpoints. Note: Active profiles will be cancelled without confirmation.\nCancel without making changes to the setpoints.",
-            "page": 20,
-            "section": "Main Screen Interface and Layout Management/Setpoint Configuration and Modification/Setpoint Modification Interface for Single-Stage Machines"
-          },
-          {
-            "id": "L3-020",
-            "title": "CM Machine Setpoint Configuration",
-            "summary": "Advanced setpoint configuration for CM machines including temperature, humidity, CO2, damper modes, airflow, and fan control.",
-            "content": "Use the setpoint function to modify the temperature, humidity, carbon dioxide and other setpoint in one operation when stage program is inactive.\n\nThe setpoints shown vary depending on your system and selections but can provide the following:\n- Temperature\n- Humidity\n- Carbon dioxide\n- Damper\n- Turning\n- Airflow\n- Fumigation\n- Blower minimum activation\n- Variable frequency fan drives\n\nPress this button to change the temperature setpoint. Enter high temperature alarm point ± and low temperate alarm point ±. These will be shown in units as set in the preferences screen.\nPress this button to change the humidity setting. Enter high humidity alarm point ± and low humidity alarm point ±. These will be shown in units as set in the preferences screen.\nPress this button to change the carbon dioxide setpoint. Enter high carbon dioxide alarm point ± and low carbon dioxide alarm point ±. These will be shown in units as set in the preferences screen.\nEnter the high airflow alarm point ± and low airflow alarm point ±. These will be shown in cfm if control panel has Fahrenheit temperature selected or m³/m if Celsius is selected.\nSelect automatic or manual damper operating mode. Select for automatic temperature, for humidity, for carbon dioxide, or for manual mode.\nSelect damper opening setpoint when operating mode is set to manual.\nSelect damper opening low alarm point.\nSelect fan direction when using manual direction control. Select to run fans in forward direction, or to run fans in reverse direction.\nSelect the fan forward run time in minutes.\nSave the current setpoints to disk.\nLoad the setpoints from file on disk.\nSelect the fan reverse run time in minutes.\nSend the setpoints to the machine.\nCancel dialog without making changes.",
-            "page": 21,
-            "section": "Main Screen Interface and Layout Management/Setpoint Configuration and Modification/CM Machine Setpoint Configuration"
-          }
-        ]
-      },
-      {
-        "id": "L2-008",
-        "title": "Hatchery Layout Editing and Configuration",
-        "summary": "Complete layout editing tools including machine arrangement, object properties, room configuration, and visual customization for the hatchery display.",
-        "children": [
-          {
-            "id": "L3-021",
-            "title": "Layout Editing Functions and Tools",
-            "summary": "Complete set of tools for editing hatchery layout including machine movement, resizing, arrangement, and configuration.",
-            "content": "Use the edit function to configure incubators, hatchers, and Guardian-controlled rooms as well as to arrange the units to match the building layout.\n\nWhen launching Hatchcom for the first time after installation, you will be prompted to edit the hatchery layout. After selecting Yes all Ethernet connected incubators and hatchers will automatically appear in the layout. Other network types must be configured manually by clicking one of the configuration buttons.\n\nOnce all units have been configured, arrange the unit rectangles to match the hatchery building layout. You may use the arrange machines function to quickly position the units into several rows. When several machines are selected the function will arrange those units only.\n\nClick on one of the rectangular unit shapes and move the unit while holding down the mouse button. Several units can be moved in a single operation by holding down the Ctrl key while selecting several units or by holding down the Shift key to drag the rubber band around the units to be selected. Release the key, then move selected units with mouse as described above.\n\nTo resize the rectangle, click on one of the resize handles and drag the mouse pointer. Hold down the Ctrl key to maintain aspect ratio. If several units are selected, then they will be resized likewise. If you make a mistake, use the undo function to restore the layout to a previous state.\n\nThe configuration functions will only add new units to the layout, but may prompt to remove units that are in the layout but did not respond to automatic configuration. Any units that should no longer appear in the layout must be manually selected and removed using the delete function. Reboot the Hatchcom PC to drop non-operational machine numbers.",
-            "page": 24,
-            "section": "Main Screen Interface and Layout Management/Hatchery Layout Editing and Configuration/Layout Editing Functions and Tools"
-          },
-          {
-            "id": "L3-022",
-            "title": "Layout Configuration and Customization Options",
-            "summary": "Configuration options for machine display, status colors, sensor readings, and 360 platform integration.",
-            "content": "The following functions are available while editing the layout:\n\nConfigure Ethernet or RS-485 connected CM setters and hatchers. Hatchcom can automatically scan network for Ethernet connected machines or user can manually add legacy systems.\nConfigure Guardian HVAC panels connected to RS-485 network. Hatchcom will try all possible PLC addresses and list units that respond, showing their installed options.\nDisplay a menu to choose the colors associated with each machine status. When prompted for the color you may set the Alpha channel to 0 to remove the status from the priority order. You may also reset the status colors to factory defaults.\nChoose which actual values are displayed on each unit. Selecting fewer readings to display will increase the font size of sensor readings in the layout view. Values are shown horizontally when the unit's width exceeds four times its height. You may also select whether Hatchcom only highlights audibly alarming units or have Hatchcom scroll the hatchery layout to make newly alarming machines visible.\nExport 360 function generates the hatchery layout file for import into the 360 cloud platform.\n\nThe left side of the screen has the tool buttons to edit the layout:\nToggle the button to view sensor readings when in edit mode. If the readings are not visible after first configuration, save the layout and then return to edit mode. Ctrl-click the zoom buttons to change font scale or reset with zoom all button.\nUndo the last change. Use Ctrl+Z key as a shortcut.\nEdit the selected object's properties. See layout object properties section for detailed instructions. Use P key as a shortcut or double-click left mouse button on the object.\nDelete the selected object. Use Delete key as a shortcut.\nRotate the selected object. Use R key as a shortcut.\nArrange selected machines into rows or columns. See arrange machines section for detailed instructions. If no machines are selected, then all units will be arranged.\nDuplicate the selected object. Use D key as a shortcut. Machine objects cannot be duplicated.\nAdd a new shape object.\nAdd a new text object. Use T key as a shortcut.\nAdd a new room object to permit zooming with a middle mouse button click. When two or more machines are selected, the new room object will enclose them.\nAdd a new horizontal wall object. Use H key as a shortcut.\nAdd a new vertical wall object. Use V key as a shortcut.\nAdd or change the backdrop image. Hatchcom allows only one backdrop image.\nBring object in front of all other objects on same level. Use the object property function to change object's level value. Use F key as a shortcut.\nPlace object behind all other objects on same level. Use the object property function to change object's level value. Use B key as a shortcut.",
-            "page": 26,
-            "section": "Main Screen Interface and Layout Management/Hatchery Layout Editing and Configuration/Layout Configuration and Customization Options"
-          },
-          {
-            "id": "L3-023",
-            "title": "Layout Object Properties Configuration",
-            "summary": "Complete property configuration for layout objects including room numbers, Modbus IDs, machine models, backgrounds, and text display.",
-            "content": "Use the object properties to change appearance of the rectangle, such as colors and background image settings. The contents of the dialog will depend on the type of object.\n\nEach machine can be assigned a custom room number between 1 and 20. When the room is not set (-) then single-stage machines will retain the room number programmed at the controller and multi-stage machines will not show a room number. When supported by the Platinum machine software, the room number will also appear on the machine.\n\nThe Modbus ID only needs to be set when interfacing a SCADA program to Hatchcom. Each incubator and HVAC panel will need to be assigned a unique ID number. It is recommended to use the Auto ID function to assign a unique ID the first time Hatchcom is configured, and then edit individually as new machines are added to the network.\n\nThe machine model number is only required for the 360 cloud platform. When not connecting to the 360 platform the machine model number does not need to be entered. The machine model can be selected by picking the cabinet capacity from the first combo box, then selecting the controls model number from the second combo box. Either read the controls model from the nameplate inside the control panel or choose the appropriate item from the list based on machine voltage and other machine options.\n\nThe machine model selection is only shown if the unit is supported by the 360 platform. The model can only be selected once Hatchcom has successfully communicated with the machine (i.e. the machine object in the layout is not black).\n\nRoom objects and HVAC panels have an additional combo box setting to select the room type. This setting is only required for the 360 cloud platform. It can be left blank if room type assignment is not required.\n\nAdd a background image to the machine or shape. When image is present the machine status color will be drawn with some transparency to make sure image is still visible.\nRemove background image from object.\nChange the background color of the object.\nFor machines, this color is visible only if its current status is normal. If set to black, then the object will display the standard normal color in place of black. The background can be made translucent by setting the Alpha channel value between 0 and 255, where 0 is completely transparent and 255 is opaque.\nWhen enabled, draws a frame around object.\nWhen enabled, makes the object's background transparent.\nText to be displayed on object.\nWhen entry is left empty, the short identification text will be shown for incubators and hatchers, and for Guardian-controlled rooms it will display the panel description. Use the @ placeholder to insert the machine's unit number or ^ to insert room. Optionally, the machine's unit text can be customized by appending a semicolon, followed by the custom unit text.\nWhen enabled, centers the machine name in the object.\nChange the text color of the object.\nSet the object level. Objects with a higher number will be placed in front of objects with a lower number.\nSet the room number. The room object's room number can be left blank if it is not associated with an incubator or hatcher room.\nOn multi-stage hatchers only, turn on this option to configure as PX hatcher type.",
-            "page": 27,
-            "section": "Main Screen Interface and Layout Management/Hatchery Layout Editing and Configuration/Layout Object Properties Configuration"
-          },
-          {
-            "id": "L3-024",
-            "title": "Advanced Object Properties and Machine Identification",
-            "summary": "Advanced properties including Modbus auto-ID, model selection, shape types, and machine identifier codes.",
-            "content": "Automatic Modbus ID function assigns each machine a unique ID value. Use this function with caution as it will renumber every unit in the layout.\n\nPrint a table of all machines showing the assigned Modbus ID.\n\nDisplays the model picker screen to select machine model by selecting its options. The machine model only needs to be selected when using the 360 cloud platform.\n\nSet general shape objects to rectangle mode.\nSet general shape objects to rounded rectangle mode.\nSet general shape objects to oval mode.\nGlobal function will apply changes to all other units of the same type when selected.\nAccept the changes to the object.\nCancel properties dialog without making changes.\n\nDefault short machine identifiers used by Hatchcom:\n\nIdentifier Description\nSCI Single-stage chicken incubator\nSCH Single-stage chicken hatcher\nSTI Single-stage turkey incubator\nSTH Single-stage turkey hatcher\nMSI Multi-stage incubator\nMSH Multi-stage hatcher\nENC Encore egg storage machine\nHVR Guardian HVAC room panel\nHVP Guardian HVAC plenum panel\nSCM setter\nHCM hatcher",
-            "page": 29,
-            "section": "Main Screen Interface and Layout Management/Hatchery Layout Editing and Configuration/Advanced Object Properties and Machine Identification"
-          },
-          {
-            "id": "L3-025",
-            "title": "Machine Arrangement Tools and Grid Configuration",
-            "summary": "Automatic machine arrangement tools for organizing layouts in grid structures with directional control.",
-            "content": "Use this function to automatically arrange units in a grid structure. You will be prompted to select the direction in which the units will be ordered. The number quantity chooses how many units are added to each row or column before the following units shift to the next row or column.\n\nThe first unit that is selected will determine the location where the lowest numbered unit is placed into the layout. Use one of these methods to make sure the correct starting location is chosen before clicking the arrange function:\n\nClick the first unit with the mouse, then click additional units while holding down Ctrl key\nClick the first unit with the mouse, then press Ctrl+A to select all other units of the same type, or press Ctrl+A a second time to select all machines in the layout\nHold down the Shift key and drag the mouse to select units, making sure the first unit becomes highlighted first\n\nArrange machines to the right with unit numbers increasing from left to right.\nArrange machines to the left with unit numbers increasing from right to left.\nArrange machines down with unit numbers increasing from top to bottom.\nArrange machines up with unit numbers increasing from bottom to top.\nSelect the number of units that will be placed in one row (left or right mode) or in one column (up or down mode) before following units shift to the next row or column.\nArrange selected machines.\nCancel without making changes.",
-            "page": 30,
-            "section": "Main Screen Interface and Layout Management/Hatchery Layout Editing and Configuration/Machine Arrangement Tools and Grid Configuration"
-          }
-        ]
-      },
-      {
-        "id": "L2-009",
-        "title": "Machine Network Configuration and Setup",
-        "summary": "Configuration of network connections for single-stage, multi-stage, CM, and manual machine addition to the Hatchcom system.",
-        "children": [
-          {
-            "id": "L3-026",
-            "title": "Single-Stage and Multi-Stage Network Configuration",
-            "summary": "Automatic and manual configuration of single-stage and multi-stage incubators and hatchers via fiber optic or Belden cables.",
-            "content": "The configuration function allows Hatchcom to recognize single-stage or multi-stage incubators and hatchers connected via fiber optic or legacy Belden cable.\n\nNote: This step is not required when single-stage machines are connected via Ethernet or when Hatchcom is connected to a Sentry display via fiber optics. In these cases, the list of machines will be detected automatically. If these machines are not shown in the layout then the Ethernet is not connected properly, or the Sentry display panel has not been configured correctly. Refer to the appropriate manuals for configuration procedure.\n\nConfigure the single-stage or multi-stage network. Hatchcom will try all possible address combinations and list units that respond.\nSet the date and time on single-stage network to be same as the Hatchcom PC.\nManually add a machine to layout. This is an advanced command that should only be used to configure units that are not powered on. See manual configuration for more information.\nOnce configuration has completed, accept the configured machines. Each newly added machine will have a rectangle added to the layout to the right of all existing units.\nCancel the configuration without making changes to the layout.",
-            "page": 31,
-            "section": "Main Screen Interface and Layout Management/Machine Network Configuration and Setup/Single-Stage and Multi-Stage Network Configuration"
-          },
-          {
-            "id": "L3-027",
-            "title": "Manual Machine Configuration Procedures",
-            "summary": "Procedures for manually adding machines to the layout when automatic detection fails.",
-            "content": "Manually add a machine to this layout. This is an advanced command that should only be used to configure units that are not powered on. This function should not be used to add units that did not respond to automatic configuration or units that are connected on Ethernet. You must correct the physical network problem preventing the unit(s) from being detected.\n\nSelect the machine type from the list and set the desired unit number. If the machine supports room number then also set this value, otherwise this setting is hidden. When you accept the manual configuration, the unit will be added to the list in the configure screen.\nSelect the room number for machine. This value is displayed only if the machine supports rooms.\nSelect the unit number for the machine.\nAdd the machine to the configure list.\nCancel the dialog without making changes.",
-            "page": 32,
-            "section": "Main Screen Interface and Layout Management/Machine Network Configuration and Setup/Manual Machine Configuration Procedures"
-          },
-          {
-            "id": "L3-028",
-            "title": "CM Machine Network Configuration",
-            "summary": "Configuration of CM setters and hatchers via Ethernet or RS-485 networks with automatic scanning and conflict detection.",
-            "content": "The CM configuration function allows Hatchcom to recognize CM setters and hatchers connected via Ethernet or legacy RS-485 networks.\n\nHatchcom can automatically scan the Ethernet network for connected machines. Make sure each machine is assigned a unique communication ID in the display's Engineer 2 tab and that all machines are powered on.\n\nMachines using the legacy RS-485 network must be entered manually one machine at a time, or a range can be added by holding down the Add Unit button for 3 seconds.\n\nSettings will be highlighted red when there is a conflict. Examples of conflict:\nTwo machines have the same IP address\nTwo machines have the same serial adapter and communication ID\nTwo machines have the same unit number and machine type\nIncompatible machine types are assigned to the same serial adapter\nInvalid Ethernet IP address is specified\n\nManually add a machine to the configuration. Select communication port, communication ID, unit number, and machine type that uniquely identify this machine. Hold for 3 seconds to add several machines at once. You will be prompted for the number of machines.\nManually delete the selected machine from the configuration.\nScan the Ethernet network for CM machines having IP addresses in the 10.77.20.x or 10.77.21.x range. Hatchcom will automatically assign unit numbers based on the communication ID set on the machine.\nOnce configuration is complete, accept the configured machines. Each newly added machine will have a rectangle added to the layout to the right of all existing units.\nCancel the configuration without making changes to the layout.",
-            "page": 33,
-            "section": "Main Screen Interface and Layout Management/Machine Network Configuration and Setup/CM Machine Network Configuration"
-          }
-        ]
-      },
-      {
-        "id": "L2-010",
-        "title": "HVAC System Configuration and Setup",
-        "summary": "Complete configuration of Guardian HVAC control systems including panel setup, room configuration, sensor options, and communication settings.",
-        "children": [
-          {
-            "id": "L3-029",
-            "title": "HVAC Panel Configuration Procedures",
-            "summary": "Procedures for configuring Guardian HVAC panels via RS-485 or Ethernet networks with automatic scanning.",
-            "content": "The HVAC feature allows Hatchcom to communicate with Jamesway's Guardian control system. Older HVAC panels are networked to Hatchcom using a RS-485 network that is separate from incubators and hatchers, or panels utilizing the Schneider PLC operate on the Platinum Ethernet network.\n\nThe configuration function allows Hatchcom to recognize all Guardian and Airway panels connected to it, and collect the configuration data from those panels, which includes the number of Guardian-controlled rooms or plenums on each panel. You can double check that each panel is configured with correct options and you can customize the panel descriptions.\n\nBefore the panels can be added to Hatchcom, you must select the correct communication port and baud rate. Click the Configure button to start the panel search on the RS-485 and Ethernet networks. When a serial communication port is selected, both serial and Ethernet are active. When the port is set to Ethernet then only this network will be active.\n\nEthernet panels in IP address range 10.77.19.101 to 10.77.19.149 are configured automatically. Panels can be manually added and removed by pressing the F10 and F11 keys respectively. When adding a panel, it must be given a unique ID in the range 101 to 149.\n\nTo temporarily suspend HVAC communication set the port to disabled.\nWhen the panels have been configured, give each room or plenum a unique description. This will be the text used when the rooms and plenums are added to the hatchery layout. If you leave the description empty, Hatchcom will assign a generic type and unit number. Use the organizer function to re-order the panel list for screen and statistical reports.\nEach newly added room or plenum will have a rectangle added to the layout to the right of all existing units. Hatchcom will not remove rooms or plenums that did not respond from the layout, you will need to select each of these panels and use the delete function to remove from the layout.",
-            "page": 34,
-            "section": "Main Screen Interface and Layout Management/HVAC System Configuration and Setup/HVAC Panel Configuration Procedures"
-          },
-          {
-            "id": "L3-030",
-            "title": "HVAC Configuration Interface and Controls",
-            "summary": "Configuration interface elements including panel descriptions, room indices, organizer mode, and password management.",
-            "content": "Set panel description\nRoom index or IP address\nSet panel order\nConfigure the Guardian panels using selected serial port and speed. Hatchcom will scan all possible PLC addresses and add panels that respond to the list. All Guardian panels must be powered on before configuring.\nOnce configuration has completed and description for each room or plenum is set, then accept the configuration.\nCancel the configuration without making changes to the layout.\nChange the setpoint and calibration passwords for the Guardian touch screen that is selected in the list.\nToggle the panel organizer mode on or off. When organizer mode is on drag items or use the up and down arrows to move panels into desired order. When mode is turned off the panels will be renumbered in ascending order, then the configuration list will revert to normal Modbus ID order. The selected order will be used in the report, machine state, and graph screens to scroll through the unit list.\nMove the selected panel up in the display order.\nMove the selected panel down in the display order.",
-            "page": 35,
-            "section": "Main Screen Interface and Layout Management/HVAC System Configuration and Setup/HVAC Configuration Interface and Controls"
-          },
-          {
-            "id": "L3-031",
-            "title": "HVAC Configuration Icons and System Options",
-            "summary": "Complete list of configuration icons representing HVAC system options and capabilities.",
-            "content": "The configuration icons indicate how the Guardian panel has been programmed:\n\n1 Room has hot water heating\n2 Room has chilled water cooling\n3 Room has a mixing box temperature sensor\n4 Room has a humidity sensor\n5 Room has a humidifier\n6 Room has a pulse width modulating humidifier\n7 Room has dehumidification enabled\n8 Room has a pressure sensor\n9 Room has analog pressure control\n10 Room has floating point pressure control\n11 Room has supply fan control enabled\n12 First plenum control is enabled with pressure sensor\n13 Second plenum control is enabled with pressure sensor\n14 Airway panel controlling Modular ventilation system\n15 Airway panel controlling CC3 climate control system\n16 Heat recovery AHU 1 chilled water incubation return temperature\n17 Heat recovery AHU 2 chilled water incubation return temperature\n18 Heat recovery AHU 3 chilled water incubation return temperature\n19 Heat recovery AHU 4 chilled water incubation return temperature\n20 Water chiller 1 chilled water incubation supply temperature\n21 Water chiller 2 chilled water incubation supply temperature\n22 Water chiller 3 chilled water incubation supply temperature\n23 Water chiller 4 chilled water incubation supply temperature\n24 Hydronic system has hot water heating\n25 Hydronic system has electric heating\n26 Airway panel controlling air handler unit\n27 Air handler has a heat recovery valve\n28 Air handler has a chilled water valve\n29 Air handler has a hot water valve\n30 Air handler has a humidifier\n31 Air handler has a dehumidifier\n32 Air handler has an outdoor humidity sensor\n33 Air handler has a combined humidity and temperature sensor",
-            "page": 36,
-            "section": "Main Screen Interface and Layout Management/HVAC System Configuration and Setup/HVAC Configuration Icons and System Options"
-          },
-          {
-            "id": "L3-032",
-            "title": "HVAC Configuration Details and Panel Management",
-            "summary": "Detailed configuration information including Modbus ID assignment, panel descriptions, and error resolution.",
-            "content": "The Modbus ID represents the panel number of the Guardian controller, and Room Index number shows which of the four room positions the rooftop unit is connected to or the IP address when the Ethernet panel is added manually.\n\nThe Unit Number is the unique number Hatchcom assigns to each Guardian-controlled room or plenum and is based on the Guardian's Modbus ID and room.\n\nThe Panel Description is the name given to each Guardian-controlled room or plenum and will appear in all the machine selection screens. Typically, this will be the name of the room (i.e. Incubator Room 1). The user can customize this text by clicking once, then either select from the predefined list or type text up to 25 characters in length.\n\nIf the panel has a program error alarm, then the configuration reported by the Guardian panel does not match the configuration stored in the database. Select the panel in the list, Hatchcom will display a message indicating that the configurations differ and prompt the user whether to write Hatchcom's configuration back to PLC. If you know the Guardian panel's configuration is incorrect (for example after replacing the CPU module) answer Yes, otherwise answer No and run the configuration step so that Hatchcom records the correct configuration from PLC.\n\nTo view the touch screen passwords, select one of the panels in the list, and then click the Password button. Note that all panels with the same Modbus ID will have common passwords. To change a password, enter a new four digit number and press the Change button.",
-            "page": 37,
-            "section": "Main Screen Interface and Layout Management/HVAC System Configuration and Setup/HVAC Configuration Details and Panel Management"
-          }
-        ]
-      },
-      {
-        "id": "L2-011",
-        "title": "360 Cloud Platform Integration",
-        "summary": "Configuration and export of hatchery layouts for integration with Jamesway 360 cloud platform including requirements, export methods, and merge options.",
-        "children": [
-          {
-            "id": "L3-033",
-            "title": "360 Platform Export Requirements",
-            "summary": "Complete requirements and prerequisites for exporting hatchery layouts to the 360 cloud platform.",
-            "content": "This function generates the hatchery layout file which needs to be imported into the 360 cloud platform. It contains all necessary data that allows Hatchcom to interface with the 360 portal. Before generating the layout file, ensure the following items have been configured:\n\nThe edge server connection information is configured in the Preferences 360 tab.\nThe Sequential addressing mode is selected correctly in the Preferences General tab.\nAll incubators, hatchers, and HVAC panels have been added to the hatchery layout. Remove machines from the layout that should not be present.\nThe machine identifier shown at the bottom right corner of each machine is used to identify the machine in the 360 portal. Customize the text for each machine in the layout properties screen.\nThe room names will be transferred from the text field of each room object if they are configured, otherwise Hatchcom will assign generic room names. For example, to set the first room to be different than the default 'Setter Room 1', use this procedure:\n1. Hold down Ctrl key and select the top-left and bottom-right machines to be in the room.\n2. Click the Add Room toolbar button. The room will be dimensioned to outline the selected machines.\n3. Click the Properties toolbar button to edit the room settings.\n4. Set the desired room text, set the room number to 1, and set the room type to 'Setter' or 'Hatcher' as appropriate.\nEach machine must have the correct model number selected in the properties screen. Hatchcom will show an error message if some machines are missing the model number.\nThe machines must have unique room and unit numbers. Hatchcom will show an error message if some machines have duplicate unit numbers. For example, if the layout contains a single-stage incubator and multi-stage incubator numbered 1 located in the same room, then one of the machines needs to be assigned to a different room or its unit number must be changed. The layout may have one incubator and one hatcher that have the same unit number and room number because the 360 platform separates them into different rooms.\nMake all room number assignments before the layout is exported. The 360 platform will not map the machines correctly when the rooms are changed later. Whenever the room assignment or model numbers are changed the layout must be exported again to 360.\nOptionally the layout may have a background image or company logo that will be transferred to the 360 platform. If there is no background image, then Hatchcom will try to use the image from a generic or text object if present.",
-            "page": 37,
-            "section": "Main Screen Interface and Layout Management/360 Cloud Platform Integration/360 Platform Export Requirements"
-          },
-          {
-            "id": "L3-034",
-            "title": "Export Methods and Merge Options",
-            "summary": "Different export rendering methods, merge options for multiple Hatchcom installations, and file handling procedures.",
-            "content": "By default, all machines will be configured on 360. Select machines individually if not all machines should be used. After selecting the Export 360 function, you will be prompted to choose the rendering method. The Yes option should be selected for standard 360 installations.\n\nBoth PC's must connect to the same edge server so that they can be joined to one portal. This is an advanced feature that should only be used after consultation with Jamesway.\nExport the layout by rendering all non-machine objects into the background image. This is the recommended method because it ensures that the 360 platform includes all images, wall objects and text items.\nExport the layout including only the background image and machine objects. This option will not include wall objects or text items. Use this option when applying the merge option.\nIf you selected the merge option, Hatchcom will prompt for the layout json file generated by the second Hatchcom PC. Hatchcom will load the second layout and verify that there is no room number overlap, then prompt how the layouts are to be combined. The second layout can be scaled and moved above, below, or beside the first layout.\nYou will be prompted to select the filename for saving the layout. Log into the 360 platform, then import the file into the hatchery section.",
-            "page": 39,
-            "section": "Main Screen Interface and Layout Management/360 Cloud Platform Integration/Export Methods and Merge Options"
-          }
-        ]
-      },
-      {
-        "id": "L2-012",
-        "title": "Modbus TCP/SCADA Integration",
-        "summary": "Configuration of Modbus TCP protocol for SCADA system integration including register mapping, device ID assignment, and alarm status registers.",
-        "children": [
-          {
-            "id": "L3-035",
-            "title": "Modbus Configuration and Device ID Management",
-            "summary": "Modbus TCP setup, device ID assignment, auto-ID functions, and SCADA integration procedures.",
-            "content": "The Modbus feature allows industry standard SCADA (Supervisory Control and Data Acquisition) applications to access machine parameters using the Modbus TCP protocol. The Modbus client needs to connect to the Hatchcom PC over an Ethernet network using standard Modbus TCP port 502, using a single IP address acting as a gateway to the individual incubators and hatchers. Please consult the manual of your SCADA software to determine the procedure to access devices through a gateway. Hatchcom supports only one concurrent connection.\n\nUse the layout object properties function to assign a unique device ID by which each machine can be identified. The valid device ID range is 1 to 247. After making any changes to the device ID configuration, it is vital to update the SCADA program's configuration accordingly.\n\nInitially, the device ID of each machine will be blank, indicating that IDs have not yet been assigned. Ensure that all machines are present in the layout, then edit the properties of one of the machines and select the Auto ID button to assign a sequential device ID to each machine. The Auto ID function should only be used the first time when no IDs have been assigned. If this function is used later when a Modbus client is already in use, the device IDs may shift on all machines causing the client to show incorrect information until the client is reprogrammed with the new configuration.\n\nWhen a new machine has been added to the hatchery network, its device ID will be blank. Select the machine and click the Edit Properties button to modify the Modbus ID. Use any ID that is not yet in use between 1 and 247. There will be an error message displayed if another machine already has the ID assigned to it.",
-            "page": 39,
-            "section": "Main Screen Interface and Layout Management/Modbus TCP/SCADA Integration/Modbus Configuration and Device ID Management"
-          },
-          {
-            "id": "L3-036",
-            "title": "Modbus Register Tables and Address Mapping",
-            "summary": "Complete Modbus register address tables for incubators, HVAC systems, and Airway panels with unit conversions.",
-            "content": "Use the Print function to make a hardcopy printout of the device ID configuration for programming the Modbus client software. The bottom of the page shows a list of input registers that are accessible to the client program. Hatchcom does not offset the register addresses, make sure the client program accesses the register address as shown. Note that only a subset of registers may be available depending on the machine type.\n\nThe Modbus client program needs to use the Read Input Register (04) to query the Hatchcom server using addresses described in table below. Hatchcom will also respond to the Read Holding Register function (03) returning the same information. Do not use any offsets when selecting the register address.\n\nRegister Incubators and HVAC Airway air handler Units\n1000 Machine unit number Machine unit number bit field (see notes)\n1001 Temperature setpoint Supply temp setpoint 1/10 °F\n1002 Temperature actual Supply temp actual 1/10 °F\n1003 ^Humidity setpoint Humidity setpoint 1/10 °F or %RH\n1004 ^Humidity actual Humidity actual 1/10 °F or %RH\n1005 $Alarm relay status Alarm relay status > 0 if alarming\n1006 *Egg temperature actual Outdoor temp actual 1/10 °F\n1007 *Damper setpoint % open\n1008 *Damper actual % open\n1009 *Carbon dioxide setpoint ppm\n1010 *Carbon dioxide actual ppm\n1011 *Fan speed Supply fan actual % full speed\n1012 *Profile day in cycle 1/100 day\n1013 Alarm status LO Alarm status LO bit field (see below)\n1014 Alarm status HI Alarm status HI bit field (see below)\n1015 #Pressure setpoint Supply pressure setpoint 1/1000 inch w.c.\n1016 #Pressure actual Supply pressure actual 1/1000 inch w.c.\n1017 *Temp actual zone 2 Chilled water valve act 1/10 °F or % open\n1018 *Temp actual zone 3 Hot water valve act 1/10 °F or % open\n1019 *Temp actual zone 4 Heat recovery valve act 1/10 °F or % open\n1020 *Turn count Outdoor humidity actual count or 1/10 %RH\n\nAirway Modular and CC3 panel registers:\n\nRegister Hydronic primary Hydronic secondary Units\n1000 Panel unit number Panel unit number bit field\n1001 CHWIS temp actual CHWS temp actual 1/10 °F\n1002 CHWIS temp setpoint CHWR temp actual 1/10 °F\n1003 CHWIR temp actual HWS temp actual 1/10 °F\n1004 CHWIR temp setpoint HWR temp actual 1/10 F\n1005 Alarm status Alarm status >0 if alarming\n1006 CHWRT temp actual 1/10 F\n1007 CHWIS press actual Inch w.c.\n1008 CHWIS press setpoint Inch w.c.\n1009 CHWIR press actual Inch w.c.\n1010 CHWIR press setpoint Inch w.c.\n1011 HWIR press actual HWS press actual Inch w.c.\n1012 HWIR press setpoint HWS press setpoint Inch w.c.\n1013 Alarm status LO Alarm status LO bit field\n1014 Alarm status HI Alarm status HI bit field\n1015 CHWIS VFD A actual CHWRT VFD A actual % speed\n1016 CHWIS VFD B actual CHWRT VFD B actual % speed\n1017 HWIR VFD A actual % speed\n1018 HWIR VFD B actual % speed\n1019 CHWIR HR valve actual % open\n1020 CHWIR HR valve setpoint % open",
-            "page": 40,
-            "section": "Main Screen Interface and Layout Management/Modbus TCP/SCADA Integration/Modbus Register Tables and Address Mapping"
-          },
-          {
-            "id": "L3-037",
-            "title": "Modbus Implementation Notes and Alarm Status",
-            "summary": "Detailed implementation notes, register value conversions, and alarm status bit field definitions.",
-            "content": "Notes:\n1. Machine unit number is encoded as a bit field with format RRRTTTTUUUUUUUU where R represents the room number (0 = room 1, 7 = room 8), T is the machine type number (see table below), and U is the unit number.\n2. Temperature and humidity values need to be divided by 10 to convert to final reading. For example, a register value of 990 is equivalent to 99.0 °F.\n3. Humidity values marked ^ will be in units according to type of humidity sensor used by machine. On multi-stage machines, the sensor reads in degrees Fahrenheit wet bulb, while on single-stage machines and HVAC the sensor reads in percent relative humidity.\n4. Profile day in cycle needs to be divided by 100 to convert to number of days. For example, a register value of 1800 is equivalent to day 18.00, where fractional day 0.01 is slightly less than 15 minutes.\n5. Input registers marked * are active for single-stage incubators only depending on installed options.\n6. The alarm relay status marked S is the only writeable register. Use the Modbus Write Register function (06) with a non-zero value to acknowledge the alarms.\n7. The pressure registers marked # are active for Guardian rooms or plenums only. These two's-complement values can be positive or negative and need to be divided by 1000 to convert to units of inches water column.\n8. Inactive registers will be zero. If Hatchcom has not received data from a machine for 10 minutes, its actual readings will be set to zero and alarm relay status will have a value of 2. The alarm status registers contain a bit field representation of active alarms (bit 1 is the least significant bit in the register):\n\nBit Alarm status LO Alarm status HI\n1 High pressure Alarm bypass\n2 Low pressure Damper sensor failure\n3 High temperature Novram / clock error\n4 High humidity Egg turn continuity\n5 Low temperature Program error\n6 Low humidity Carbon dioxide sensor\n7 Dry wick / exhaust fan High carbon dioxide\n8 Maintenance Egg temperature\n9 Fan failure Pilot / HatchSense sensor\n10 Door open\n11 Damper failure\n12 Communications\n13 Egg turn failure\n14 Alarm relay\n15 Sensor failure\n16 Sensor communications\n\nNote that not all alarm types are implemented for every type of machine.\n\nMachine type Description\n8 Single-stage chicken incubator\n9 Single-stage chicken hatcher\n10 Single-stage turkey incubator\n11 Single-stage turkey hatcher\n14 Encore egg storage machine\n16 Multi-stage incubator\n17 Multi-stage hatcher\n19 Guardian or Airway controlled panel\n20 CM setter\n21 CM hatcher",
-            "page": 41,
-            "section": "Main Screen Interface and Layout Management/Modbus TCP/SCADA Integration/Modbus Implementation Notes and Alarm Status"
-          }
-        ]
-      },
-      {
-        "id": "L2-013",
-        "title": "Database Management and Configuration",
-        "summary": "Database backup scheduling, integrity checking, settings import/export, and archive management for Hatchcom data storage.",
-        "children": [
-          {
-            "id": "L3-038",
-            "title": "Database Management Functions and Operations",
-            "summary": "Complete database management functions including backup scheduling, integrity checking, and settings management.",
-            "content": "The database configuration screen allows you to perform several database related tasks:\n\n- Define interval schedule for making complete database backup.\n- Schedule an immediate database backup.\n- Export all critical database settings to a text file which later can be restored.\n- Load an archived database backup file for generation of reports and graphs.\n- See date range of numeric data contained in the database or archived backup.\n\nIf you need to restore a previously backed up database file run the Hatchcom 5 installer program, then choose the Restore database file from backup when prompted to select the components to be installed. The installer also offers the option to Restore empty database file but choosing this option will result in the loss of all data including the hatchery layout. The layout and other information may then be imported from a settings backup file.\n\nTurn on the Adjust report data to original time zone check box to display all times exactly as recorded by the Hatchcom server in reports and graphs, otherwise if an archive is viewed in a different time zone the dates and times will be adjusted accordingly.",
-            "page": 42,
-            "section": "Main Screen Interface and Layout Management/Database Management and Configuration/Database Management Functions and Operations"
-          },
-          {
-            "id": "L3-039",
-            "title": "Database Configuration Interface and Controls",
-            "summary": "Complete interface for database configuration including backup scheduling, location settings, and import/export functions.",
-            "content": "Display the SQL Server configuration manager from Windows control panel. This may be used to configure database server to use a specific TCP port.\nCheck the database integrity. This operation may take several minutes to finish depending on the database size.\nDisplay the database server's error log. Use this function when the database does not start.\nWhen selected enables the automatic database backup function. The Hatchcom server will schedule the backup around midnight at the selected frequency. Backups will be stored in the configured location.\nSelect the number of days between full database backups.\nSelect the number of database backups to keep. When Hatchcom has reached this number of backups, it will delete the oldest file before creating the next backup.\nImmediately instructs the Hatchcom server to create a backup file. Depending on database size this may take a while to complete. Hatchcom will pop up a message when backup is finished.\nChoose the location where backups will be stored. If you change the location, then previous backups will be left in the previous location and do not count towards the number of backup files that are stored. Note: You must choose a location which SQL Server database engine running with limited user rights can access.\nExport database settings to text file. Do not edit this file as it may fail to import later. Hatchcom will automatically export settings whenever hatchery layout changes are saved. Note: Only settings are saved, not sensor readings and related data.\nImport database settings that were previously exported or automatically generated by Hatchcom when the hatchery layout was saved.\nOpen an archived database backup. You will be prompted for the filename, and a new Hatchcom instance will be launched. The backup restoration may take a while to process before the main screen opens. Note: Only a limited number of functions are available.\nExit the database configuration screen. All changes will be saved.",
-            "page": 43,
-            "section": "Main Screen Interface and Layout Management/Database Management and Configuration/Database Configuration Interface and Controls"
-          }
-        ]
-      },
-      {
-        "id": "L2-014",
-        "title": "Alarm Callout and Notification Systems",
-        "summary": "Configuration of automatic phone and email alarm notifications including scheduling, contact management, alarm filtering, and email server setup.",
-        "children": [
-          {
-            "id": "L3-040",
-            "title": "Alarm Callout System Overview",
-            "summary": "Complete overview of alarm callout system including modem requirements, email functionality, and notification procedures.",
-            "content": "Alarm callout is a feature of Hatchcom which automatically places telephone calls or sends e-mails to a list of contacts when an alarm occurs.\n\nYou can specify:\nAlarms which trigger Hatchcom to initiate a call.\nTime period during the day when Hatchcom can call.\nDelays before Hatchcom calls or when it calls again if problem persists.\n\nIf calling by phone, it is assumed that the modem is configured and hooked up to the computer and phone jack. Refer to Windows documentation for installing and setting up the modem. If only using the e-mail functionality then no modem needs to be connected to the PC.\n\nThe Hatchcom program uses the Windows TAPI interface; therefore the modem can be shared with other TAPI compliant programs. Note however that Hatchcom cannot call out while another program is using the modem, nor if a non TAPI compliant program is active and has exclusive control of the modem.\n\nWhen using a standard data modem, if the modem calls out and reaches one of the persons on the phone list, that person will get a silent connection. It is up to the person being called to conclude that Hatchcom is trying to inform the person that an alarm has occurred at the hatchery.\n\nUsing the e-mail feature requires that the computer has a permanent internet connection to access a reliable e-mail server. Once Hatchcom has forwarded the e-mail message to the mail server, it has no control over the time required to send the e-mails to their destination. It is up to the user to ensure that a reliable e-mail server is used, and all message recipients have configured their inbox to accept e-mail from the server. Some cell phone providers allow e-mails to be sent directly to the phone as text messages, which may be used to provide detailed alarm data to the contact.\n\nWhen sending an e-mail, the machine with the highest priority alarm that triggered the callout will be listed first, followed by all other machines that are also alarming. Note that only the highest priority alarm will be listed for each machine, therefore each machine may have additional alarms active at the same time. Machines will be shown with their short machine identifier.\n\nThe alarm callout screen shows five property pages. The first page is for general callout settings, the second page sets days and times callout is active, the third lists the contact information, the fourth selects which alarms will generate a callout, and the last page configures the optional e-mail server settings.",
-            "page": 44,
-            "section": "Main Screen Interface and Layout Management/Alarm Callout and Notification Systems/Alarm Callout System Overview"
-          },
-          {
-            "id": "L3-041",
-            "title": "Callout Options and Modem Configuration",
-            "summary": "General callout options including modem selection, delay times, retry settings, and bypass switch handling.",
-            "content": "On this page, set the general callout options such as modem device and delay times.\n\nWhen this button is turned on, Hatchcom will call out if an alarm occurs, otherwise no calls or e-mails will be processed.\nThis button selects whether Hatchcom will call out when a machine has an alarm condition that matches the list, but the alarm bypass switch is activated on the machine. When the button is turned on, Hatchcom will call even when bypass switch is on, otherwise Hatchcom will call only when alarm is audible (not bypassed).\nNote: PT-100 machines do not have access to the alarm bypass switch state and will always call out the alarm.\nThis number indicates how many times Hatchcom will go through the list of phone numbers if no one answers the phone. If Hatchcom has attempted to call everyone this number of times, then Hatchcom will wait for the override time before trying again. The maximum number of times to call each person is 10.\nWhen an alarm is detected, Hatchcom will wait for the specified number of minutes before starting the callout. If the alarm goes away during the delay time, callout will not be initiated. The minimum value for this field is 1 minute and the maximum is 90 minutes.\nThis defines the number of seconds Hatchcom rings the phone before it determines that there is no answer. Hatchcom will go on to the next person in the list and try again. The maximum timeout is 60. On some modems, the timeout must be set in its modem properties dialog.\nThis is the override delay time in minutes before callout is restarted when the alarm condition is still active. In each round of calls Hatchcom will dial each active number in the contacts list. It is not possible for Hatchcom to determine whether a call was answered. This field can be set to a maximum of 240 minutes.\nThe modem field allows the user to pick the modem to use for callout. The modem and driver must be configured in Windows before it can be used by Hatchcom. The modem selection can only be changed at the main Hatchcom computer.\nAccept the new callout settings.\nCancel callout dialog without making changes.",
-            "page": 45,
-            "section": "Main Screen Interface and Layout Management/Alarm Callout and Notification Systems/Callout Options and Modem Configuration"
-          },
-          {
-            "id": "L3-042",
-            "title": "Callout Time Scheduling and Restrictions",
-            "summary": "Configuration of callout time ranges including daily schedules, weekend settings, and time restrictions.",
-            "content": "On this page set the day and time ranges when Hatchcom can call out.\n\nHatchcom allows the user to set one to three independent time ranges during which Hatchcom will perform a callout. To program the ranges, select one of the range buttons on the left. Then set one of the range type buttons at the top to select whether the range is disabled, whether it is enabled all day on the days selected below, or if it is enabled on the selected days but only after and before a certain time. At least one of the ranges must be to Days or Day and Time before Hatchcom will callout.\n\nFor example: Range 1 could be set to be active Monday to Friday, after 5:00 pm and before 6:00 am. Range 2 could be set to Saturday and Sunday without any time restrictions. Range 3 would be left disabled. With this setup Hatchcom will call out at any time except from 6:00 am to 5:00 pm Mondays to Fridays.\n\nSelect the first date range for programming.\nSelect the second date range for programming.\nSelect the third date range for programming.\nDisables the selected date range. This will not affect the other date ranges which may still be set to call out.\nSets the date range to callout on the selected days of the week without any time restrictions. Click the days below to select the days when callout will be permitted.\nSets the date range to callout selected days of the week with selected time restrictions. Click the days to turn on or off and set the before and after times to choose when callout will be permitted.\nWhen date range is set to Day and Time mode then callout will be permitted only after this time.\nWhen date range is set to Day and Time mode then callout will be permitted only before this time.\nOptionally turn on this button to schedule a daily test callout at specified time. Select a time that lies within the callout time range, the test will not occur if set to a time outside one of the active ranges.\nAccept the new callout settings.\nCancel callout dialog without making changes.",
-            "page": 47,
-            "section": "Main Screen Interface and Layout Management/Alarm Callout and Notification Systems/Callout Time Scheduling and Restrictions"
-          },
-          {
-            "id": "L3-043",
-            "title": "Contact Management and Notification Settings",
-            "summary": "Contact list configuration including phone numbers, email addresses, scheduling preferences, and dialing options.",
-            "content": "On this page set the phone number or e-mail contact information for up to ten people. To set the phone number and email contact for one person, you must use two lines.\n\nWhen Hatchcom detects an alarm, an e-mail notification will be sent to all entries marked Email. If the e-mail could not be transmitted to server or Dial on Fail setting is not checked, then the person at first phone entry will be called first, and the person at the bottom will be called last.\n\nThe name field is used when sending e-mail only. The phone number or e-mail fields must be filled with appropriate information, it cannot be left blank. The toggle button to the left of the name enables Hatchcom to e-mail or call the person. To temporarily remove a person from the callout list, for example due to vacation, all you need to do is turn off the button. You may also select if person is called on even or odd weeks only.\n\nModems allow special codes to be inserted into the phone number. For example, a comma (,) will insert a two second delay during dialing which may be required on some phone systems when connecting to an outside line. Refer to the modem's manual for more information.\n\nTurn the contact on or off for callout. This button must be turned on for each contact otherwise it will be skipped during the callout process.\nTurn this option on when contact is an e-mail address. E-mail server must be configured to use this option.\nTurn this option on when contact is a phone number. Modem must be configured to use this option.\nSelect if contact is always called, or on odd or even weeks only. Press button to cycle through options. The week number used is in accordance with ISO 8601 standard.\nAccept the new callout settings.\nCancel callout dialog without making changes.",
-            "page": 49,
-            "section": "Main Screen Interface and Layout Management/Alarm Callout and Notification Systems/Contact Management and Notification Settings"
-          },
-          {
-            "id": "L3-044",
-            "title": "Alarm Filtering and Callout Triggers",
-            "summary": "Configuration of which specific alarms trigger callout notifications including machine-specific and HVAC panel alarms.",
-            "content": "On this page configure which alarms will trigger a callout.\n\nThe callout alarm list shows all alarms that can occur. Some alarms are specific to multi-stage machines, some are specific to single-stage machines, and others are used by the Guardian system only. Only alarms that have a colored background will call out if that type of alarm occurs on any machine. If the alarm has a white background, then it will not call out.\n\nChange all alarms to selected state.\nChange all alarms to unselected state.\nHatchcom makes alarm callouts for all HVAC panels that have callout enabled in their alarm status screen.\nHatchcom disables alarm callouts for all HVAC panels, ignoring the alarm status setting.\nAccept the new callout settings.\nCancel callout dialog without making changes.",
-            "page": 50,
-            "section": "Main Screen Interface and Layout Management/Alarm Callout and Notification Systems/Alarm Filtering and Callout Triggers"
-          },
-          {
-            "id": "L3-045",
-            "title": "Email Server Configuration and Settings",
-            "summary": "Complete email server configuration including SMTP settings, authentication, encryption, and Gmail-specific requirements.",
-            "content": "On this page, set the e-mail server settings when using this feature.\n\nSMTP Server: Specify the internet address of the SMTP mail server. This could be a local company mail server or one of several free Internet-based mailing services, such as Google Mail (e.g. smtp.gmail.com).\nUsername: The username of a mail account on the server. Some servers require just the username, others need the full username and domain name with @ symbol in between (e.g. user@gmail.com). If your smtp server requires the username only for login but needs the domain name in the from address, then add a space character before the @ symbol.\nPassword: The password needed to authenticate the user on the mail server.\nServer port: Most non-encrypted connections will use port 25, and servers requiring encrypted connections typically use ports 465 or 587 (e.g. Gmail supports SSL encrypted port 465 or STARTTLS command on port 587). Refer to the Internet service provider documentation to determine the correct port number. Some Internet providers may block certain ports or use non-standard port numbers.\n\nWhen using Gmail and you are using 2-step verification you will need to generate an app password for Hatchcom in the Google account sign-in & security settings. When 2-step verification is not used you will need to turn on the setting allowing less secure apps.\n\nThe authenticate option must be checked for most mail servers, however some local servers may operate without authentication.\nThe encrypt option must be checked for most Internet based mail servers, and usually is not needed for local servers.\nUse the Start TLS setting when the mail server begins with an insecure connection and upgrades it to a secure type. Typically, these servers will use port 25 or 587.\nWhen dial on fail option is checked, the modem calls out only if Hatchcom failed to transmit the e-mail messages to the server, otherwise Hatchcom will send both e-mail and phone calls. Note that successful transfer of the message to the mail server does not guarantee that the server forwards the message in a timely manner to the recipients; Hatchcom has no way to detect whether a message has failed to be delivered. After configuring server settings and adding e-mail addresses to the contacts page, use the Test button to send out a test message. The test function is only available at the main Hatchcom computer. There will be an error message indicating the reason if Hatchcom fails to connect to the mail server. If the test message is not received by a recipient, check whether it ended up in the spam mailbox. Create a rule in the user's e-mail system to make sure future messages are received correctly.\nAccept the new callout settings.\nCancel callout dialog without making changes.",
-            "page": 51,
-            "section": "Main Screen Interface and Layout Management/Alarm Callout and Notification Systems/Email Server Configuration and Settings"
-          }
-        ]
-      },
-      {
-        "id": "L2-015",
-        "title": "User Preferences and System Configuration",
-        "summary": "Complete user preference configuration including measurement units, date formats, language settings, password security, and remote connection options.",
-        "children": [
-          {
-            "id": "L3-046",
-            "title": "Measurement Units Configuration",
-            "summary": "Configuration of temperature, humidity, CO2, pressure, and decimal display units for all Hatchcom readings.",
-            "content": "The preferences dialog allows you to select the units used to display sensor readings such as temperature, humidity, or carbon dioxide and other user settings. The preference screen is divided into several tab pages.\n\nUse this page to select units of measure used in Hatchcom.\n\nSet temperature units to degrees Fahrenheit or degrees Celsius.\nSet humidity units to percent relative humidity, degrees wet bulb, or use the sensor's units (relative for single-stage machines or wet bulb for multi-stage machines).\nSet carbon dioxide units to percent or parts per million.\nSet pressure units to metric such as Pascal and bar, or imperial such as inches of water column and pounds per square inch.\nSet the decimal place mode to Windows system units, or display all decimal readings using a period or comma. Select the system decimal option to save reports using Unicode text encoding.\nDisplay the Hatchcom software version information. See information section for details.\nAccept the new preference settings.\nCancel preference dialog without making changes.",
-            "page": 53,
-            "section": "Main Screen Interface and Layout Management/User Preferences and System Configuration/Measurement Units Configuration"
-          },
-          {
-            "id": "L3-047",
-            "title": "Date and Time Format Configuration",
-            "summary": "Configuration of date display formats, profile day formatting, and calendar date order preferences.",
-            "content": "Use this page to select how dates are formatted in Hatchcom.\n\nSelect profile day in cycle to be displayed as:\n2:12h fractional days\n60h days and hours\n12/31/99\n\nSelect calendar date order to be displayed as:\n31/12/99 month/day/year\nday/month/year\n99/12/31 or year/month/day\n\nSelect calendar date order to be displayed using Windows system date order.\nDisplay the Hatchcom software version information. See information section for details.\nAccept the new preference settings.\nCancel preference dialog without making changes.",
-            "page": 54,
-            "section": "Main Screen Interface and Layout Management/User Preferences and System Configuration/Date and Time Format Configuration"
-          },
-          {
-            "id": "L3-048",
-            "title": "General Preferences and Interface Options",
-            "summary": "General preference settings including language selection, sequential addressing, embedded screens, and interface modes.",
-            "content": "Use this page to select various preference options.\n\nSelect language to display in Hatchcom. A dialog will list all languages that are installed. Select the desired language or choose the blank option to hide text on all function buttons.\nSequential addressing mode allows newer Platinum machines to use a continuous address numbering system. Hatchcom will remove room numbers unless a room assignment was made in layout properties. Consult the Platinum user manual for the procedure on setting the address switches to work with sequential addressing mode.\nEmbedded main screen option allows Hatchcom to show an embedded state screen in the layout when sufficiently zoomed in. Note that this option greatly increases the memory usage of the Hatchcom program.\nChange the password configuration.\nSelect the light user interface mode. The Hatchcom client will restart when mode is changed.\nSelect the dark user interface mode. The Hatchcom client will restart when mode is changed.\nOn Windows systems that support dark mode, adapts Hatchcom to use the Windows default app mode. Hatchcom will use light user interface mode if Windows does not support the feature.\nDisplay the Hatchcom software version information. See information section for details.\nAccept the new preference settings.\nCancel preference dialog without making changes.\n\nThe Do not use native file selection dialogs option only needs to be enabled in rare instances where a faulty Windows Explorer shell extension interferes with Hatchcom operation when selecting file names, for example when saving a report.\nThe Use classic print dialog option uses the legacy print dialog on Windows 11 where the embedded preview function is not available in Hatchcom. Note that this option will affect all Windows applications. Select the square option to restore the Windows default mode.\nThe Sound alarms on computer option can be enabled to play a sound on the local PC whenever there is an audible incubator alarm.",
-            "page": 55,
-            "section": "Main Screen Interface and Layout Management/User Preferences and System Configuration/General Preferences and Interface Options"
-          },
-          {
-            "id": "L3-049",
-            "title": "Language Selection and Display Options",
-            "summary": "Language selection for interface text including language-neutral icon-based navigation.",
-            "content": "Use the language setting to select the language to be used for text items in the Hatchcom program. The dialog will list all the languages currently installed. You may also select a language neutral option that suppresses most of the English text, allowing navigation by icons.\n\nSelect the desired language as indicated by the name underneath the icon. The button with a blank name will select language neutral setting which removes all English text from command buttons.\nAccept the new language setting.\nCancel language dialog without making changes.",
-            "page": 56,
-            "section": "Main Screen Interface and Layout Management/User Preferences and System Configuration/Language Selection and Display Options"
-          },
-          {
-            "id": "L3-050",
-            "title": "Password Security Configuration",
-            "summary": "Complete password security configuration including level 1 and 2 passwords, authentication modes, and protected functions.",
-            "content": "Hatchcom provides password security access to functions that modify how the incubators and hatchers operate. Functions such as reports and graphs are not password protected since they do not affect machine operation.\n\nWhen Hatchcom is connected to a Platinum or Sentry Network, Hatchcom will use the same passwords.\n\nTwo levels of access are provided:\n- Use Level 1 Password (lower) for hatchery personnel who can change a few of the machine parameters.\n- Use Level 2 Password (higher) to give your hatchery manager access to all machine functions.\n\nEach of the two levels is programmed with its own four-digit numeric password.\n\nEdit password level 1 value. When prompted enter password value between 1 and 9999. To disable the password press C to clear the value.\nEdit password level 2 value. When prompted enter password value between 1 and 9999. To disable the password press C to clear the value.\nNo Password - The selected function does not require a password to enter.\nLevel 1 - Use a level 1 password (lower) for hatchery personnel who can change a few of the machine's parameters. Any function that requires a level 1 password can also be accessed using the level 2 password.\nLevel 2 - Use level 2 password (higher) to give your hatchery manager access to all machine functions but restrict access to all other employees.\nLevel 2 Master - The function requires the level 2 password and can only be entered at the main Hatchcom console or local Platinum display.\nMaster display - The function does not require a password, but users can only enter the function on the main Hatchcom console, local Platinum display, or master Sentry display.\nWhen selected, Hatchcom will prompt for password every time a function is accessed that requires a password.\nWhen selected Hatchcom will prompt for password one time only the first time a protected function is accessed. You will not be asked again until program is closed.\nWhen selected Hatchcom will never prompt for password. Note: The user will still be prompted for a password at Platinum touch screens and Sentry display panels.\nWhen selected Hatchcom uses Windows logon name to authenticate users. When selecting this option, you will be prompted to set the password users and assign the level for each user. Unlisted users will be prompted to enter the password, but if the special * name is added then this level is used instead without prompting for password.\nAccept the new password settings.\nCancel password dialog without making changes.",
-            "page": 57,
-            "section": "Main Screen Interface and Layout Management/User Preferences and System Configuration/Password Security Configuration"
-          },
-          {
-            "id": "L3-051",
-            "title": "Password-Protected Function List",
-            "summary": "Complete list of Hatchcom functions that can be password protected with their respective access levels.",
-            "content": "Note: If you are setting a level 1 password and there is currently no level 2 password, level 1 and 2 passwords will be set to the same password. If the level 2 password is disabled, then the level 1 password is also disabled. It is acceptable to have a level 2 password and not have a password for level 1.\n\nThe following table shows the functions that can be password protected. Some functions will affect several related operations.\n\n1 Start profile, adjust profile start date, transfer profile start date, stage control\n2 Edit profile, edit current profile, delete profile, edit stage program\n3 Copy profile\n4 Change password\n5 Select online/offline status\n6 Configure single-stage, multi-stage, or Guardian HVAC network\n7 Hatchcom options: alarm callout, database configuration, edit maintenance task, configure recurring maintenance tasks\n8 Adjust clock (at machine only)\n9 Graph sample time (at machine only)\n10 Dry out mode\n11 Reset machine (at machine only)",
-            "page": 59,
-            "section": "Main Screen Interface and Layout Management/User Preferences and System Configuration/Password-Protected Function List"
-          },
-          {
-            "id": "L3-052",
-            "title": "Password User Management and Authentication",
-            "summary": "Windows user authentication configuration and access level assignment for Hatchcom users.",
-            "content": "The password user setup screen is shown when the user authentication mode is selected. Use the screen to enter the Windows logon identifiers of all Hatchcom users, assigning the password level they have access to. The listed users will not be asked to enter passwords anymore when working from a Hatchcom client. Optionally the special name * may be added to the list to represent users that are not explicitly listed. This could be used to block access to functions that change machine operation, however users would still be able to see the machine status, reports and graphs.\n\nAdd the specified login identifier to the list. Do not include the domain name. Click the authentication level buttons on the left to assign the access permission.\nRemove the selected login identifier from the list.\nWhen selected, the user will be blocked from accessing all critical machine functions.\nWhen selected, the user will only be able to access functions that do not require a password.\nWhen selected, the user will only be able to access functions that require level 1 access or that do not require a password.\nWhen selected, the user will have access to all critical machine functions. If a function requires master access, then the user will only be able to perform the function at the main Hatchcom console.\nExit the password user list dialog.",
-            "page": 60,
-            "section": "Main Screen Interface and Layout Management/User Preferences and System Configuration/Password User Management and Authentication"
-          },
-          {
-            "id": "L3-053",
-            "title": "Remote Connection Configuration",
-            "summary": "Configuration of remote client connections including server selection, security phrases, and firewall considerations.",
-            "content": "Use this page to select remote connection options.\n\nRemote mode enables the Hatchcom client to connect to the networked server on a different computer. Remote connection may fail if firewalls are blocking access.\nWhen remote mode is turned on, choose the server computer name from a list of local PCs. Alternatively, you may enter the computer name or IP address directly into the entry field.\nUse an optional security phrase to authenticate remote clients. When the phrase is set at the main Hatchcom PC, enter the matching phrase at each remote client else the connection is rejected.\nDisplay the Hatchcom software version information. See information section for details.\nAccept the new preference settings.\nCancel preference dialog without making changes.",
-            "page": 61,
-            "section": "Main Screen Interface and Layout Management/User Preferences and System Configuration/Remote Connection Configuration"
-          },
-          {
-            "id": "L3-054",
-            "title": "360 Cloud Platform Connection Configuration",
-            "summary": "Configuration of 360 cloud platform connections including edge server setup, token management, and network addressing.",
-            "content": "Use this page to select 360 cloud platform connection options. After entering the user and network connection options press the 'Request token' button to establish communication with the edge server device. If connection is successful the security key will appear beside the padlock icon, otherwise the message area shows the failure reason.\n\nThe 360 platform data transfer can be disabled by pressing the 'Reset token' button.\n\nSelect the edge server user. The user must be set to 'hatchcom'.\nSelect the edge server password. The password must be set to the name of the edge server displayed on its nameplate label, for example 'Edge-1a1234'.\nThe network address of the edge server. The server will obtain a DHCP lease from local network and register the DNS name displayed on the nameplate label, for example 'Edge-1a1234'. If the search function fails to locate the server and the network is not resolving the name to the IP address, then the network administrator needs to examine DHCP server for its address. In this case the address should be reserved so that it does not change over time. Alternatively, the secondary Ethernet port of the edge server may be connected to the private Platinum incubator Ethernet network. The Hatchcom PC will be able to access the edge server via its fixed '10.77.254.254' static IP address.\nSearch the local network for edge server located on the same /24 subnet as the Hatchcom PC. A specific subnet can be searched by entering an IPv4 address into the network address field. When an edge server is discovered, its local DNS name is filled into the network address field, else its IP address when the name could not be resolved.\nShows the edge server token when Hatchcom has connected to the server.\nShows the status message from the edge server. When Hatchcom is connected to the edge server it will show the time of last data transfer.\nDisplay the Hatchcom software version information. See information section for details.\nAccept the new preference settings.\nCancel preference dialog without making changes.",
-            "page": 62,
-            "section": "Main Screen Interface and Layout Management/User Preferences and System Configuration/360 Cloud Platform Connection Configuration"
+            "title": "Multi-Location Setup",
+            "summary": "How restaurant groups with multiple locations manage separate menus and QR codes from a single Tueely account.",
+            "content": "Tueely supports restaurant groups operating multiple locations from a single account:\n\n- Each location gets its own menu configuration, QR codes, and analytics within the same account\n- Menus can be shared across locations (for chains with identical menus) or kept separate (for locations with different offerings)\n- QR codes are location-specific — scanning a QR at Location A always opens Location A's menu\n- Dashboard filtering lets you view analytics per location or across all locations combined\n- Team access can be scoped per location so individual location managers only manage their own data\n\nFor franchise or licensing models, the Tueely team can set up account structures to match your operational hierarchy. Contact the team at tueely.com/demo to discuss multi-location rollout planning.",
+            "page": 10,
+            "section": "Setup and Integration/POS and System Integration/Multi-Location Setup"
           }
         ]
       }
@@ -552,128 +162,175 @@
   },
   {
     "id": "L1-003",
-    "title": "Report Generation and Data Analysis",
-    "summary": "Comprehensive reporting system for hatchery equipment monitoring including screen reports, alarm history, statistical analysis, numeric data, setpoint tracking, profile changes, and maintenance scheduling.",
+    "title": "Features and Capabilities",
+    "summary": "Detailed features of Tueely including menu insights, allergen tagging, multilingual support, team updates, and guest interaction analytics.",
     "children": [
       {
-        "id": "L2-016",
-        "title": "Report System Overview and Navigation",
-        "summary": "Common interface elements, navigation controls, and data selection options for all Hatchcom report types.",
+        "id": "L2-006",
+        "title": "Guest Experience Features",
+        "summary": "Features that directly improve the guest experience: instant menu access, AI Q&A, dietary filtering, and cross-device compatibility.",
         "children": [
           {
-            "id": "L3-055",
-            "title": "Report Types and Functionality Overview",
-            "summary": "Complete overview of all available report types including screen reports, alarm reports, statistics, numeric data, setpoint tracking, profiles, and maintenance.",
-            "content": "Hatchcom provides several different types of reports that allow you to obtain detailed information about the current execution of the machines or past machine activity. The following reports are available:\n\n- Screen report lists the current setpoints and actual readings of all machines.\n- Alarm report lists past alarm activity showing date and time when alarm started and ended, along with sensor readings at the time alarm commenced.\n- Statistic report displays averaged sensor readings over a time period, along with the minimum and maximum readings and activity percentage of heating, cooling and other outputs.\n- Numeric report presents a detailed listing of temperature, humidity, carbon dioxide and other readings for selected machine over a time period.\n- Setpoint report lists all setpoint changes made by a machine over a time period.\n- Profile report lists all profile and setting changes made by operator over a time period.\n- Scheduled maintenance report allows you to set periodic maintenance tasks for incubators and HVAC units and keep track of tasks that have been completed.\n\nAll reports have a similar screen layout with many options to select the type of machines and data columns to be included.\n\nThe statistic report screenshot below shows the common report features. Note that not all reports have the same feature set and some items are displayed differently.\n\n- Room and machine type selections are only available in global reports selected from the ribbon of the Home screen.\n- Data columns may be turned on or off from the Columns menu in some reports or have dedicated selection buttons instead of the menu.\n- Reports displaying historical data have start and end controls to select the date range. All dates will be formatted as selected by date selection in preference screen.\n- The alarm, numeric and setpoint reports present the data in a text format that can be selected and copied to another program such as Microsoft Excel.\nThe screen, profile and statistic report have context menus to obtain detailed information on selected unit.",
-            "page": 65,
-            "section": "Report Generation and Data Analysis/Report System Overview and Navigation/Report Types and Functionality Overview"
+            "id": "L3-015",
+            "title": "Device Compatibility and Accessibility",
+            "summary": "Tueely works on iPhone, Android, and tablets without requiring app installation, using any modern browser.",
+            "content": "Tueely is built mobile-first and works across all major devices and browsers:\n\n- iPhone and iPad: Works in Safari, Chrome, or any browser — no App Store download needed\n- Android phones and tablets: Works in Chrome, Firefox, Samsung Browser, or any modern browser\n- Desktop: Accessible on laptop and desktop browsers for guests at high-top tables or counter seating\n- No app installation: The entire guest experience runs in the browser. Guests scan the QR code, the menu opens immediately.\n\nAccessibility considerations:\n- Text sizing is optimized for mobile reading without zooming\n- High-contrast mode support for visually impaired guests\n- Screen reader compatible layout for guests using assistive technology\n- Language support: MenuGPT can respond in the guest's language if the menu supports multilingual data\n\nTueely does not collect guest personal information during the menu browsing or MenuGPT interaction unless the guest explicitly submits a feedback form.",
+            "page": 11,
+            "section": "Features and Capabilities/Guest Experience Features/Device Compatibility and Accessibility"
           },
           {
-            "id": "L3-056",
-            "title": "Common Report Controls and Functions",
-            "summary": "Complete set of common control buttons and functions available across all report types.",
-            "content": "Save report to disk file in tab delimited format or comma separated values format. The data can then be imported into other programs such as Microsoft Excel.\nPreview the report for printing. You will be able to change options before printing the report to any Windows compatible printer device.\nPrint the report to any Windows compatible printer device.\nOpen a menu to select the data columns to be included in the report. Click on each menu item to turn on and off. The menu item will have a blue background when selected, or white when not selected.\nHide all columns that do not contain any data.\nShow all columns including ones that are presently turned off.\nOn reports that display historical data set the start date and time. If this button cannot be pressed, change the date or time entry field beside it.\nOn reports that display historical data set the end date and time. If this button cannot be pressed, change the date or time entry field beside it.\nOn reports that display historical data, set the date range to cover the last 24 hours. The report will refresh immediately when pressed.\nRefresh button appears when the user changes a date or time setting. Click the refresh button to reload the report data using selected date range.\nShow single-stage incubators in report when selected. Hold button down to clear or select all machine types.\nShow single-stage hatchers in report when selected. Hold button down to clear or select all machine types.\nShow Platinum egg storage machines in report when selected. Hold button down to clear or select all machine types.\nShow multi-stage incubators in report when selected. Hold button down to clear or select all machine types.\nShow multi-stage hatchers in report when selected. Hold button down to clear or select all machine types.\nShow CM setters in report when selected. Hold button down to clear or select all machine types.\nShow CM hatchers in report when selected. Hold button down to clear or select all machine types.\nShow Guardian HVAC panels in report when selected. Hold button down to clear or select all machine types.\nShow Sentry display panels in report when selected. Hold button down to clear or select all machine types.\nShow units assigned to room when selected. Any units that do not use room will be shown when room 1 is selected. Hold button down to clear or select all rooms.\nLoad report for previous machine.\nLoad report for next machine.\nIn the screen and statistic reports, click the right mouse button on a unit to show a context menu with additional functions. See context menu in the main screen for more information. In numeric, alarm, and setpoint reports the right mouse button will allow you to copy selected text and paste into another program such as Microsoft Excel.",
-            "page": 66,
-            "section": "Report Generation and Data Analysis/Report System Overview and Navigation/Common Report Controls and Functions"
-          }
-        ]
-      },
-      {
-        "id": "L2-017",
-        "title": "Screen Report and Real-Time Monitoring",
-        "summary": "Real-time monitoring display showing current setpoints, actual readings, alarms, and machine status for all hatchery equipment.",
-        "children": [
-          {
-            "id": "L3-057",
-            "title": "Screen Report Display and Content",
-            "summary": "Complete description of screen report content including sensor readings, alarms, status indicators, and machine-specific data.",
-            "content": "Use the screen report to display all current setpoint and actual readings for each incubator or Guardian-controlled room or plenum. The values are constantly updated as they change. The screen report displays the following readings:\n\nActive alarms\nTemperature setpoint and actual\nHumidity setpoint and actual\nDamper setpoint, actual and auto settings (single-stage only)\nCarbon dioxide setpoint and actual (single-stage only)\nPressure setpoint and actual (Guardian only)\nFan speed (single-stage and Guardian only)\nAuxiliary fan (CM hatchers only)\nTurn count (multi-stage or single-stage using compatible software)\nProfile number, start date and elapsed incubation time (incubators and hatchers only)\nCalibration offsets (single-stage and PS501 controllers only)\n\nThe alarm column lists the currently active alarms. Hover the mouse over the icons to see a tooltip with the alarm descriptions.\n\nSetpoints and readings will be displayed using units set in the preference screen, with the exception that the Guardian system will always show humidity in percent relative humidity. Readings will be color coded based on sensor type when enabled in Columns option menu.\n\nSome of the columns may be blank depending on the machine type and whether the unit is equipped with the required sensor. For example, HVAC plenums do not have temperature or humidity sensors, therefore those columns will appear empty.\n\nDual zone Platinum incubators will show two temperature actual readings and temperature calibration offsets. The first value indicates the front zone, and the second value the rear zone.\n\nCM machines show the cooling mode in the temperature setpoint column, the damper mode in the damper setpoint column, and blower mode in the auxiliary fan column. See setpoints section for explanation of the mode icons. The profile column shows the program step number.\n\nThe column widths can be adjusted by dragging the separator between the column headers. Click on any header item to sort the values according to the values in that column.\n\nThe button controls are described in report navigation section.",
-            "page": 68,
-            "section": "Report Generation and Data Analysis/Screen Report and Real-Time Monitoring/Screen Report Display and Content"
-          }
-        ]
-      },
-      {
-        "id": "L2-018",
-        "title": "Alarm History and Event Reporting",
-        "summary": "Detailed alarm history reporting with start/end times, acknowledgment tracking, sensor readings, and alarm analysis.",
-        "children": [
-          {
-            "id": "L3-058",
-            "title": "Alarm Report Functions and Access Methods",
-            "summary": "Multiple access methods for alarm reports and complete description of alarm data storage and display.",
-            "content": "The alarm report function provides a detailed summary of alarms that have occurred. The alarms can be shown for a specific machine of interest, or a report of all machines of a given type can be generated depending on where you select the alarm report function:\n\n- Main screen toolbar: display alarm report for all machines.\n- Group selection function: display alarm report for selected machines only.\n- Context menu: display alarm report for one specific machine only.\n- Alarm status windows: display alarm report for one specific machine only.\n\nHatchcom will store up to 100,000 alarm occurrences, after which the oldest alarms will be erased from the database.\n\nThe button controls are described in report navigation section, with the following additional functions:\nA progress bar is shown while data is loading. The information is presented in several columns.\n- First column shows the unit's address in short or long form depending on the selection in Columns menu. This column will not appear when a report is for a single machine.\n- Second column indicates the alarm type.\n- Third column indicates the zone number if the machine has more than one zone and the alarm type can be indicated separately for each zone. More than one number is shown if alarm was active on multiple zones.\n- Fourth column indicates the start date and time of the alarm.\n- Fifth column indicates the end date and time of the alarm. If the alarm is still active, then the end time area will be blank since the alarm has not ended yet.\n- Sixth and seventh columns indicate the last time the alarm was acknowledged and how many times it was acknowledged. If the alarm was never acknowledged, the time will be blank.\n- Eighth column indicates the duration of the alarm If there is a start and end time. The units will be seconds, minutes, hours, or days depending on the duration of the alarm.\n- Ninth and tenth columns show the profile and incubation day in cycle at the time of alarm, shown as per date preference. These will be blank if profile was not active. The asterisk marker * indicates the profile is a Pilot type on incubators, HatchSense on hatchers, Encore type on egg storage machines, or schedule on HVAC. On CM machines the eighth column shows the program step number.\n- Remaining columns show the setpoint and actual readings at the time when the alarm first occurred. Some readings will be blank depending on machine capabilities.\n\nSee alarm description section for detailed explanation of the alarms. If you turn off the long unit description option in the columns menu then machines will be shown with its short machine identifier.",
-            "page": 69,
-            "section": "Report Generation and Data Analysis/Alarm History and Event Reporting/Alarm Report Functions and Access Methods"
-          }
-        ]
-      },
-      {
-        "id": "L2-019",
-        "title": "Statistical Analysis and Performance Reporting",
-        "summary": "Statistical analysis of machine performance including averages, minimums/maximums, standard deviation, and output activity percentages.",
-        "children": [
-          {
-            "id": "L3-059",
-            "title": "Statistic Report Functions and Calculations",
-            "summary": "Statistical calculations including averages, minimums, maximums, and output activity percentages with 24-hour performance evaluation.",
-            "content": "The statistic report function uses a machine's historical data to calculate averages, minimums, and maximums for temperature, humidity, carbon dioxide and other sensor readings. It also calculates the activity percentage of outputs such as heating, cooling, humidification and damper.\n\nThe activity percentage is a calculation of the amount of time an output was active during the previous recording period. The Hatchcom server records sensor readings every five minutes, therefore if the heating percentage shows 40%, then heating was on for a total of 2 minutes over the previous 5-minute recording period.\n\nPress the 24-hour button to quickly evaluate machine performance for the last day. Hatchcom will set the date range to cover the preceding 24 hours and reload the statistic report using the new date range.\n\nThe column widths can be adjusted by dragging the separator between the column headers. Click on any header item to sort the values according to the values in that column. Hover the mouse over a header item to see a tooltip showing the full description.\n\nSetpoints and readings will be displayed using units set in the preference screen, with the exception that Guardian-controlled rooms will always show humidity in percent relative humidity. Readings will be color coded based on sensor type when enabled in Columns menu under options setting:\n\nRed for temperature sensor.\nBlue for humidity sensor.\nOrange for damper sensor.\nGreen for carbon dioxide sensor.\nYellow for pressure sensor.\n\nGenerates detailed statistics for selected unit showing daily averages and standard deviation over the current date range.",
-            "page": 71,
-            "section": "Report Generation and Data Analysis/Statistical Analysis and Performance Reporting/Statistic Report Functions and Calculations"
+            "id": "L3-016",
+            "title": "Allergen and Dietary Information",
+            "summary": "How Tueely handles allergen tagging, dietary filters, and accurate responses to allergy-related questions via MenuGPT.",
+            "content": "Allergen and dietary accuracy is one of the most important capabilities in Tueely:\n\nAllergen tagging:\n- Each menu item can be tagged with allergens based on the 14 major allergens: gluten, crustaceans, eggs, fish, peanuts, soybeans, milk/dairy, nuts, celery, mustard, sesame, sulphites, lupin, and molluscs.\n- Tags are visible alongside items in the MenuQR display\n- MenuGPT uses these tags to accurately answer questions like 'Does this dish contain peanuts?' or 'Which pizzas are dairy-free?'\n\nDietary filters:\n- Guests can filter the menu by dietary preference: Vegan, Vegetarian, Gluten-Free, Halal, Kosher, Nut-Free\n- Filters update the visible menu in real time so only matching items are shown\n\nAccuracy responsibility:\n- Allergen data is only as accurate as the information provided by the restaurant\n- Tueely displays a standard advisory note reminding guests that while allergen information is maintained carefully, kitchen cross-contamination risks should always be verified with staff for severe allergies\n- Restaurants should update allergen data immediately when suppliers or recipes change",
+            "page": 12,
+            "section": "Features and Capabilities/Guest Experience Features/Allergen and Dietary Information"
           },
           {
-            "id": "L3-060",
-            "title": "Detailed Statistical Analysis and Calculations",
-            "summary": "Advanced statistical analysis including standard deviation, normal distribution, setpoint differences, and HVAC-specific calculations.",
-            "content": "The statistical report function uses a machine's historical data to calculate statistical figures for temperature, humidity, carbon dioxide and pressure readings. The computer will perform the calculations and after a short delay the window with the results is shown. The calculations will be slightly different for Guardian HVAC system and incubators.\n\nThe standard statistical analysis is made on the actual readings. The average and standard deviation of the actual readings are calculated, and the maximum and minimum reading that occurred each day during the selected time period. Dual zone incubators will show two temperature readings, the first for front zone and the second for rear zone.\n\nIncubators and hatchers have the option to calculate statistical analysis on the difference between the setpoint and actual reading. When using profiles, it can be more meaningful to calculate an average temperature that is not affected by profile setpoint changes. When the option is enabled in the Columns menu the average and standard deviation of the difference is calculated, and the maximum and minimum difference that occurred each day during the selected time period.\n\nOn incubators equipped with a carbon dioxide sensor, the average actual carbon dioxide is displayed, as well as the maximum and minimum. On Guardian HVAC panels equipped with pressure sensor, the report will list average, maximum, and minimum pressure. Note that unlike temperature and humidity, these calculations never consider the setpoint value.\n\nNext to the statistical information there will be additional columns showing heating, cooling, humidification, dehumidification, and damper activity information. The numbers show what percentage of time the various devices were turned on.\n\nThis manual will not go into detail of the meaning of the statistical numbers, only a brief introduction is given. The average is simply the sum of all actual readings (or differences depending on option) divided by the number of sample points.\n\nThe standard deviation is a measure of the spread of the actual readings (or differences). It assumes that the data follows what is called a normal distribution, which is a bell-shaped curve, with the average representing the middle of the curve. It shows how far away from the average point the readings are expected to be. A sample curve is shown in the figure. The first standard deviation is 34.1%, the second is 47.7% and the third is 49.9%. In a normal distribution it is always expected that half of the readings would be above the average and the other half below the average.\n\nAs an example, a statistical report of an incubator using the differences option indicates that the average temperature difference is -0.1 F and the standard deviation is 0.15 F as shown in the figure. Ideally the average difference would be close to zero which would indicate that the actual reading was the same as the setpoint or was above the setpoint about as often as it was below the setpoint. If the average is negative, then the actual readings tended to be below the setpoint. In this example 34.1% of all differences of the sampled points would be below the average difference by no more than 0.15 F (between -0.25 and -0.1 on the sample curve), that 47.7% of all differences would be below the average by no more than 0.3°F between -0.4 and -0.1 and that 49.9% of the differences would be below the average difference by no more than 0.45°F between -0.55 and -0.10. This same reasoning can be used for differences above the average difference. Note: The above assumes that the differences form a normal distribution. For this example, 81.8% of all temperature readings (34.1 + 47.7) would be within -0.25 and +0.2°F of the setpoint.\n\nThe button controls are described in report navigation section.",
-            "page": 73,
-            "section": "Report Generation and Data Analysis/Statistical Analysis and Performance Reporting/Detailed Statistical Analysis and Calculations"
+            "id": "L3-017",
+            "title": "MenuGPT Conversation Capabilities",
+            "summary": "What types of questions MenuGPT can handle and its limitations.",
+            "content": "MenuGPT is trained on your specific menu data and can handle a wide range of guest questions:\n\nMenuGPT can answer:\n- Ingredient questions: 'What is in the Caesar salad dressing?'\n- Allergen questions: 'Is the fish and chips gluten-free?'\n- Dietary questions: 'Do you have vegan options for dessert?'\n- Comparison questions: 'What is the difference between the two steak options?'\n- Recommendation questions: 'What would you recommend for someone who likes spicy food?'\n- Pairing questions: 'What wine pairs well with the lamb?'\n- Spice level questions: 'How spicy is the vindaloo on a scale of 1 to 10?'\n- Size/portion questions: 'How large is the sharing platter?'\n- Preparation questions: 'Is the salmon served raw or cooked?'\n\nMenuGPT limitations:\n- It can only answer questions based on the menu data you have provided; it does not know information not in your menu\n- It cannot process orders or add items to a cart\n- It cannot access real-time inventory or sold-out items unless availability toggles are kept up to date\n- For severe allergen concerns, MenuGPT always advises guests to confirm with staff due to cross-contamination risk",
+            "page": 13,
+            "section": "Features and Capabilities/Guest Experience Features/MenuGPT Conversation Capabilities"
           }
         ]
       },
       {
-        "id": "L2-020",
-        "title": "Numeric Data Reporting and Export",
-        "summary": "Detailed numerical data reporting with configurable sampling intervals, data export capabilities, and comprehensive sensor reading documentation.",
+        "id": "L2-007",
+        "title": "Restaurant Team Features",
+        "summary": "Features built for restaurant owners, managers, and staff: menu management dashboard, team access roles, and analytics.",
         "children": [
           {
-            "id": "L3-061",
-            "title": "Numeric Report Overview and Data Storage",
-            "summary": "Overview of numeric report functionality including data storage duration, activity percentage calculations, and export options.",
-            "content": "The numeric report function creates a detailed listing of temperature, humidity and damper setpoint readings recorded by Hatchcom. The activity percentage of heating, cooling, humidification, and damper activity can also be displayed. This is the same data that is used by the line graph function, but here the data can be inspected in numerical form.\n\nNumeric data is stored in the database for 180 days, after which the oldest data will be erased.\n\nThe activity percentage is a calculation of the amount of time an output was active during the previous recording period. The Hatchcom server records sensor readings every five minutes, therefore if the heating percentage shows 40%, then heating was on for a total of 2 minutes over the previous 5-minute recording period.\n\nPress the 24-hour button to quickly evaluate machine performance for the last day. Hatchcom will set the date range to cover the preceding 24 hours and reload the numeric report using the new date range.\n\nAs an alternative to saving the data to disk, you may use copy and paste operation to transfer data into programs such as Microsoft Excel. Select the text by dragging the left mouse button, then press Ctrl+C or click right mouse button and choose Copy. In Microsoft Excel use Ctrl+V or the Paste function to insert the data.",
-            "page": 74,
-            "section": "Report Generation and Data Analysis/Numeric Data Reporting and Export/Numeric Report Overview and Data Storage"
+            "id": "L3-018",
+            "title": "Tueely Dashboard Overview",
+            "summary": "The Tueely dashboard lets owners and managers manage menus, generate QR codes, view analytics, and control team access.",
+            "content": "The Tueely dashboard is the control center for everything in your account:\n\nMenu Management:\n- Add, edit, or remove items, categories, prices, and descriptions\n- Toggle item availability without deleting items\n- Upload or link your latest menu version\n- Preview how your menu looks to guests before publishing\n\nQR Code Management:\n- Generate new QR codes for different tables, areas, or menus\n- Download QR codes in print-ready formats\n- View scan count per QR code to identify high-traffic tables\n\nAnalytics:\n- Daily and weekly scan counts per location or QR code\n- Most viewed menu items and categories\n- Most asked question topics via MenuGPT\n- Guest filter usage (e.g., how often guests filter for 'Vegan')\n\nTeam Access:\n- Invite team members with specific roles: Admin (full access), Manager (menu + analytics), Staff (view only)\n- Multi-location operators can scope access per site\n\nSupport:\n- In-dashboard chat support and documentation links",
+            "page": 14,
+            "section": "Features and Capabilities/Restaurant Team Features/Tueely Dashboard Overview"
           },
           {
-            "id": "L3-062",
-            "title": "Numeric Report Columns and Data Structure",
-            "summary": "Complete description of numeric report columns including time stamps, profile data, sensor readings, and activity percentages.",
-            "content": "The button controls are described in report navigation section, with the following additional functions:\nShow the temperature and humidity calibration offsets.\nShows the profile and day in cycle values.\nUse the slider to select the font point size. When button is turned on printing will use the selected point size which may result in some text cut off page, otherwise printed report will be scaled to fit the width of paper.\nUse the timer interval slider to select whether all data is included in report, or data is averaged to produce time intervals of 5, 10, 15, 30, 60 or 120 minutes.\nLoad report for previous machine.\nLoad report for next machine.\nA progress bar is shown while data is loading. The information is presented in several columns.\n- The first section shows the date and time when the sample was taken. The sampling rate defaults to 5 minutes but can be changed with the interval slider. By default, the dates are formatted as selected by the Windows regional settings but can be overridden in the preferences.\n- The second section shows the profile and incubation day in cycle. These will be blank if profile was not active. Day in cycle is formatted as per the date preference setting. The asterisk marker * indicates the profile is a Pilot type on incubators, HatchSense type on hatchers, Encore type on egg storage machines, or schedule on HVAC. On CM machines the profile column shows the program step number. When the machine is in standby mode, the day in cycle is blank. When a prewarm step is active it will show the number of hours until profile start.\n- The third section shows the temperature setpoint and actual readings. The Max and Min values indicate the maximum and minimum air temperature readings during the previous sampling period. When the machine is a dual zone type, separate columns show actual temperature for each zone. Values are displayed in units as selected by the preference screen.\n- If egg temperature is enabled and machine is equipped with a Pilot system, the actual eggshell temperatures will be displayed next.\n- The fourth section shows the humidity setpoint and actual values, and the maximum and minimum humidity in the previous sample period. All values are displayed in units as selected by the preference screen, except for HVAC panels which will always show percent relative humidity.\n- The fifth section for single-stage machines contains damper data, indicating the actual damper position, the damper setpoint and auto damper setting. The damper setpoint column will be blank if the machine is operating in carbon dioxide mode, and the auto damper column will be blank if auto damper is disabled. On CM machines equipped with anemometer the air velocity and volume will be displayed using cfm units if machine temperature mode is set to °F or m³/min if display is set to °C.\n- The sixth section displays carbon dioxide setpoint and actual values in units as selected by the preference screen when equipped with a sensor. The setpoint column will be blank if machine is operating using a fixed damper setpoint.\n- The seventh section for Guardian rooms displays pressure setpoint and actual readings for units configured with this option.\n- The eight section shows the activity percentages of output events such as heating and cooling. The number of columns and output list depends on the machine type.\n- If the HVAC panel supports the operating mode setting, then a numeric value will indicate the current mode: 0 is rooftop unit off, 1 is normal/automatic, 2 is cooling only, 3 is heating only, 4 – 6 are economy auto, cooling, and heating respectively, and 7 is fan only mode.\n- Single-stage and PS501 multi-stage incubators show the rack turn feedback signal. This column shows v¹ when racks have turned left, or v¹ when racks have turned right. It will show C if racks are in process of turning, but this may not always appear in report depending on timing of samples. The status will be blank if it is not available or single-stage racks fail to turn after five minutes. Machine controllers with compatible firmware show the rack turn count. Note: When report is saved the turn indicators change to < for left turn, > for right turn, or ~ for turning state.\n- Single-stage machines and PS501 multi-stage controllers using firmware version 4.20 or higher show the temperature and humidity calibration offsets. Note: Offsets are not recorded by Hatchcom versions prior to 4.11.",
-            "page": 76,
-            "section": "Report Generation and Data Analysis/Numeric Data Reporting and Export/Numeric Report Columns and Data Structure"
+            "id": "L3-019",
+            "title": "Analytics and Guest Insights",
+            "summary": "How Tueely's analytics help restaurants understand what guests scan, ask, and care about most.",
+            "content": "Tueely captures anonymized interaction data that gives restaurants actionable menu intelligence:\n\nScan Analytics:\n- Total QR code scans per day, week, or month\n- Peak scanning times to understand when guests engage with menus most\n- Per-table or per-QR scan breakdown to identify table utilization patterns\n\nMenu Engagement:\n- Most-viewed items and categories\n- Items with low engagement (candidates for better descriptions or promotion)\n- Filter usage: which dietary filters guests use most (e.g., Vegan being used heavily suggests adding more vegan labels or options)\n\nMenuGPT Insights:\n- Question categories most asked by guests (ingredients, allergens, recommendations)\n- Specific items that receive the most AI questions (may indicate unclear descriptions in base menu)\n- Unanswered question patterns (topics not covered by your current menu data — useful for adding missing information)\n\nAll analytics data is anonymized. No guest personal data is collected or stored. Analytics are available in the dashboard and can be exported as CSV for use in your own reports or restaurant management tools.",
+            "page": 15,
+            "section": "Features and Capabilities/Restaurant Team Features/Analytics and Guest Insights"
+          },
+          {
+            "id": "L3-020",
+            "title": "Team Roles and Permissions",
+            "summary": "The three access roles in Tueely: Admin, Manager, and Staff — what each can do.",
+            "content": "Tueely provides three access roles to control what each team member can do in the dashboard:\n\nAdmin:\n- Full account access including billing and subscription management\n- Can invite, edit, and remove team members\n- Can create and delete QR codes and menus\n- Access to all analytics across all locations\n- Can contact Tueely support and manage account settings\n\nManager:\n- Can update menu items, descriptions, prices, and availability\n- Can generate and download QR codes\n- Can view analytics for assigned locations\n- Cannot manage billing or team membership\n\nStaff:\n- View-only access to menus\n- Useful for front-of-house staff who need to reference the digital menu internally\n- Cannot edit menu data, manage QR codes, or view analytics\n\nRole assignments are made by the Admin and can be updated at any time. For multi-location operators, role access can be scoped to specific locations so a manager at one site cannot edit menus for another site.",
+            "page": 15,
+            "section": "Features and Capabilities/Restaurant Team Features/Team Roles and Permissions"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "L1-004",
+    "title": "Pricing and Plans",
+    "summary": "Tueely pricing tiers, what is included in each plan, trial options, billing, and how to upgrade or cancel.",
+    "children": [
+      {
+        "id": "L2-008",
+        "title": "Pricing Overview",
+        "summary": "Tueely's pricing structure, plan tiers, and what each includes.",
+        "children": [
+          {
+            "id": "L3-021",
+            "title": "Plan Tiers and What Is Included",
+            "summary": "Tueely offers a Starter plan with MenuQR and a Growth plan adding MenuGPT, analytics, and multi-location support.",
+            "content": "Tueely offers tiered pricing to match the needs of restaurants at different stages:\n\nStarter Plan:\n- MenuQR: Unlimited QR code generation for your venue\n- Up to 1 menu location\n- Basic menu management dashboard\n- Standard branding on QR codes\n- Email support\n- Best for: Smaller restaurants testing digital menus for the first time\n\nGrowth Plan:\n- Everything in Starter plus:\n- MenuGPT: AI-powered conversational menu Q&A\n- Advanced analytics including scan tracking and MenuGPT question insights\n- Up to 5 menu locations\n- Full QR code branding customization\n- Dietary filter and allergen tagging tools\n- Priority support\n- Best for: Growing restaurants that want to reduce staff menu load and gain guest insights\n\nEnterprise Plan:\n- Everything in Growth plus:\n- Unlimited locations\n- Dedicated account manager\n- Custom POS integration options\n- SLA-backed support with guaranteed response times\n- White-label options for franchise or licensing models\n- Custom onboarding and staff training\n- Best for: Multi-site restaurant groups, franchises, and hospitality groups\n\nFor current pricing, visit tueely.com or book a demo at tueely.com/demo.",
+            "page": 16,
+            "section": "Pricing and Plans/Pricing Overview/Plan Tiers and What Is Included"
+          },
+          {
+            "id": "L3-022",
+            "title": "Trial and Free Demo",
+            "summary": "Tueely offers a guided demo and trial period before committing to a paid plan.",
+            "content": "You can evaluate Tueely before committing to a subscription:\n\nFree Demo:\n- Book a personalized walkthrough at tueely.com/demo\n- The demo uses your actual menu data so you see exactly how MenuQR and MenuGPT would work for your restaurant\n- No credit card required to book a demo\n- A Tueely team member walks you through the full setup and answers your questions\n\nTrial Period:\n- After the demo, a trial period may be available for qualifying restaurants\n- During the trial, you deploy Tueely in a live or limited section of your restaurant\n- All features of the plan you are trialing are available during the trial period\n- At the end of the trial, you choose to subscribe or the account is paused with no charge\n\nContact the Tueely team via tueely.com/demo to start the process.",
+            "page": 17,
+            "section": "Pricing and Plans/Pricing Overview/Trial and Free Demo"
+          },
+          {
+            "id": "L3-023",
+            "title": "Billing and Cancellation",
+            "summary": "How billing works for Tueely subscriptions, monthly vs annual options, and how to cancel.",
+            "content": "Tueely subscriptions are billed on a monthly or annual basis:\n\nBilling:\n- Monthly billing: Pay month-to-month with no long-term commitment\n- Annual billing: Pay for a full year upfront at a discounted rate vs. monthly equivalent\n- Billing is managed through Paddle, a trusted payment provider\n- Invoices are sent by email and accessible in the dashboard under Account > Billing\n- Accepted payment methods: major credit and debit cards, and select digital payment methods\n\nUpgrading:\n- Upgrade from Starter to Growth or Growth to Enterprise at any time from Account > Billing\n- Upgrade takes effect immediately; you are charged a pro-rated amount for the remainder of the current billing period\n\nCancelling:\n- Cancel at any time from Account > Billing > Cancel Subscription\n- Cancellation takes effect at the end of your current billing period; you retain access until then\n- No refunds are issued for unused time on monthly plans; annual plan refund terms are in the Refund Policy at tueely.com/refund-policy\n\nFor billing questions contact the Tueely team through the dashboard support channel.",
+            "page": 17,
+            "section": "Pricing and Plans/Pricing Overview/Billing and Cancellation"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "L1-005",
+    "title": "Support and Troubleshooting",
+    "summary": "How to get help with Tueely, common troubleshooting steps for QR codes and MenuGPT, and contact methods.",
+    "children": [
+      {
+        "id": "L2-009",
+        "title": "Getting Help",
+        "summary": "How to contact Tueely support, self-serve resources, and expected response times.",
+        "children": [
+          {
+            "id": "L3-024",
+            "title": "Support Channels and Contact",
+            "summary": "Tueely support is available through in-dashboard chat, email, and LinkedIn.",
+            "content": "Tueely offers multiple ways to get help:\n\nIn-dashboard support:\n- Use the chat widget inside the Tueely dashboard for the fastest response\n- Available for all plan tiers\n- Typical response time: within a few hours during business hours\n\nEmail support:\n- Send questions to the support email listed in your dashboard under Account > Support\n- Best for non-urgent technical or billing questions\n- Include your account name and a description of the issue for faster resolution\n\nDemo and sales inquiries:\n- Book a demo or reach the sales team at tueely.com/demo\n\nCommunity and social:\n- Follow Tueely on LinkedIn at linkedin.com/company/tueely for updates, tips, and case studies\n- GitHub: github.com/tueely for open-source components\n\nPriority support is available on the Growth and Enterprise plans with faster response time guarantees. Enterprise customers have a dedicated account manager as their primary point of contact.",
+            "page": 18,
+            "section": "Support and Troubleshooting/Getting Help/Support Channels and Contact"
+          },
+          {
+            "id": "L3-025",
+            "title": "QR Code Not Scanning Troubleshooting",
+            "summary": "Steps to fix QR codes that are not scanning correctly — print quality, size, contrast, and lighting issues.",
+            "content": "If guests report that a QR code is not scanning, work through these checks:\n\n1. QR code size: Ensure the printed QR code is at least 2.5 cm x 2.5 cm (1 inch x 1 inch). Smaller codes are harder for phone cameras to read.\n\n2. Print quality: Low-resolution printing causes scanning failures. Always print from SVG or high-resolution PNG source files, not compressed images from Word documents or screenshots.\n\n3. Contrast and color: There must be strong contrast between the dark QR modules and the light background. Avoid printing dark QR codes on dark materials or light codes on light materials.\n\n4. Damage and glare: Torn, scratched, or laminated QR codes with excessive glare may not scan reliably. Replace damaged codes and position laminated cards to reduce direct light reflection.\n\n5. Distance: Most phone cameras scan QR codes best from 15–40 cm (6–16 inches) away. If the code is too close or too far, it may not trigger.\n\n6. Browser camera permissions: If guests are scanning using a browser-based QR scanner, ensure the browser has camera permission granted on their device.\n\nIf the QR code itself appears correct but links to the wrong menu or an error page, log in to the Tueely dashboard, navigate to QR Codes, and verify the code is linked to the correct active menu.",
+            "page": 19,
+            "section": "Support and Troubleshooting/Getting Help/QR Code Not Scanning Troubleshooting"
+          },
+          {
+            "id": "L3-026",
+            "title": "MenuGPT Giving Incorrect Answers",
+            "summary": "What to do when MenuGPT gives inaccurate or outdated answers about your menu.",
+            "content": "If MenuGPT is giving incorrect or outdated answers, the most common causes and solutions are:\n\n1. Outdated menu data: MenuGPT answers are based on the menu data loaded in your Tueely account. If you have updated prices, changed ingredients, or removed items but have not updated your Tueely menu, answers may be wrong. Solution: Update your menu in the dashboard or send the updated menu file to the support team.\n\n2. Missing information: If MenuGPT says it does not know the answer to a question about a real menu item, that item likely does not have enough detail in its description. Solution: Add ingredient lists, allergen tags, and more descriptive content to the relevant items in your dashboard.\n\n3. Vague item descriptions: Short or generic descriptions like 'Chef's special pasta' without any ingredients will produce vague MenuGPT answers. Solution: Add meaningful descriptions including key ingredients and preparation style.\n\n4. Allergen tags not applied: If guests report that MenuGPT answered incorrectly about allergens, check that all allergen tags are applied accurately in the dashboard item editor.\n\n5. AI interpretation edge cases: Occasionally MenuGPT may misinterpret an ambiguous question. If a specific question consistently produces wrong answers, report it through the support channel with the exact question text so the team can investigate.",
+            "page": 20,
+            "section": "Support and Troubleshooting/Getting Help/MenuGPT Giving Incorrect Answers"
           }
         ]
       },
       {
-        "id": "L2-021",
-        "title": "Setpoint Change History and Tracking",
-        "summary": "Comprehensive tracking of all setpoint changes including operator interventions, profile executions, calibration adjustments, and schedule modifications.",
+        "id": "L2-010",
+        "title": "Frequently Asked Questions",
+        "summary": "Common questions from restaurant owners and managers about Tueely, MenuQR, and MenuGPT.",
         "children": [
           {
-            "id": "L3-063",
-            "title": "Setpoint Report Overview and Data Collection",
-            "summary": "Overview of setpoint change tracking including data storage capacity, change reasons, and calibration recording.",
-            "content": "Hatchcom records all setpoint changes that occur on a machine, either as a result of operator intervention, or by the machine as it executes a profile. Hatchcom records the last 500,000 setpoint changes covering all machines. This includes the time and day of the change, the new setpoints, and the reason for the change.\n\nHatchcom also records changes to calibration offsets of temperature and humidity sensors on single-stage machines, or PS501 multi-stage controllers that have firmware version 4.21 or higher. Single-stage Platinum machines will record carbon dioxide calibration changes when the Platinum touchscreen display uses firmware version 4.24 or higher.\n\nThe button controls are described in report navigation section, with the following additional functions:\nLoad report for previous machine.\nLoad report for next machine.\nA progress bar is shown while data is loading. The information is presented in several columns.",
-            "page": 77,
-            "section": "Report Generation and Data Analysis/Setpoint Change History and Tracking/Setpoint Report Overview and Data Collection"
+            "id": "L3-027",
+            "title": "FAQs About Setup and Going Live",
+            "summary": "Common questions about how long setup takes, what is required from the restaurant, and how to go live.",
+            "content": "Frequently asked questions about setup:\n\nQ: How long does setup take?\nA: Most restaurants can be live within a few days of sharing their menu data. The Tueely team handles the configuration. Complex menus with many modifiers or dietary tags may take a few extra days. Enterprise onboarding timelines are discussed individually.\n\nQ: Do I need a website or existing online menu?\nA: No. Tueely works from your existing menu file. Share a PDF, a photo, or a spreadsheet and the team will set it up.\n\nQ: Can I do a partial rollout before going fully live?\nA: Yes. Many restaurants start with one section (e.g., one dining area or the drinks menu) and expand after confirming the flow works for their team.\n\nQ: Does my POS provider need to approve or be involved?\nA: No. Tueely is independent of your POS. No POS integration is required for standard setup.\n\nQ: Will going live with Tueely slow down my service?\nA: No. Tueely is an add-on that guests use independently. It does not add steps to your ordering or payment process — it replaces or supplements the 'guest reads printed menu' step.",
+            "page": 21,
+            "section": "Support and Troubleshooting/Frequently Asked Questions/FAQs About Setup and Going Live"
           },
           {
-            "id": "L3-064",
-            "title": "Setpoint Report Columns and Change Types",
-            "summary": "Complete description of setpoint report columns including change types, user identification, and calibration events.",
-            "content": "The first two columns show the date and time when the setpoint change occurred. The third column shows which profile number was active or became active. If no profile was active, this column shows a dash. An asterisk character * is displayed if the profile is a Pilot type on incubators, HatchSense type on hatchers, Encore type on egg storage machines, or schedule on Guardian HVAC panels. On CM machines the profile column shows the program step number. The fourth column shows the day in cycle of the profile if it was active. If the machine was in standby mode, this field will show 'Standby' or the number of hours remaining until profile start if a prewarm step is active. The next columns show the new temperature, humidity, damper, and carbon dioxide or pressure setpoints. On dual zone machines the rear temperature column will be blank because the setpoint is common to both zones. If the event is a calibration change, the temperature and humidity columns show the new calibration deviation from the factory setting. When the old calibration offset is available, the previous offset is shown to the left of y symbol, and the new offset to the right. The last two columns show what activity took place when the change occurred and the login name of the user if the change was initiated from Hatchcom. The username will be blank if the action was made at the machine. The action will show:\n\nSetpoints changed: An operator changed the fixed setpoints from Hatchcom.\nProfile started: A new profile was started. This may also appear on a machine whenever it is powered off and on while a profile is running.\nProfile changed: An operator instructed the machine to use a different profile number, by starting a different profile using the same start date and time.\nProfile cancelled: The machine was in profile mode, but an operator activated fixed setpoints which cancels profile mode. This may also appear on a machine whenever it is powered off and on while the machine is running a profile.\nDelayed start: On CM machines program start was delayed. Another setpoint record will indicate when machine switches to stage program mode.\nSensors calibrated: This action is not a change in setpoint, it indicates that one of the sensors was calibrated. The temperature and humidity columns indicate the new offsets, or the change from old to new offset when available. Note that the humidity offset is always shown in units compatible with the humidity sensor, irrespective of the current humidity preference setting.\nReturn calibrated: On CM machines this action indicates that the return temperature probes were calibrated. The temperature columns indicate the change from old to new return probe offsets.\nZero calibrated: This action is not a change in setpoint. This indicates that the carbon dioxide sensor's zero point was calibrated. If an instrument was used to calibrate, then the CO2 column indicates the new calibration reading. The column will be blank when using calibration gas or show a dash when resetting the calibration.\nSpan calibrated: This action is not a change in setpoint. This indicates that the carbon dioxide sensor's span point was calibrated. If an instrument was used to calibrate, then the CO2 column indicates the new calibration reading. The column will be blank when using calibration gas or show a dash when resetting the calibration.\nCalibration checked: This action is not a change in setpoint. This indicates that the carbon dioxide sensor calibration was checked when user used the calibration command without making a change. Platinum machines must be running software version that supports this feature.\nSetpoints locked: The setpoints were locked on a multi-stage machine.\nSetpoints unlocked: The setpoints were unlocked on a multi-stage machine.\nHatchcom started: The Hatchcom computer was restarted.\nBlank: The machine made the setpoint change executing a profile, or the setpoints were changed by the operator at the machine. Note that the username field will also be blank because Hatchcom cannot determine who changed the setpoints.",
-            "page": 79,
-            "section": "Report Generation and Data Analysis/Setpoint Change History and Tracking/Setpoint Report Columns and Change Types"
+            "id": "L3-028",
+            "title": "FAQs About MenuGPT and AI",
+            "summary": "Common questions about how MenuGPT works, its accuracy, data privacy, and what it cannot do.",
+            "content": "Frequently asked questions about MenuGPT:\n\nQ: Is MenuGPT the same as ChatGPT?\nA: MenuGPT is powered by AI but is specifically trained on your restaurant's menu data. It is not a general-purpose AI like ChatGPT — it only answers questions about your specific menu.\n\nQ: How accurate is MenuGPT?\nA: Accuracy depends on the quality of your menu data. The more complete your item descriptions, ingredient lists, and allergen tags, the more accurate MenuGPT will be. Vague descriptions produce vague answers.\n\nQ: Does MenuGPT store guest conversations?\nA: Guest conversations are used anonymously to improve question insights in your analytics dashboard. No personal guest data is stored or linked to individual guests.\n\nQ: Can MenuGPT handle multiple languages?\nA: MenuGPT can respond in the guest's language for questions asked in common languages, even if your source menu is in English. Full multilingual menu data support is available on request.\n\nQ: Can guests order through MenuGPT?\nA: No. MenuGPT is a menu information assistant only. It cannot take orders, add items to a cart, or process payments. Ordering continues through your existing staff or ordering system.",
+            "page": 22,
+            "section": "Support and Troubleshooting/Frequently Asked Questions/FAQs About MenuGPT and AI"
+          },
+          {
+            "id": "L3-029",
+            "title": "FAQs About Billing and Account",
+            "summary": "Common questions about billing, cancellation, refunds, and account management.",
+            "content": "Frequently asked questions about billing and account management:\n\nQ: Can I cancel anytime?\nA: Yes. Cancel at any time from Account > Billing > Cancel Subscription. Access continues until the end of the current billing period.\n\nQ: Is there a free trial?\nA: A trial period is available after the demo for qualifying restaurants. Contact the team at tueely.com/demo to discuss terms.\n\nQ: What happens to my menu data if I cancel?\nA: Your menu data is retained for 60 days after cancellation so you can reactivate easily if needed. After 60 days it is deleted per the Tueely data retention policy.\n\nQ: Can I change plans mid-month?\nA: Yes. Upgrades take effect immediately with pro-rated billing. Downgrades take effect at the start of the next billing period.\n\nQ: Who handles payment processing?\nA: Payments are processed through Paddle, a trusted global payment provider. Paddle handles all payment security and compliance including PCI DSS.\n\nQ: I was charged incorrectly — what should I do?\nA: Contact support through the dashboard or email. Include your invoice number and a description of the discrepancy. The team aims to resolve billing issues within one business day.",
+            "page": 22,
+            "section": "Support and Troubleshooting/Frequently Asked Questions/FAQs About Billing and Account"
           }
         ]
       }

@@ -13,18 +13,18 @@ const ProjectOverview = () => {
     >
       <div className="border rounded-lg p-6 flex flex-col gap-4 text-neutral-500 text-sm dark:text-neutral-400 dark:border-neutral-700 dark:bg-neutral-900">
         <h3 className="flex flex-row justify-center gap-4 items-center text-neutral-900 dark:text-neutral-50">
-          HatchcomAI
+          Tueely AI Assistant
         </h3>
         <p>
-          This AI uses the {" "}
+          Ask me anything about{" "}
           <Link
-            href="https://hatchcomai.vercel.app/manual.pdf"
+            href="https://tueely.com"
             className="text-blue-500"
           >
-            Hatchcom5 manual
-          </Link>{" "}
-          to implement a serverless chatbot.
-          Please only ask specific questions related to the manual content and avoid vague or overly broad queries. Example: What type of reports are available in Hatchcom5? rather than Tell me about Hatchcom5.
+            Tueely
+          </Link>
+          {" "}, MenuQR, or MenuGPT. I can help with setup, features, pricing, allergen tagging, QR code deployment, analytics, and more.
+          For best results, ask specific questions. Example: <em>How do I update my menu after going live?</em> rather than <em>Tell me about Tueely.</em>
         </p>
       </div>
     </motion.div>
