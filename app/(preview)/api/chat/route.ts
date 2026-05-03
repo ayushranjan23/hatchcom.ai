@@ -1,7 +1,7 @@
 import { convertToModelMessages, generateObject, stepCountIs, streamText, tool } from "ai";
 import { google } from "@ai-sdk/google";
 import { z } from "zod";
-import manualChunks from "@/lib/data/manual-chunks.json";
+import manualChunks from "@/lib/data/khao-hakka-manual-chunks.json";
 
 // Configuration
 const CONFIDENCE_THRESHOLD = 0.1; // Lowered to allow more guesses with vague matches
@@ -42,7 +42,7 @@ export async function POST(req: Request) {
   const result = streamText({
     model,
     messages: convertToModelMessages(messages),
-    system: `CRITICAL: You are a Tueely AI assistant that MUST use the provided tools to answer questions about Tueely, MenuQR, and MenuGPT.
+    system: `CRITICAL: You are the Khao Hakka restaurant assistant that MUST use the provided tools to answer questions about Khao Hakka, its menu, hours, location, ordering, and restaurant FAQ.
 FOLLOW THIS EXACT SEQUENCE EVERY TIME:
 1) ALWAYS call analyzeCategories first. You MUST ALWAYS select a top-level category from the knowledge base. Even if the match seems vague or imperfect, you MUST PICK ONE based on the best available match. Use both title AND summary to make educated guesses.
 2) ALWAYS call selectSubcategory within the chosen category. You MUST ALWAYS select a subcategory. Even if unsure, pick the most plausible one based on available information.
@@ -64,14 +64,14 @@ CRITICAL: YOUR FINAL ANSWER MUST:
 4. DO NOT SAY "LX-XXX HAS THE ANSWER" - YOU ARE THE ONE ANSWERING!
 
 EXAMPLE OF WHAT TO DO:
-User: "How do I update my menu after going live?"
-Your answer: "To update your menu after going live, you can... [rest of actual answer from content]"
+User: "What are your hours?"
+Your answer: "Khao Hakka is open Monday to Thursday from 11:00am to 9:00pm, Friday from 11:00am to 11:00pm, Saturday from 4:00pm to 11:00pm, and Sunday from 4:00pm to 9:00pm."
 
 Confidence: XX%
-Source: Updating Your Menu
-Reference: https://tueely.com
+Source: Hours and Status
+Reference: https://khaohakka.com/location/
 
-IF THE USER IS JUST GREETING OR MAKING GENERAL CHAT, respond normally as a Tueely assistant without using tools.
+IF THE USER IS JUST GREETING OR MAKING GENERAL CHAT, respond normally as a Khao Hakka assistant without using tools.
 DO NOT MENTION TOOLS, AI MODEL NAMES, OR INTERNAL PROCESSES IN FINAL ANSWER.`,
     // Ensure tool loop continues and doesn't stop early
     stopWhen: stepCountIs(MAX_ATTEMPTS),
@@ -269,7 +269,12 @@ Provide a thorough answer based on the manual content.`,
               title: sourceChunk.title,
               page: sourceChunk.page,
               section: sourceChunk.section,
-              manualLink: `https://tueely.com`,
+                manualLink:
+                  sourceChunk.id === "L3-002" || sourceChunk.id === "L3-003"
+                    ? "https://khaohakka.com/location/"
+                    : sourceChunk.id === "L3-006" || sourceChunk.id === "L3-007" || sourceChunk.id === "L3-008" || sourceChunk.id === "L3-009"
+                      ? "https://khaohakka.com/menu/"
+                      : "https://khaohakka.com/",
             },
             decisionPath: [
               { level: 1, title: level1Parent.title, id: level1Parent.id },

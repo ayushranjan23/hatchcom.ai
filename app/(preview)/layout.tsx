@@ -4,10 +4,10 @@ import { Toaster } from "sonner";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://tueely.com"),
-  title: "Tueely AI — MenuQR & MenuGPT Assistant",
+  metadataBase: new URL("https://khaohakka.com"),
+  title: "Khao Hakka Assistant",
   description:
-    "Ask anything about Tueely, MenuQR, or MenuGPT. Get instant answers about setup, features, pricing, allergens, and more.",
+    "Ask anything about Khao Hakka in downtown Toronto, including hours, location, menu categories, popular dishes, and ordering details.",
 };
 
 export default function RootLayout({

@@ -131,7 +131,7 @@ export default function Chat() {
                 minLength={3}
                 required
                 value={input}
-                placeholder={"Ask me anything..."}
+                placeholder={"Ask about Khao Hakka..."}
                 onChange={(e) => setInput(e.target.value)}
               />
             </form>
@@ -199,11 +199,11 @@ const AssistantMessage = ({ message }: { message: UIMessage | undefined }) => {
 const Loading = ({ tool }: { tool?: string }) => {
   const toolName =
     tool === "analyzeCategories"
-      ? "Analyzing manual categories"
+      ? "Reviewing restaurant sections"
       : tool === "selectSubcategory"
-        ? "Searching subcategories"
+        ? "Narrowing the menu match"
         : tool === "generateAnswer"
-          ? "Generating answer from manual"
+          ? "Drafting the restaurant answer"
           : "Thinking";
 
   return (

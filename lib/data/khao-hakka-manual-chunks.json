@@ -1,0 +1,199 @@
+[
+  {
+    "id": "L1-001",
+    "title": "About Khao Hakka",
+    "summary": "Overview of Khao Hakka as a downtown Toronto Indo-Chinese and Hakka restaurant, including its street-style identity, location, hours, and contact details.",
+    "children": [
+      {
+        "id": "L2-001",
+        "title": "Restaurant Overview",
+        "summary": "What Khao Hakka is and how the restaurant describes its food and service style.",
+        "children": [
+          {
+            "id": "L3-001",
+            "title": "What Khao Hakka Is",
+            "summary": "Khao Hakka is a downtown Toronto Indo-Chinese and Hakka restaurant with a simple, self-serve, no-fuss identity.",
+            "content": "Khao Hakka - Toronto is a downtown Toronto restaurant serving Indo-Chinese and Hakka cuisine. Its public-facing pages describe it as a simple self-serve style, no-fuss spot offering street-style Desi Hakka eats. The restaurant's menu is built around familiar Hakka favorites such as momo, noodles, fried rice, chicken, seafood, and lunch deals.",
+            "page": 1,
+            "section": "About Khao Hakka/Restaurant Overview/What Khao Hakka Is"
+          },
+          {
+            "id": "L3-002",
+            "title": "Where It Is",
+            "summary": "Khao Hakka is located at 37 Sherbourne St, Toronto, ON M5A 2P6, in downtown Toronto.",
+            "content": "Khao Hakka is located at 37 Sherbourne St, Toronto, ON M5A 2P6. The restaurant is in downtown Toronto and the business phone number listed on the site is +1 (416) 504-5426.",
+            "page": 1,
+            "section": "About Khao Hakka/Restaurant Overview/Where It Is"
+          },
+          {
+            "id": "L3-003",
+            "title": "Hours and Status",
+            "summary": "Posted business hours and the site's closed-now messaging.",
+            "content": "Khao Hakka's posted hours are Monday to Thursday 11:00am to 9:00pm, Friday 11:00am to 11:00pm, Saturday 4:00pm to 11:00pm, and Sunday 4:00pm to 9:00pm. The website also shows a closed-state message when ordering is disabled.",
+            "page": 1,
+            "section": "About Khao Hakka/Restaurant Overview/Hours and Status"
+          }
+        ]
+      },
+      {
+        "id": "L2-002",
+        "title": "Ordering and Contact",
+        "summary": "How to use the website, order online, and contact the restaurant.",
+        "children": [
+          {
+            "id": "L3-004",
+            "title": "Website and Ordering",
+            "summary": "Khao Hakka's website supports order online and navigation to the menu and location pages.",
+            "content": "Khao Hakka's website includes Order Online and Location navigation, plus links for Menu, Reviews, Terms and Conditions, and Privacy Policy. The Google listing also shows Order pickup and Order delivery options when available. If the ordering system is disabled because the restaurant is closed, the site shows a closed notice.",
+            "page": 2,
+            "section": "About Khao Hakka/Ordering and Contact/Website and Ordering"
+          },
+          {
+            "id": "L3-005",
+            "title": "Catering and Contact",
+            "summary": "Public contact details and catering references from the restaurant's Linktree.",
+            "content": "Khao Hakka's Linktree says it is a simple self serve style no fuss Indo-Chinese spot offering street style Desi Hakka eats. It also lists a catering menu and gives a contact number for catering and general queries: 416-504-5426. The profile note also says the meat is halal.",
+            "page": 2,
+            "section": "About Khao Hakka/Ordering and Contact/Catering and Contact"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "L1-002",
+    "title": "Menu Guide",
+    "summary": "The restaurant's menu structure, the cuisine style, and a few example dishes and price points.",
+    "children": [
+      {
+        "id": "L2-003",
+        "title": "Menu Categories",
+        "summary": "The main sections shown on the menu and homepage.",
+        "children": [
+          {
+            "id": "L3-006",
+            "title": "Main Menu Sections",
+            "summary": "The menu is organized into Momo, Vegetarian, Chicken, Seafood, Fried Chicken Lollipop, Fried Rice, Noodles, Triple Schezwan, Meal for 2, Lunch, and Drinks.",
+            "content": "The Khao Hakka menu is organized into these main sections: Momo, Vegetarian, Chicken, Seafood, Fried Chicken Lollipop, Fried Rice, Noodles, Triple Schezwan, Meal for 2, Lunch, and Drinks. The homepage also highlights these as the restaurant's core categories.",
+            "page": 3,
+            "section": "Menu Guide/Menu Categories/Main Menu Sections"
+          },
+          {
+            "id": "L3-007",
+            "title": "Menu Labels and Styles",
+            "summary": "The menu uses spicy and vegetarian labels to help guests identify dishes quickly.",
+            "content": "Khao Hakka's menu includes visual labels for spicy dishes and vegetarian dishes. That makes it easier for guests to scan the menu quickly and identify heat level or vegetarian-friendly items at a glance.",
+            "page": 3,
+            "section": "Menu Guide/Menu Categories/Menu Labels and Styles"
+          }
+        ]
+      },
+      {
+        "id": "L2-004",
+        "title": "Example Dishes",
+        "summary": "A few representative dishes and price points visible on the public menu.",
+        "children": [
+          {
+            "id": "L3-008",
+            "title": "Popular Dishes",
+            "summary": "Publicly visible examples include Bombay Chicken, Momo, fried rice, noodles, and meal combos.",
+            "content": "The public menu shows Bombay Chicken at $15.00 as a homepage best seller. Other visible dishes include Vegetable Steamed Momo at $13.00, Chicken Chilli Momo at $16.00, Hakka Fried Rice at $13.00, Hakka Noodles at $13.00, and Meal for 2 at $35.00.",
+            "page": 3,
+            "section": "Menu Guide/Example Dishes/Popular Dishes"
+          },
+          {
+            "id": "L3-009",
+            "title": "Lunch Deals",
+            "summary": "Lunch items are served from 11:00 to 16:00 and include rice, noodles, and combo meals.",
+            "content": "The menu includes a lunch section labeled Lunch (11:00-16:00). Visible examples include Lunch-1 Egg Fried Rice at $12.00, Lunch-4 Chicken Hakka Fried Rice at $14.00, Lunch-8 Chicken Hong Kong Noodles at $14.00, and multiple vegetarian and chicken combo options.",
+            "page": 4,
+            "section": "Menu Guide/Example Dishes/Lunch Deals"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "L1-003",
+    "title": "Food Style and Highlights",
+    "summary": "What kind of food Khao Hakka serves and what guests can expect from the menu.",
+    "children": [
+      {
+        "id": "L2-005",
+        "title": "Cuisine Profile",
+        "summary": "The restaurant's Indo-Chinese and Hakka flavor profile.",
+        "children": [
+          {
+            "id": "L3-010",
+            "title": "Indo-Chinese Identity",
+            "summary": "Khao Hakka serves Indo-Chinese and Hakka cuisine with a street-style Desi Hakka feel.",
+            "content": "Khao Hakka serves Indo-Chinese and Hakka cuisine. The restaurant describes itself as a street-style Desi Hakka spot, which points to a bold, savory menu with familiar Chinese-Indian flavors rather than fine-dining style plating.",
+            "page": 5,
+            "section": "Food Style and Highlights/Cuisine Profile/Indo-Chinese Identity"
+          },
+          {
+            "id": "L3-011",
+            "title": "Vegetarian and Halal Notes",
+            "summary": "The menu includes vegetarian options and the public Linktree says the meat is halal.",
+            "content": "The public menu includes a full Vegetarian section, and the restaurant's Linktree says the meat is halal. Guests looking for vegetarian dishes have several visible options across starters, mains, fried rice, noodles, and lunch deals.",
+            "page": 5,
+            "section": "Food Style and Highlights/Cuisine Profile/Vegetarian and Halal Notes"
+          }
+        ]
+      },
+      {
+        "id": "L2-006",
+        "title": "Guest Favorites",
+        "summary": "What the site surfaces most prominently as best sellers and signature dishes.",
+        "children": [
+          {
+            "id": "L3-012",
+            "title": "Homepage Best Seller",
+            "summary": "Bombay Chicken is highlighted as a best seller on the homepage.",
+            "content": "The Khao Hakka homepage features Bombay Chicken as a best seller, priced at $15.00. That makes it one of the most prominent dishes on the public site and a good default recommendation for first-time visitors who want a signature chicken dish.",
+            "page": 6,
+            "section": "Food Style and Highlights/Guest Favorites/Homepage Best Seller"
+          },
+          {
+            "id": "L3-013",
+            "title": "Menu Coverage",
+            "summary": "The menu spans momos, noodles, fried rice, chicken, seafood, and combo meals.",
+            "content": "The visible menu coverage suggests a restaurant built around comfort-friendly Hakka staples: momos, vegetarian plates, chicken and seafood entrees, fried rice, noodles, quick lunch deals, and combo meals for sharing. That is a strong fit for casual dine-in or takeaway ordering.",
+            "page": 6,
+            "section": "Food Style and Highlights/Guest Favorites/Menu Coverage"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "L1-004",
+    "title": "Frequently Asked Questions",
+    "summary": "Common questions about the restaurant, its location, hours, menu, and contact details.",
+    "children": [
+      {
+        "id": "L2-007",
+        "title": "General Questions",
+        "summary": "Basic facts guests often ask before visiting.",
+        "children": [
+          {
+            "id": "L3-014",
+            "title": "Is Khao Hakka in Downtown Toronto",
+            "summary": "Yes. The restaurant is on Sherbourne Street in downtown Toronto.",
+            "content": "Yes. Khao Hakka is based at 37 Sherbourne St, Toronto, ON M5A 2P6, which places it in downtown Toronto.",
+            "page": 7,
+            "section": "Frequently Asked Questions/General Questions/Is Khao Hakka in Downtown Toronto"
+          },
+          {
+            "id": "L3-015",
+            "title": "What To Ask About",
+            "summary": "The assistant can answer questions about hours, location, menu sections, lunch deals, popular dishes, halal notes, and ordering.",
+            "content": "The restaurant assistant is meant to answer practical guest questions about Khao Hakka's hours, address, menu categories, lunch deals, popular dishes, halal notes, ordering, and contact details. It is built around the restaurant's public menu and website information.",
+            "page": 7,
+            "section": "Frequently Asked Questions/General Questions/What To Ask About"
+          }
+        ]
+      }
+    ]
+  }
+]
